@@ -1,12 +1,12 @@
 import React from 'react';
 import Flags from './flags/flags';
-
+import './header.scss'
 
 
 const Header =()=>{
 
 return (
-<div>
+<div className='header-container'>
 <Flags/>
 </div>
 );
