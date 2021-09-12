@@ -1,4 +1,7 @@
 .container {
     display: flex;
     justify-content: end;
+    align-self: end;
+    padding: 10px;
+    cursor: pointer;
 }
