@@ -2,7 +2,10 @@ import styles from './banner.module.scss';
 
 const Banner = ({src}) =>{
 
-    return (<img className={styles.banner} src={src}/>);
-};
+    return (<div className={styles.container}>
+        <img className={styles.banner} src={src}/>
+        <div className={styles.cover}/>
+    </div>)
+}
 
 export default Banner;
