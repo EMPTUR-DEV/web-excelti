@@ -1,0 +1,87 @@
+.formContainer {
+    background-color: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .form {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            color: honeydew;
+            margin: 0;
+        }
+        .inputContainer {
+            position: relative;
+            width: 100%;
+            margin: 5px 0px;
+        }
+        .buttonContainer {
+            width: 200px;
+            position: relative;
+            button {
+                height: 45px;
+                width: 200px;
+                border: none;
+                text-align: center;
+                border-radius: 4px;
+                margin: auto;
+                font-weight: bold;
+                background-color: greenyellow;
+                transition: 0.3s;
+                overflow: hidden;
+                span {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    transition: 0.3s;
+                    font-size: 20px;
+                    &:after {
+                        content: '\00bb';
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        right: -20px;
+                    }
+                }
+                &:hover {
+                    border-radius: 10px;
+                    background-color: green;
+                    span {
+                        color: honeydew;
+                        padding-right: 25px;
+                        &:after {
+                            color: honeydew;
+                            opacity: 1;
+                            right: 0;
+                        }
+                    }
+                }
+                &:active {
+                    background-color: #00aa77;
+                }
+            }
+        }
+        .text {
+            padding: 10px;
+            height: 20px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+        }
+        .textBox {
+            border-radius: 10px;
+            padding: 10px 10px;
+            border: none;
+            height: 100px;
+            width: 80%;
+            font-size: 13px;
+            text-align: left;
+            vertical-align: top;
+        }
+    }
+}

@@ -1,38 +1,20 @@
 import React from 'react'
 import ContactForm from '../contact-form/contact-form'
-import './footer.scss'
+import styles from './footer.module.scss'
 
 const Footer = () => {
     return (
-        <div className='footer-container'>
+        <div className= {styles.container}>
             Footer
-            <div className="footer-grid">
-                <div className="footer-grid-menu">
-                    <nav>
-                        Links
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="footer-grid-form">
+            <div className={styles.grid}>
+                
+                <div className={styles.form}>
                     Formulario
                     <ContactForm/>
                 </div>
-                <div className="footer-grid-menu">
-                    <nav>
-                        Links
-                        <ul>
-                            <li>a</li>
-                            <li>b</li>
-                            <li>c</li>
-                        </ul>
-                    </nav>
-                </div>
+              
             </div>
-            <div className="footer-footer">
+            <div className= {styles.footer}>
                 Copyright
             </div>
         </div>
