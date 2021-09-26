@@ -1,0 +1,45 @@
+.container {
+    height: 90%;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    min-width: 200px;
+    h3 {
+        font-size: 22px;
+        padding: 10px;
+        color: white;
+        position: relative;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        &::after {
+            content: '';
+            height: 0px;
+            width: 50%;
+            position: absolute;
+            left: 20%;
+            top: 100%;
+            background-color: purple;
+            border: 1px purple solid;
+        }
+    }
+    ul {
+        height: 100%;
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 5px;
+        li {
+            text-align: center;
+            list-style-type: none;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 13px;
+            padding-bottom: 10px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            border-bottom: purple 1px solid;
+            font-weight: normal;
+        }
+    }
+}
