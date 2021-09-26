@@ -4,6 +4,9 @@ import styles from './footer.module.scss'
 import InfoFooter from './info-footer/info-footer'
 
 const Footer = () => {
+    
+    const currentYear  = new Date().getFullYear()
+    
     return (
         <div className= {styles.container}>
             
@@ -24,7 +27,9 @@ const Footer = () => {
             
             </div>
             <div className= {styles.footer}>
-                Copyright
+               <span> Copyright  <a href="www.tempweb.com.ar">TempWeb </a>
+               {`${currentYear}`}
+               </span>
             </div>
         </div>
     )
