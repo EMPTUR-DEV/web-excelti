@@ -21,13 +21,16 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-evenly;
+            position: relative;
             .socialNets {
                 min-width: 300px;
-                height: 40px;
+                height: 70px;
+                right: 0%;
                 width: 100%;
                 margin-left: 50px;
-                background-color: yellow;
-                display: block;
+                margin-right: 50px;
+                display: flex;
+                justify-content: center;
             }
         }
         .form {

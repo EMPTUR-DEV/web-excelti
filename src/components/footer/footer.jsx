@@ -13,25 +13,27 @@ const Footer = () => {
             
             <div className={styles.grid}>
                 
-                <div className={styles.subgridInfo}>
-
-                
-                    <div className={styles.info}>
-                        <InfoFooter/>
-                    </div>
-                    <div className={styles.info}>
-                        <InfoFooter/>
-                    </div>
-
-                    <div className={styles.socialNets}>
-                        <RedesSociales/>
-                    </div>
-
-                </div>
                 <div className={styles.form}>
                     
                     <ContactForm/>
                 </div>
+            
+                <div className={styles.subgridInfo}>
+
+                
+<div className={styles.info}>
+    <InfoFooter/>
+</div>
+<div className={styles.info}>
+    <InfoFooter/>
+</div>
+
+<div className={styles.socialNets}>
+    <RedesSociales/>
+</div>
+
+</div>
+
             
             </div>
             <div className= {styles.footer}>
