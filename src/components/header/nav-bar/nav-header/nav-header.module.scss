@@ -1,0 +1,29 @@
+.container {
+    width: 130px;
+    height: 40px;
+    margin-left: 1px;
+    background-color: violet;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: purple;
+    }
+}
+
+.childsContainerShow {
+    display: block;
+    position: relative;
+    z-index: 9999;
+}
+
+.childsContainerHidden {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .childsContainerShow {
+        position: absolute;
+    }
+}

@@ -1,0 +1,27 @@
+.container {
+    .nodeContainer {
+        height: 130px;
+        min-width: 10%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px;
+        z-index: 999;
+    }
+    .bars {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        .nodeContainer {
+            display: flex;
+            flex-direction: row;
+        }
+        .bars {
+            display: none;
+        }
+    }
+}
