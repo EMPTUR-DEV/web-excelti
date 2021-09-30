@@ -9,22 +9,13 @@ const NavBar = () => {
         setItems(
             [{name:'Home',link:'/', childrens:[]},
             {name:'Traducción', link:'/', childrens:[]},
-            {name:'Capacitación', link:'/', childrens:[{name:'Módulo 1',link:'/'},{name:'Módulo 2',link:'/'},{name:'Módulo 3',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'}]},
+            {name:'Capacitación', link:'/', childrens:[{name:'Módulo 1',link:'/'},{name:'Módulo 2',link:'/'},{name:'Módulo 3',link:'/'}]},
             {name:'E-learning', link:'/', childrens:[]},
             {name:'Servicios audiovisuales', link:'/', childrens:[]},
             {name:'Nuestros profesionales', link:'/', childrens:[]},
-            {name:'Publicaciones', link:'/', childrens:[{name:'Home',link:'/', childrens:[]},
-            {name:'Traducción', link:'/', childrens:[{name:'Home',link:'/', childrens:[]},
-            {name:'Traducción', link:'/', childrens:[]},
-            {name:'Capacitación', link:'/', childrens:[{name:'Módulo 1',link:'/'},{name:'Módulo 2',link:'/'},{name:'Módulo 3',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'}]},
-            {name:'E-learning', link:'/', childrens:[]},
-            {name:'Servicios audiovisuales', link:'/', childrens:[]},
-            {name:'Nuestros profesionales', link:'/', childrens:[]}]},
-            {name:'Capacitación', link:'/', childrens:[{name:'Módulo 1',link:'/'},{name:'Módulo 2',link:'/'},{name:'Módulo 3',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'},{name:'Módulo 4',link:'/'}]},
-            {name:'E-learning', link:'/', childrens:[]},
-            {name:'Servicios audiovisuales', link:'/', childrens:[]},
-            {name:'Nuestros profesionales', link:'/', childrens:[]}]}
-            ]);
+            {name:'Publicaciones', link:'/', childrens:[{name:'Home',link:'/', childrens:[]}]},
+            ]
+            );
     },[]);
 
    const renderMenu=(items)=>{
@@ -35,7 +26,7 @@ const NavBar = () => {
 
     return (<div className={styles.container}>
 
-        <img className={styles.bars} src={'header/bars.svg'}/>
+        <img className={styles.bars} alt= 'header-bars' src={'header/bars.svg'}/>
         <div className={styles.nodeContainer}>
             {
                 renderMenu(items)

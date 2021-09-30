@@ -14,7 +14,7 @@
 
 .childsContainerShow {
     display: block;
-    position: relative;
+    position: absolute;
     z-index: 9999;
 }
 
@@ -22,7 +22,7 @@
     display: none;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 700px) {
     .childsContainerShow {
         position: absolute;
     }

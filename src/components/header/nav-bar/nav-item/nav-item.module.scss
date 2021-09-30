@@ -2,7 +2,7 @@
     width: 130px;
     height: 40px;
     margin-left: 1px;
-    background-color: violet;
+    background-color: blueviolet;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -22,8 +22,8 @@
     display: block;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 700px) {
     .childsContainerShow {
-        position: relative;
+        position: absolute;
     }
 }

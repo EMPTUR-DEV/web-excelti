@@ -4,5 +4,11 @@
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    .menuContainer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .logo {
+        margin: 100px;
+    }
 }

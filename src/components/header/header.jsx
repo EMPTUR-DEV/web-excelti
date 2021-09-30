@@ -10,10 +10,15 @@ const Header =()=>{
 
 return (
     <div className={styles.headerContainer}>
-        <Logo/>
-        <NavBar/>
-        <Flags/>
-        <Banner src={'header/home-banner.jpg'}/>
+        <Logo className={styles.logo}/>
+        
+
+        <div className={styles.menuContainer}>
+            <NavBar />
+            <Flags/>
+        
+        </div>
+        
     </div>
     );
 };
