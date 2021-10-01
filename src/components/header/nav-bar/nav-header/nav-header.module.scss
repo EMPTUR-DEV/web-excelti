@@ -1,14 +1,14 @@
 .container {
-    width: 130px;
+    width: 120px;
     height: 40px;
     margin-left: 1px;
-    background-color: violet;
+    background-color: var(--green);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     &:hover {
-        background-color: purple;
+        background-color: var(--greenMint);
     }
 }
 

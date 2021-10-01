@@ -2,13 +2,5 @@
     width: 100%;
     min-height: 80px;
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    .menuContainer {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .logo {
-        margin: 100px;
-    }
+    display: grid;
 }

@@ -1,6 +1,9 @@
 .container {
     display: flex;
-    align-self: flex-end;
     padding: 10px;
     cursor: pointer;
+    justify-self: flex-end;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: flex-end
 }

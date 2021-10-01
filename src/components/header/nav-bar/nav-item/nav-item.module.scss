@@ -1,21 +1,19 @@
 .container {
-    width: 130px;
+    width: 120px;
     height: 40px;
     margin-left: 1px;
-    background-color: blueviolet;
+    background-color: var(--greenLeaf);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     &:hover {
-        background-color: purple;
+        background-color: var(--greenMint);
     }
 }
 
 .childsContainerShow {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    display: none;
 }
 
 .childsContainerHidden {
@@ -24,6 +22,8 @@
 
 @media (min-width: 700px) {
     .childsContainerShow {
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 }

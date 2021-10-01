@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 
 const NavBar = () => {
     const [ items,setItems ] = useState([]);
+    const [ menu,setMenu ] = useState(false);
 
     useEffect(()=>{
         setItems(
@@ -25,14 +26,15 @@ const NavBar = () => {
     }
 
     return (<div className={styles.container}>
-
-        <img className={styles.bars} alt= 'header-bars' src={'header/bars.svg'}/>
-        <div className={styles.nodeContainer}>
+        <img onClick={()=>setMenu(!menu)} className={styles.bars}
+        alt= 'header-bars' src={'header/bars.svg'}/>
+        
+        <div className={menu ? `${styles.nodeContainer} ${styles.openNodeContainer}` : styles.nodeContainer}>
             {
                 renderMenu(items)
             }
         </div>
-        </div>);
+    </div>);
 };
 
 export default NavBar;
