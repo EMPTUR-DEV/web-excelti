@@ -8,13 +8,15 @@ const CardInfograph = ({title}) => {
         <CardNumber bgcolor = 'white' boxshadowcolor = '#124e4e'>
             {title}
             </CardNumber>
-        <CardTitle>Title</CardTitle>
-        <CardText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae,
-            temporibus consectetur? Iure id nam fuga asperiores repellat accusantium exercitationem nemo?</CardText>
+        
         <CardImg><img class="flexcardimgItem"
                 src="https://cdn.pixabay.com/photo/2017/01/10/23/01/seo-1970475_960_720.png" alt=""/></CardImg>
     </CardContainer>
     )
 }
+
+//<CardTitle>Title</CardTitle>
+//<CardText>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae,
+//temporibus consectetur? Iure id nam fuga asperiores repellat accusantium exercitationem nemo?</CardText>
 
 export default CardInfograph

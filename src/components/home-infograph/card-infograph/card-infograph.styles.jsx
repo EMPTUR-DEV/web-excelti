@@ -7,8 +7,9 @@ flex-direction: column;
 justify-content: flex-start;
 width: 300px;
 align-items: baseline;
-height: 400px;
-border-radius: 0 50%;
+justify-self: center;
+height: 300px;
+border-radius: 0 50% 50% 50%;
 background: ${(props) => props.bgcolor};
 box-shadow: 
     4px 4px 4px ${(props)=>props.boxshadowcolor},
@@ -18,17 +19,17 @@ margin: 10px;
 `
 
 export const CardNumber = styled.div`
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-    margin: 10px 0px;
+    margin: 20px 0px;
     border-radius: 0px 50px 50px 0px;
     font-family: 'Jost', sans-serif;
     color: black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     background: ${({bgcolor})=> bgcolor ? bgcolor : "white"};
     box-shadow: 0px 2px 2px ${({boxshadowcolor}) => boxshadowcolor ? boxshadowcolor: "black"};
@@ -82,4 +83,4 @@ font-weight: 300;
 export const CardImg =styled.div`
     justify-content: center;
     img{
-    width: 50%;}`
+    width: 30%;}`
