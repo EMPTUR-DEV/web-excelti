@@ -10,8 +10,7 @@ function App() {
     <div className="App">
       <Header/>
       <Banner src={'header/home-banner.jpg'}/>
-      
-        <Home/>
+      <Home/>
       <Footer/>
     </div>
   );
