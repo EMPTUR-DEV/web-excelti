@@ -1,29 +1,48 @@
 .container {
-    width: 120px;
-    height: 40px;
-    margin-left: 1px;
-    background-color: var(--green);
-    cursor: pointer;
     display: flex;
+    width: 200px;
+    height: 100px;
+    margin-left: 1px;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    &:hover {
-        background-color: var(--greenMint);
-    }
+    font-size: 1.5em;
+}
+
+.childsMobile {
+    display: none;
 }
 
 .childsContainerShow {
     display: block;
-    position: absolute;
-    z-index: 9999;
 }
 
 .childsContainerHidden {
     display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
+    .childsMobile {
+        display: block;
+    }
+    .container {
+        background-image: none;
+        width: 140px;
+        height: 40px;
+        margin-left: 1px;
+        font-size: 1em;
+        background-color: var(--green);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: var(--greenMint);
+        }
+    }
     .childsContainerShow {
+        display: block;
         position: absolute;
+        z-index: 9999;
     }
 }

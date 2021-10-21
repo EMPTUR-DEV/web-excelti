@@ -7,24 +7,29 @@
     grid-row: 2;
     font-size: .8em;
     .nodeContainer {
-        min-width: 10%;
+        width: 100%;
         display: none;
         flex-direction: column;
         text-align: center;
         align-items: center;
-        z-index: 999;
+        z-index: 51;
         position: absolute;
-        top: 88px;
+        top: 0;
     }
     .openNodeContainer {
-        display: block;
+        @extend .animationBackground;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--green);
+        display: flex;
+        justify-content: center;
     }
     .bars {
-        height: 40px;
-        width: 40px;
-        background-color: var(--green);
+        height: 50px;
+        width: 50px;
         padding: 3px;
         cursor: pointer;
+        z-index: 100;
     }
 }
 
@@ -32,15 +37,69 @@
     .container {
         align-items: center;
         display: flex;
+        grid-column: 2;
+        grid-row: 2;
         .nodeContainer {
             display: flex;
             flex-direction: row;
             height: 100%;
             align-items: center;
+            justify-content: flex-end;
             position: static;
+            padding-right: 1px;
         }
         .bars {
             display: none;
         }
+        .openNodeContainer {
+            display: flex;
+            width: inherit;
+            height: inherit;
+            background-color: none;
+        }
+    }
+}
+
+.animationBackground {
+    background: linear-gradient(227deg, #4ca392, #0194da);
+    background-size: 400% 400%;
+    -webkit-animation: mobileNavAnimation 30s ease infinite;
+    -moz-animation: mobileNavAnimation 30s ease infinite;
+    animation: mobileNavAnimation 30s ease infinite;
+}
+
+@-webkit-keyframes mobileNavAnimation {
+    0% {
+        background-position: 91% 0%
+    }
+    50% {
+        background-position: 10% 100%
+    }
+    100% {
+        background-position: 91% 0%
+    }
+}
+
+@-moz-keyframes mobileNavAnimation {
+    0% {
+        background-position: 91% 0%
+    }
+    50% {
+        background-position: 10% 100%
+    }
+    100% {
+        background-position: 91% 0%
+    }
+}
+
+@keyframes mobileNavAnimation {
+    0% {
+        background-position: 91% 0%
+    }
+    50% {
+        background-position: 10% 100%
+    }
+    100% {
+        background-position: 91% 0%
     }
 }

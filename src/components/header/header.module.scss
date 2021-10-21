@@ -3,4 +3,6 @@
     min-height: 80px;
     background-color: #fff;
     display: grid;
+    position: fixed;
+    z-index: 50;
 }
