@@ -1,19 +1,25 @@
-import React from "react";
-import SpainFlag from "./spain-flag/spain-flag";
-import BritainFlag from "./britain-flag/britain-flag";
+import React,{ useContext,useState } from "react";
 import styles from "./flags.module.scss";
+//import { changeLang }  from "../../../translations/i18n";
+import { useTranslation } from 'react-i18next';
+
 
 const Flags = () => {
+    const { i18n } = useTranslation();
+    const flags =[ {flag:styles.spain,lenguage:'es'},{flag:styles.british,lenguage:'en'} ]
 
-const flags =[ <SpainFlag/>,<BritainFlag/> ]
- 
-return (
-    <div className={styles.container}>
-        {
-            flags.map(flag =>flag )
-        }
-    </div>
-)
+    return (
+        <div className={styles.container}>
+            {
+                flags.map(item =>(
+                    <div key={item.lenguage} 
+                    onClick={() =>(i18n.changeLanguage(item.lenguage))}
+                    className={item.flag}/>
+                )
+                )
+            }
+        </div>
+    )
 }
 
 export default Flags;
