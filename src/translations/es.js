@@ -6,4 +6,7 @@ export const TRANSLATIONS_ES = {
     publications: "Publicaciones",
     module: "Módulo {{count}}",
     contact: "CONTACTO",
+    homeTitle: "EXCELTI",
+    homeSubtitle: "Equipo de traductores e intérpretes comprometidos con la profesión.",
+    homeParagraph: "Dirigido por Olga Álvarez-Barr",
 };
