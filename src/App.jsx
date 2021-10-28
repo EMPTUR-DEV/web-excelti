@@ -1,17 +1,11 @@
 import './App.scss';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Home from './pages/home/home';
-import Banner from './components/header/banner/banner';
+import Router from './routes/routes';
 
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <Banner src={'header/home-banner.jpg'}/>
-        <Home/>
-        <Footer/>
+        <Router/>
     </div>
   );
 }

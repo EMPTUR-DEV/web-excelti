@@ -9,7 +9,7 @@ const NavBar = () => {
     const [ menu,setMenu ] = useState(false);
 
     useEffect(()=>{
-        setItems([{name: t("traduction"), link:'/', childrens:[]},
+        setItems([{name: t("traduction"), link:'/traduction', childrens:[]},
                 {name:t("training"), link:'/', childrens:[{name:t("module", { count: 1}),link:'/'},{name:t("module", { count: 2}),link:'/'},{name:t("module", { count: 3}),link:'/'}]},
                 {name:'E-learning', link:'/', childrens:[]},
                 {name:t("audiovisualServices"), link:'/', childrens:[]},
