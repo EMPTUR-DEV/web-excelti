@@ -1,0 +1,25 @@
+.show {
+    animation: show-item 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes show-item {
+    0% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    100% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes show-item {
+    0% {
+        -webkit-opacity: 0;
+        opacity: 0;
+    }
+    100% {
+        -webkit-opacity: 1;
+        opacity: 1;
+    }
+}

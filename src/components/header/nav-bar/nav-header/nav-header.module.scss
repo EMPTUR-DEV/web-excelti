@@ -2,7 +2,6 @@
     display: flex;
     width: 200px;
     height: 100px;
-    margin-left: 1px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -27,11 +26,10 @@
     }
     .container {
         background-image: none;
-        width: 140px;
-        height: 40px;
-        margin-left: 1px;
-        font-size: 1em;
-        background-color: var(--green);
+        width: 160px;
+        height: 60px;
+        font-size: 1.3em;
+        color: var(--green);
         cursor: pointer;
         display: flex;
         align-items: center;
