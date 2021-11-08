@@ -19,7 +19,8 @@ export const CircleContainer = styled.div`
         place-items:center;
         position: relative;
         cursor:pointer;
-        background-color:  var(--background) ;
+        background-color:white;
+        box-shadow: 0 0 0 100px inset var(--background);
         transition-property: width, height;
         transition:  0.3s ease-in;
         &:hover {
