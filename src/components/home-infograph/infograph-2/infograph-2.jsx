@@ -1,118 +1,88 @@
-import React from 'react'
-import './infograph-2.css'
+import React, {useState} from 'react'
+
 import {RiTranslate} from 'react-icons/ri'
-import {GrArticle}  from 'react-icons/gr'
+import {RiArticleLine}  from 'react-icons/ri'
 import {FiEdit3} from 'react-icons/fi'
 import {GiVideoConference} from 'react-icons/gi'
 import {BsHeadset} from 'react-icons/bs'
 import {IoIosPeople} from 'react-icons/io'
-
+import {GraphicContainer,Double,Single, CenterCircleContainer} from './infograph-2.styles'
+import Circle from './circle-infograph/circle-infograph'
 
 const InfoGraph2 = ({items}) => {
-  console.log(items)
+  
+  const large_circle_size = '200px';
+  const short_circle_size = '160px';
+  const colors = [ 'black',"#228855","#aaaa22",
+                  "purple","rgb(223, 149, 12)","#124e4e"];
+  const dots = [
+    "top:0px;left: 0px" ,
+    'top:0px;left: 0px',
+    "top:0px;left: 0px" ,
+    'top:0px;left: 0px',
+    "top:0px;left: 0px" ,
+    'top:0px;left: 0px',
+    ]
+  const box_shadows = [
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),250px 150px 0 6px var(--background)",
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),230px 150px 0 6px var(--background)",
+    "0px -20px 0 6px var(--background),0px 180px 0 4px var(--background),250px 160px 0 6px var(--background)",
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),200px 150px 0 6px var(--background)",
+    "0px -10px 0 6px var(--background),-20px 180px 0 4px var(--background),250px 150px 0 6px var(--background)",
+    "0px 30px 0 6px var(--background),-20px 130px 0 4px var(--background),250px 150px 0 6px var(--background)"
+  ]
+
     return (
-<div class="graphic-container">
+<GraphicContainer>
   
-  <div class="center-circles-container">
-    
+  <CenterCircleContainer>
+      <Single>
+        <Circle background={colors[0]} size={large_circle_size} 
+                 item = {items[0]}
+                box_shadows={box_shadows[0]} position_stats={dots[0]}
+                >
+                  <RiTranslate/>
+        </Circle>
+      </Single>
+      <Double> 
+        <Circle background={colors[1]} size={short_circle_size} 
+                item={items[1]} box_shadows={box_shadows[1]}
+                position_stats={dots[1]}
+                >
+                  <FiEdit3/>
+        </Circle>
+        <Circle background={colors[2]} size={large_circle_size} 
+                item={items[2]} box_shadows={box_shadows[2]}
+                position_stats={dots[2]}
+                >
+                  <RiArticleLine/>
+        </Circle>
+      </Double>
+      <Double>
+        <Circle background={colors[3]} size={short_circle_size} 
+                item={items[3]} box_shadows={box_shadows[3]}
+                position_stats={dots[3]}
+                >
+                <BsHeadset/>
+        </Circle>
+        <Circle background={colors[4]} size={large_circle_size} 
+                item={items[4]} box_shadows={box_shadows[4]}
+                position_stats={dots[4]}
+                >
+                  <GiVideoConference/>
+        </Circle>
+      </Double>
+      <Single>
+        <Circle background={colors[5]} size={large_circle_size} 
+                item={items[5]} box_shadows={box_shadows[5]}
+                position_stats={dots[5]}
+                >
+                  <IoIosPeople/>
+        </Circle>
+      </Single>
+      </CenterCircleContainer>
+  </GraphicContainer>
 
-    <div class="single">
-      <div class="circle one">
-        <div class="dot"></div>
-        <div class="icon">
-        <i class="far fa-building"><RiTranslate/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[0].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="double">
-      <div class="circle two">
-      
-        <div class="icon">
-          <i class="far fa-building"><FiEdit3/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[1].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-        </div>
-      <div class="circle three">
-        <div class="icon">
-          <i class="far fa-building"><GiVideoConference/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[2].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="double">
-      <div class="circle four">
-        <div class="dot"></div>
-        <div class="icon">
-          <i class="far fa-building"><BsHeadset/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[3].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-        </div>
-      <div class="circle five">
-        <div class="icon">
-        <i class="far fa-building"><IoIosPeople/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[4].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="single">
-      <div class="circle six">
-        <div class="dot"></div>
-        <div class="icon">
-        <i class="far fa-building" ><GrArticle/></i>
-        </div>
-        <div class="content-container">
-          <div class="line"></div>
-          <h2>{items[5].name}</h2>
-          <div class="content">
-            <h3>option infographic</h3>
-            <p>Texto de la sección</p>
-          </div>
-        </div>
-        </div>
-    </div>
-    
-  </div>
-  
-</div>
     )
 }
 
