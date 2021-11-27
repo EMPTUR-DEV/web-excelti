@@ -23,11 +23,12 @@ export const CircleContainer = styled.div`
         box-shadow: 0 0 0 100px inset var(--background);
         transition-property: width, height;
         transition:  0.3s ease-in;
+        
         &:hover {
             background-color: white;
             box-shadow: 0 0 0 5px inset var(--background);
-             width: calc(var(--size)*1.2);
-                height: calc(var(--size)*1.2);
+             /* width: calc(var(--size)*1.2);
+                height: calc(var(--size)*1.2); */
         };
     
     .dot{
@@ -57,7 +58,9 @@ export const CircleContainer = styled.div`
         
         .icon{
             position: absolute;
-            
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
             i {
                 
                 font-size: 3.5rem;
@@ -67,12 +70,13 @@ export const CircleContainer = styled.div`
                     'white;'
             };
             }
-            span{
+            h3{
+                text-align:center;
                 ${({item_active})=>
                     item_active? 'font-size: 1.2rem;opacity: 100%; display:flex;' : 
                     'opacity: ;display:none;font-size:0.3rem;'
                 }
-                width:150px;
+                
                 padding: 0;
                 margin:0 0 10px 0;
                 
