@@ -9,12 +9,12 @@ const NavBar = () => {
     const [ menu,setMenu ] = useState(false);
 
     useEffect(()=>{
-        setItems([{name: t("traduction"), link:'/traduction', childrens:[]},
-                {name:t("training"), link:'/', childrens:[{name:t("module", { count: 1}),link:'/'},{name:t("module", { count: 2}),link:'/'},{name:t("module", { count: 3}),link:'/'}]},
-                {name:'E-learning', link:'/', childrens:[]},
-                {name:t("audiovisualServices"), link:'/', childrens:[]},
-                {name:t("ourProfessionals"), link:'/', childrens:[]},
-                {name:t("publications"), link:'/', childrens:[{name:'Home',link:'/'}]},
+        setItems([{name: t("traduction"), link:'/traduction'},
+                {name:t("training"), link:'/'},
+                {name:'E-learning', link:'/'},
+                {name:t("audiovisualServices"), link:'/'},
+                {name:t("ourProfessionals"), link:'/'},
+                {name:t("publications"), link:'/'},
             ]);
     },[i18n.language]);
 

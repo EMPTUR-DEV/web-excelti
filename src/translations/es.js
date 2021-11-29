@@ -9,4 +9,14 @@ export const TRANSLATIONS_ES = {
     homeTitle: "EXCELTI",
     homeSubtitle: "Equipo de traductores e intérpretes comprometidos con la profesión.",
     homeParagraph: "Dirigido por Olga Álvarez-Barr",
+    tecnic: "Técnica:",
+    tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos",
+    cientific: "Científica:",
+    cientificParagraph: " Resúmenes, protocolos, informes, presentaciones.",
+    comercial: "Comercial:",
+    comercialParagraph: " Contratos, poderes, estatutos, balances.",
+    public: "Pública:",
+    publicParagraph: " Documentación personal, programas de estudios, certificados analíticos, diplomas, documentación judicial.",
+    oral: "Oral:",
+    oralParagraph: " Versión oral (grabada o in situ) de material escrito."
 };
