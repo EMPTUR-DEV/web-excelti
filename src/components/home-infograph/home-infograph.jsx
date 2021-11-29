@@ -26,12 +26,12 @@ const HomeInfograph = (props) => {
     useEffect(()=>{
         setItems(
             [
-            {name:'Traducción'},
-            {name:'Capacitación'},
-            {name:'E-learning'},
-            {name:'Servicios audiovisuales'},
-            {name:'Nuestros profesionales'},
-            {name:'Publicaciones'}
+            {name:'Traducción',key:0},
+            {name:'Capacitación',key:1},
+            {name:'E-learning',key:2},
+            {name:'Servicios audiovisuales',key:3},
+            {name:'Nuestros profesionales',key:4},
+            {name:'Publicaciones',key:5}
             ]
             );
             console.log(items)
