@@ -35,6 +35,7 @@ const InfoGraph2 = ({items}) => {
 
   const [showInfo,setShowInfo] = useState(false)
   const [infoToShow,setInfoToShow] = useState('')
+  const [enterButtonColor,setEnterButtonColor] = useState('#338')
 
   const setInfoItem = (item)=>{
     setInfoToShow(item)
@@ -44,13 +45,14 @@ const InfoGraph2 = ({items}) => {
     return (
 <GraphicContainer>
   
-  <BoardInfo setShowInfo={setShowInfo}  active = {showInfo} info={infoToShow} /> 
+  <BoardInfo enterButtonColor = {enterButtonColor} setShowInfo={setShowInfo}  active = {showInfo} info={infoToShow} /> 
 
   <CenterCircleContainer>
       <Single >
         <Circle background={colors[0]} size={large_circle_size} 
                 item = {items[0]} 
                 setInfoItem= {setInfoItem}
+                setEnterButtonColor = {setEnterButtonColor}
                 box_shadows={box_shadows[0]} position_stats={dots[0]}
                 >
                   <RiTranslate/>
@@ -60,6 +62,7 @@ const InfoGraph2 = ({items}) => {
         <Circle background={colors[1]} size={short_circle_size} 
                 item={items[1]} box_shadows={box_shadows[1]}
                 position_stats={dots[1]}
+                setEnterButtonColor = {setEnterButtonColor}
                 setInfoItem= {setInfoItem}
                 >
                   <FiEdit3/>
@@ -68,6 +71,7 @@ const InfoGraph2 = ({items}) => {
                 item={items[2]} box_shadows={box_shadows[2]}
                 position_stats={dots[2]}
                 setInfoItem= {setInfoItem}
+                setEnterButtonColor = {setEnterButtonColor}
                 >
                   <RiArticleLine/>
         </Circle>
@@ -76,6 +80,7 @@ const InfoGraph2 = ({items}) => {
         <Circle background={colors[3]} size={short_circle_size} 
                 item={items[3]} box_shadows={box_shadows[3]}
                 position_stats={dots[3]}
+                setEnterButtonColor = {setEnterButtonColor}
                 setInfoItem= {setInfoItem}
                 >
                 <BsHeadset/>
@@ -83,6 +88,7 @@ const InfoGraph2 = ({items}) => {
         <Circle background={colors[4]} size={large_circle_size} 
                 item={items[4]} box_shadows={box_shadows[4]}
                 position_stats={dots[4]}
+                setEnterButtonColor = {setEnterButtonColor}
                 setInfoItem= {setInfoItem}
                 >
                   <GiVideoConference/>
@@ -93,6 +99,7 @@ const InfoGraph2 = ({items}) => {
                 item={items[5]} box_shadows={box_shadows[5]}
                 position_stats={dots[5]}
                 setInfoItem= {setInfoItem}
+                setEnterButtonColor = {setEnterButtonColor}
                 >
                   <IoIosPeople/>
         </Circle>
