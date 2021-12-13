@@ -11,11 +11,10 @@ const Circle = ({size,box_shadows,position_stats,item,background,children,setInf
                             box_shadows={box_shadows} position_stats={position_stats}
                             onMouseLeave={()=>setItem_active(!item_active)} 
                             onMouseEnter={()=>setItem_active(!item_active)}
-                            onClick = {()=>{
-                                
-                                    setInfoItem(item.name)
-                                    setEnterButtonColor(background)
-                                
+                            onClick = {()=>{    
+                                    window.location.replace(item.link)
+                                    /* setInfoItem(item.name)
+                                    setEnterButtonColor(background)  */
                                 }
                              }
                             >

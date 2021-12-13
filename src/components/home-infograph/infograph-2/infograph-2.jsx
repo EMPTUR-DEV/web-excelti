@@ -37,6 +37,8 @@ const InfoGraph2 = ({items}) => {
   const [infoToShow,setInfoToShow] = useState('')
   const [enterButtonColor,setEnterButtonColor] = useState('#338')
 
+
+
   const setInfoItem = (item)=>{
     setInfoToShow(item)
     setShowInfo(!showInfo)   

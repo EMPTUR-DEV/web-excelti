@@ -31,7 +31,7 @@ export const CenterCircleContainer =styled.div`
 export const Single = styled.div`
 
     gap: 20px;
-
+    
         @media (max-width: 992px) {
             position: relative;
             margin-bottom: 50px;
@@ -44,7 +44,7 @@ export const Single = styled.div`
 export const Double = styled.div`
         display: flex;
         flex-direction: column;
-        z-index:10;
+        
         gap: 20px;
         
         &:nth-child(even) {

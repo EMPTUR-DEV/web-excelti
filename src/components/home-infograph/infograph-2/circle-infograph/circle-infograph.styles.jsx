@@ -13,7 +13,6 @@ export const CircleContainer = styled.div`
         
         width: var(--size);
         height: var(--size);
-        z-index:2000;
         border-radius: 50%;
         display: grid;
         place-items:center;
@@ -22,7 +21,12 @@ export const CircleContainer = styled.div`
         background-color:white;
         box-shadow: 0 0 0 100px inset var(--background);
         transition-property: width, height;
-        transition:  0.3s ease-in;
+        transition:  2s ease-in;
+
+        @media (max-width: 992px) {
+            width: 200px;
+            heigth: 200px;
+        };  
         
         &:hover {
             background-color: white;
@@ -30,7 +34,23 @@ export const CircleContainer = styled.div`
              /* width: calc(var(--size)*1.2);
                 height: calc(var(--size)*1.2); */
         };
-    
+        &:before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        z-index: -10;
+        height: 100%;
+        border-radius: 100%;
+        top:0;
+        left: 0;
+        transition: all 2s;
+        ${({item_active})=> item_active? 'box-shadow:  0 0 100vw 10000px rgba(100,100,100,0.5)' :
+                                        'box-shadow:  0 0 0 0 rgba(100,100,100,0.5)'};    
+        
+        }
+            
+    }
+
     .dot{
             ${({position_stats})=>
                 position_stats?
@@ -41,7 +61,7 @@ export const CircleContainer = styled.div`
         
             width: 2px;height: 2px;
             position:absolute ;
-            z-index:-10;
+            
             background: ${({item_active})=> !item_active ? 'var(--background)' : 'white'};
             opacity: ${({item_active})=> item_active? '100%': '0%'};
             border-radius: 50%;
