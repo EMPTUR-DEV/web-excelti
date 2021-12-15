@@ -13,7 +13,7 @@ const NavBar = () => {
                 {name:t("training"), link:'/'},
                 {name:'E-learning', link:'/'},
                 {name:t("audiovisualServices"), link:'/'},
-                {name:t("ourProfessionals"), link:'/'},
+                {name:t("ourProfessionals"), link:'/professionals'},
                 {name:t("publications"), link:'/'},
             ]);
     },[i18n.language]);
