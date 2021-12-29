@@ -33,6 +33,8 @@ export const Single = styled.div`
     gap: 20px;
     
         @media (max-width: 992px) {
+            row-gap:50px;
+            column-gap:0;
             position: relative;
             margin-bottom: 50px;
             width: 100%;
@@ -52,7 +54,9 @@ export const Double = styled.div`
         }
         @media (max-width: 992px) {
             position: relative;
-            margin-bottom: 100px;
+            row-gap:50px;
+            column-gap:0;
+            margin-bottom: 50px;
             flex-direction: column;
             width: 100%;
             height: 100%;

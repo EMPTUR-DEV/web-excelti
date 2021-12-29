@@ -23,10 +23,6 @@ export const CircleContainer = styled.div`
         transition-property: width, height;
         transition:  2s ease-in;
 
-        @media (max-width: 992px) {
-            width: 200px;
-            heigth: 200px;
-        };  
         
         &:hover {
             background-color: white;
@@ -43,9 +39,9 @@ export const CircleContainer = styled.div`
         border-radius: 100%;
         top:0;
         left: 0;
-        transition: all 2s;
-        ${({item_active})=> item_active? 'box-shadow:  0 0 100vw 10000px rgba(100,100,100,0.5)' :
-                                        'box-shadow:  0 0 0 0 rgba(100,100,100,0.5)'};    
+        transition: all 1s;
+        ${({item_active})=> item_active? 'box-shadow:  0 0 100vw 10000px rgba(200,200,200,0.5)' :
+                                        'box-shadow:  0 0 0 0 rgba(200,200,200,0.5)'};    
         
         }
             
@@ -109,9 +105,15 @@ export const CircleContainer = styled.div`
             ${({posicion_mobile})=>
             posicion_mobile ?
             posicion_mobile :
-            `top: 30px;
-            left: 30px;
+            `top: 0px;
+            left: 0px;
             margin-bottom: 50px`
         };  
         }
+        @media (max-width: 992px) {
+            width: 200px;
+            height: 200px;
+            margin:0;
+        };  
+        
 `
