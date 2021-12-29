@@ -1,5 +1,5 @@
 import React from 'react'
-import CardProfessional from './card-professional/card-professional'
+import CardProfessional from '../../components/card-professional/card-professional'
 import './professionals.scss'
 
 const Professionals = () => {
