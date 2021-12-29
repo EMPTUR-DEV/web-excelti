@@ -1,13 +1,14 @@
 import React from 'react'
 import {CardProfessionalContainer,
-        ProfessionalImageContainer,
+        
         ProfessionalDataContainer,
         ProfessionalImage,
         NameTitle,
         ProfessionTitle,
         ContactBox,
         ProfessionalSocialNetworksContainer,
-        SocialIconContainer
+        SocialIconContainer,
+        CvLink
     } from './card-professional.styles'
 
 import {SocialIcon} from 'react-social-icons'
@@ -15,11 +16,11 @@ import {SocialIcon} from 'react-social-icons'
 const CardProfessional = () => {
     return (
         <CardProfessionalContainer>
-            <ProfessionalImageContainer>
-                <ProfessionalImage>
+            
+            <ProfessionalImage>
                     <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg" alt="" />
                 </ProfessionalImage>
-            </ProfessionalImageContainer>
+            
             <ProfessionalDataContainer>
                 <NameTitle>Lucas Turco</NameTitle>
                 <ProfessionTitle><span>Profesión:</span> Poseidonearse a Artemisa</ProfessionTitle>
@@ -37,6 +38,12 @@ const CardProfessional = () => {
                         </SocialIconContainer>
                         <SocialIconContainer>
                             <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
+                        </SocialIconContainer>
+                        <SocialIconContainer>
+                            <SocialIcon  url="" network='email' fgColor="#fff"/>
+                        </SocialIconContainer>
+                        <SocialIconContainer>
+                            <CvLink><span>CV</span></CvLink>
                         </SocialIconContainer>
                     </ProfessionalSocialNetworksContainer>
                 </ContactBox>
