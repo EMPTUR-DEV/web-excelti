@@ -81,10 +81,11 @@ export const CircleContainer = styled.div`
                 
                 font-size: 3.5rem;
                 color: ${({item_active})=>
-                    item_active ? 
+                    item_active  ? 
                     'black;':
                     'white;'
             };
+
             }
             h3{
                 text-align:center;

@@ -10,6 +10,9 @@ import {GraphicContainer,Double,Single, CenterCircleContainer} from './infograph
 import Circle from './circle-infograph/circle-infograph'
 import BoardInfo from './board-info/board-info'
 
+import MagicComponentActive from '../../shared/magic-component/magic-component-active'
+import MagicComponent from '../../shared/magic-component/magic-component'
+
 const InfoGraph2 = ({items}) => {
   
   const large_circle_size = '200px';
@@ -51,14 +54,16 @@ const InfoGraph2 = ({items}) => {
 
   <CenterCircleContainer>
       <Single >
-        <Circle background={colors[0]} size={large_circle_size} 
-                item = {items[0]} 
-                setInfoItem= {setInfoItem}
-                setEnterButtonColor = {setEnterButtonColor}
-                box_shadows={box_shadows[0]} position_stats={dots[0]}
-                >
-                  <RiTranslate/>
-        </Circle>
+        
+          <Circle background={colors[0]} size={large_circle_size} 
+                  item = {items[0]} 
+                  setInfoItem= {setInfoItem}
+                  setEnterButtonColor = {setEnterButtonColor}
+                  box_shadows={box_shadows[0]} position_stats={dots[0]}
+                  >
+                    <RiTranslate/>
+          </Circle>
+        
       </Single>
       <Double> 
         <Circle background={colors[1]} size={short_circle_size} 

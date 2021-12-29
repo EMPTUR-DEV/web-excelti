@@ -1,10 +1,14 @@
 import React, {useState} from 'react'
 import {CircleContainer} from './circle-infograph.styles'
 import {Icon,Line, ContentContainer} from '../infograph-2.styles'
+import MagicComponent from '../../../shared/magic-component/magic-component';
+
+
 
 const Circle = ({size,box_shadows,position_stats,item,background,children,setInfoItem,setEnterButtonColor}) => {
     const [item_active, setItem_active] = useState(false);
     return (
+        <MagicComponent>
             <CircleContainer background={background} size={size} 
                             item_active={item_active}
                             
@@ -33,7 +37,7 @@ const Circle = ({size,box_shadows,position_stats,item,background,children,setInf
                 </div>
                 </ContentContainer>
             </CircleContainer>
-
+        </MagicComponent >
     )
 }
 
