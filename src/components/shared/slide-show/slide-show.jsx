@@ -36,15 +36,6 @@ const Slideshow = ({ time,items,wide }) => {
             next();
         }, duration);
 
-        slideshow.current.addEventListener('mouseover',()=>{
-            clearInterval(intervalSlideshow.current);
-        });
-
-        slideshow.current.addEventListener('mouseleave',()=>{
-            intervalSlideshow.current = setInterval(()=>{
-                next();
-            }, duration);
-        });
     },[]);
 
     return (
@@ -99,22 +90,7 @@ const TextSlide = styled.div`
     position:absolute;
     bottom:0;
     overflow:auto;
-    @media (max-width: 700px) {
-        position:relative;
-        background:#000;
-    }
-    ::-webkit-scrollbar {
-        width: 1px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background-color: darkgrey;
-      outline: 1px solid slategrey;
-    }
+    font-size:80%;
 `;
 
 export default Slideshow;
