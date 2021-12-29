@@ -10,8 +10,6 @@ import {GraphicContainer,Double,Single, CenterCircleContainer} from './infograph
 import Circle from './circle-infograph/circle-infograph'
 import BoardInfo from './board-info/board-info'
 
-import MagicComponentActive from '../../shared/magic-component/magic-component-active'
-import MagicComponent from '../../shared/magic-component/magic-component'
 
 const InfoGraph2 = ({items}) => {
   
