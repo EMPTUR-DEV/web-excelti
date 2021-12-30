@@ -1,6 +1,6 @@
-import styles from './banner.module.scss';
+import styles from './nav-mobile.module.scss';
 
-const Banner = ({src,title}) =>{
+const NavMobile = ({src,title}) =>{
 
     return (<div className={styles.container}>
         <img className={styles.banner} alt='banner' src={src} loading="lazy"/>
@@ -10,4 +10,4 @@ const Banner = ({src,title}) =>{
     </div>)
 }
 
-export default Banner;
+export default NavMobile;

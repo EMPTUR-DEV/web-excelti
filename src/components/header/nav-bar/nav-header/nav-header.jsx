@@ -1,7 +1,7 @@
 import styles from './nav-header.module.scss';
-
+import NavMobile from '../nav-mobile/nav-mobile';
 const NavHeader = ({data})=>{
-  const { name,link } = data;
+  const { name,link,image } = data;
 
   const handleLink = (linked) => {
     if(linked) window.location.replace(linked);
@@ -9,7 +9,10 @@ const NavHeader = ({data})=>{
 
   const linkedItem = (name,linked) =>{
     return (<div className={styles.container} onClick={()=>handleLink(linked)}>
-        {name}
+        <span className={styles.nav}>{name}</span>
+        <div className={styles.banner}>
+          <NavMobile src={image} title={name}/>
+        </div>
       </div>
     )
   }
