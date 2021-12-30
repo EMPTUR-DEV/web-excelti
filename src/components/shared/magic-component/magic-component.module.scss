@@ -2,6 +2,10 @@
     animation: show-item 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.notShow {
+    opacity: 0;
+}
+
 @-webkit-keyframes show-item {
     0% {
         -webkit-opacity: 0;

@@ -19,9 +19,9 @@ const TraductionSlider = (props) => {
 export default TraductionSlider;
 
 const theme = {
-    violet:`#6889ff`,
-    ocean:`#33ccfc`,
-    sunset:`#ff68de`
+  violet: "linear-gradient(to bottom right,#6889ff, #c668ff);",
+    ocean:"linear-gradient(to bottom right,#5b7fff, #33ccfc);",
+    sunset:"linear-gradient(to bottom right,#ff9e68, #ff68de);"
 };
 
 const PrincipalContainer = styled.div`

@@ -10,12 +10,15 @@ export const TRANSLATIONS_EN = {
     homeSubtitle: "Traductor's team and Interpreters committed to the profession.",
     tecnic: "Técnica:",
     tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos",
-    cientific: "Científica:",
-    cientificParagraph: " Resúmenes, protocolos, informes, presentaciones.",
+    cientific: "Cientific:",
+    cientificParagraph: " Resumes, protocols, informs, presentations.",
     comercial: "Comercial:",
-    comercialParagraph: " Contratos, poderes, estatutos, balances.",
-    public: "Pública:",
-    publicParagraph: " Documentación personal, programas de estudios, certificados analíticos, diplomas, documentación judicial.",
+    comercialParagraph: " Contratos, legal powers, statuts, balances.",
+    public: "Public:",
+    publicParagraph: " Personal documentation, studies program, analitics certificates, diploms, juridic documentation.",
     oral: "Oral:",
-    oralParagraph: " Versión oral (grabada o in situ) de material escrito."
+    oralParagraph: " Versión oral (grabada o in situ) de material escrito.",
+    translatedBooks: "Transalated Books",
+    otherPublishedTranslates: "Other Published Translates",
+    teamTranslates: 'Gestión de proyectos de traducción en equipo'
 };

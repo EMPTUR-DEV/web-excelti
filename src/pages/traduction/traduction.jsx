@@ -9,7 +9,7 @@ const Traduction = () => {
     const { t } = useTranslation();
     const listTraductions = {
         color:'violet',
-        title:'Libros traducidos',
+        title:t("translatedBooks"),
         list:[{key:1,name:'Días de invierno',url:'traductions/dias-de-invierno.jpg'},
             {key:2,name:'Corta madera y ve a buscar agua',url:'traductions/corta.jpg'},
             {key:3,name:'Cuando la comida es tu enemiga',url:'traductions/cuando-la-comida-es-tu-enemiga.jpg'},
@@ -24,7 +24,7 @@ const Traduction = () => {
     
     const othersTraductions = {
         color:'ocean',
-        title:'Otras traducciones publicadas',
+        title:t("otherPublishedTranslates"),
         list:[{key:1,name:'Mealtime Memo Series',url:'traductions/mealtime-memo.jpg'},
             {key:2,name:'Justice of Justices',url:'traductions/justice-of-justices.jpg'},
             {key:3,name:'Líneas directrices de la OCDE para empresas multinacionales',url:'traductions/lineas-directrices.jpg'}
@@ -32,7 +32,7 @@ const Traduction = () => {
 
     const projectTraductions = {
         color:'sunset',
-        title:'Gestión de proyectos de traducción en equipo',
+        title:t("teamTranslates"),
         list:[{key:1,name:'Diana, su verdadera historia',url:'traductions/diana-verdadera-historia.jpg'},
     {key:2,name:'Parques Nacionales de Sudamérica',url:'traductions/south-america.jpg'},
     {key:3,name:'50 cosas que Ud. puede hacer para salvar la Tierra',url:'traductions/50-cosas-para-salvar-la-tie.jpg'},

@@ -18,5 +18,8 @@ export const TRANSLATIONS_ES = {
     public: "Pública:",
     publicParagraph: " Documentación personal, programas de estudios, certificados analíticos, diplomas, documentación judicial.",
     oral: "Oral:",
-    oralParagraph: " Versión oral (grabada o in situ) de material escrito."
+    oralParagraph: " Versión oral (grabada o in situ) de material escrito.",
+    translatedBooks: "Libros traducidos",
+    otherPublishedTranslates: "Otras traducciones publicadas",
+    teamTranslates: 'Gestión de proyectos de traducción en equipo'
 };

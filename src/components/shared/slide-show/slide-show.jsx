@@ -4,12 +4,12 @@ import styled from 'styled-components';
 const Slideshow = ({ time,items,wide }) => {
     
     const [ duration, setDuration ] = useState(((time || 1)*1000));
+    const [ childrens, setChildrens ] = useState([]);
 
     const slideshow = useRef(null);
     const intervalSlideshow = useRef(null);
 
     const next = () => {
-        const childrens = slideshow.current.children;
         if(childrens.length > 0) {
             const [ firstElement,...restElements ] = childrens;
 
@@ -32,6 +32,8 @@ const Slideshow = ({ time,items,wide }) => {
     };
     
     useEffect(()=>{
+        setChildrens(slideshow.current.children);
+
         intervalSlideshow.current = setInterval(()=>{
             next();
         }, duration);
