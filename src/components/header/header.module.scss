@@ -1,9 +1,15 @@
 .headerContainer {
     width: 100%;
     min-height: 80px;
-    background-color: #fff;
+    background-color: var(--white);
     display: grid;
     position: fixed;
     z-index: 50;
-    box-shadow: 1px 1px 7px var(--black);
+}
+
+@media (min-width: 1200px) {
+    .headerContainer {
+        background-color: transparent;
+        position: absolute;
+    }
 }

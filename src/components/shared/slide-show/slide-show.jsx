@@ -4,14 +4,13 @@ import styled from 'styled-components';
 const Slideshow = ({ time,items,wide }) => {
     
     const [ duration, setDuration ] = useState(((time || 1)*1000));
-    const [ childrens, setChildrens ] = useState([]);
 
     const slideshow = useRef(null);
     const intervalSlideshow = useRef(null);
 
     const next = () => {
-        if(childrens.length > 0) {
-            const [ firstElement,...restElements ] = childrens;
+        if(slideshow?.current?.children?.length > 0) {
+            const [ firstElement,...restElements ] = slideshow.current.children;
 
             slideshow.current.style.transition = `${duration}ms ease-out all`;
             
@@ -32,8 +31,6 @@ const Slideshow = ({ time,items,wide }) => {
     };
     
     useEffect(()=>{
-        setChildrens(slideshow.current.children);
-
         intervalSlideshow.current = setInterval(()=>{
             next();
         }, duration);

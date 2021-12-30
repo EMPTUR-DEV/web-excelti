@@ -4,7 +4,7 @@ import Info from '../../components/shared/info/info';
 import { useTranslation } from "react-i18next";
 import Slideshow from './../../components/shared/slide-show/slide-show.jsx';
 import TraductionSlider from '../../components/traduction-slider/traduction-sliders.jsx';
-
+import Banner from '../../components/header/banner/banner';
 const Traduction = () => {
     const { t } = useTranslation();
     const listTraductions = {
@@ -71,8 +71,8 @@ const Traduction = () => {
     
     return (
         <div className={styles.traductionContainer}>
+            <Banner src={'header/traduction-page.jpg'} title={t("traduction").toUpperCase()} />
             <Info
-            title={t("traduction").toUpperCase()} 
             paragraph={paragraph()}
             />
             <div className={styles.traductions}>

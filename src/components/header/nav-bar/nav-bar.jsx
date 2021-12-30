@@ -20,7 +20,7 @@ const NavBar = () => {
 
    const renderMenu=(items)=>{
         return items.map(item => {
-            return <NavHeader data={item}/>
+            return <NavHeader data={item} key={item.name}/>
         });
     }
 

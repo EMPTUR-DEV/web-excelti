@@ -1,10 +1,12 @@
 import styles from './banner.module.scss';
 
-const Banner = ({src}) =>{
+const Banner = ({src,title}) =>{
 
     return (<div className={styles.container}>
-        <img className={styles.banner} alt='banner' src={src}/>
-        <div className={styles.cover}/>
+        <img className={styles.banner} alt='banner' src={src} loading="lazy"/>
+        <div className={styles.cover}>
+            {title}
+        </div>
     </div>)
 }
 
