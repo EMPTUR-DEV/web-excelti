@@ -1,6 +1,20 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
-
+const pulse = (pulseColor) => keyframes` 
+    
+    0% {
+        -moz-box-shadow: 0 0 0 0 ${pulseColor['initial']};
+        box-shadow: 0 0 0 0 ${pulseColor['initial']};
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 100px ${pulseColor['mid']};
+        box-shadow: 0 0 0 100px ${pulseColor['mid']};
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 ${pulseColor['mid']};
+        box-shadow: 0 0 0 0 ${pulseColor['mid']};
+    }
+`
 
 export const CircleContainer = styled.div`
         
@@ -21,12 +35,14 @@ export const CircleContainer = styled.div`
         background-color:white;
         box-shadow: 0 0 0 100px inset var(--background);
         transition-property: width, height;
-        transition:  2s ease-in;
-
+        transition:  1s ease-in;
         
+
+
         &:hover {
             background-color: white;
-            box-shadow: 0 0 0 5px inset var(--background);
+            box-shadow: 0 0 0 0 inset var(--background);
+            box-shadow: 0px 0px 10px 0px var(--background);
              /* width: calc(var(--size)*1.2);
                 height: calc(var(--size)*1.2); */
         };
@@ -39,13 +55,14 @@ export const CircleContainer = styled.div`
         border-radius: 100%;
         top:0;
         left: 0;
-        transition: all 1s;
-        ${({item_active})=> item_active? 'box-shadow:  0 0 100vw 10000px rgba(200,200,200,0.5)' :
-                                        'box-shadow:  0 0 0 0 rgba(200,200,200,0.5)'};    
         
-        }
+        animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor): 'none'} ;
+        animation-duration: ${({item_active})=> item_active?  '4s': 'none'}; 
+        animation-iteration-count:${({item_active})=> item_active?  '1': 'none'} ;
             
+                /* rgba(100,100,100,1) */
     }
+
 
     .dot{
             ${({position_stats})=>
@@ -82,7 +99,7 @@ export const CircleContainer = styled.div`
                 font-size: 3.5rem;
                 color: ${({item_active})=>
                     item_active  ? 
-                    'black;':
+                    'var(--background);':
                     'white;'
             };
 
@@ -90,7 +107,7 @@ export const CircleContainer = styled.div`
             h3{
                 text-align:center;
                 ${({item_active})=>
-                    item_active? 'font-size: 1.2rem;opacity: 100%; display:flex;' : 
+                    item_active? 'font-size: 1.2rem;opacity: 100%; display:flex;color: var(--background);' : 
                     'opacity: ;display:none;font-size:0.3rem;'
                 }
                 
@@ -118,3 +135,5 @@ export const CircleContainer = styled.div`
         };  
         
 `
+
+

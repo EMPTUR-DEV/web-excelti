@@ -5,13 +5,15 @@ import MagicComponent from '../../../shared/magic-component/magic-component';
 
 
 
-const Circle = ({size,box_shadows,position_stats,item,background,children,setInfoItem,setEnterButtonColor}) => {
+const Circle = ({size,box_shadows,position_stats,item,background,children,setInfoItem,setEnterButtonColor,pulseColor}) => {
     const [item_active, setItem_active] = useState(false);
+
+
     return (
         
             <CircleContainer background={background} size={size} 
                             item_active={item_active}
-                            
+                            pulseColor={pulseColor}
                             box_shadows={box_shadows} position_stats={position_stats}
                             onMouseLeave={()=>setItem_active(!item_active)} 
                             onMouseEnter={()=>setItem_active(!item_active)}

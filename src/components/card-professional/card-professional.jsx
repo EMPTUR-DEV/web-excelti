@@ -23,11 +23,11 @@ const CardProfessional = () => {
             
             <ProfessionalDataContainer>
                 <NameTitle>Lucas Turco</NameTitle>
-                <ProfessionTitle><span>Profesión:</span> Poseidonearse a Artemisa</ProfessionTitle>
+                <ProfessionTitle><span>Profesión:</span> Lorem ipsum dolor sit amet consectetur adipisicing </ProfessionTitle>
                 <ContactBox>
                     <span>Contacto</span>
                     <ProfessionalSocialNetworksContainer>
-                        <SocialIconContainer>
+                      {/*   <SocialIconContainer>
                             <SocialIcon url="https://facebook.com/" network='facebook'  fgColor="#fff"/>
                         </SocialIconContainer>
                         <SocialIconContainer>
@@ -35,13 +35,13 @@ const CardProfessional = () => {
                         </SocialIconContainer>
                         <SocialIconContainer>
                             <SocialIcon  url="https://instagram.com/" network='instagram' fgColor="#fff"/>
-                        </SocialIconContainer>
+                        </SocialIconContainer> */}
                         <SocialIconContainer>
                             <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
                         </SocialIconContainer>
-                        <SocialIconContainer>
+                       {/*  <SocialIconContainer>
                             <SocialIcon  url="" network='email' fgColor="#fff"/>
-                        </SocialIconContainer>
+                        </SocialIconContainer> */}
                         <SocialIconContainer>
                             <CvLink><span>CV</span></CvLink>
                         </SocialIconContainer>
