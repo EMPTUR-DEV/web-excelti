@@ -10,15 +10,13 @@ const NavHeader = ({data})=>{
   const linkedItem = (name,linked) =>{
     return (<div className={styles.container} onClick={()=>handleLink(linked)}>
         <span className={styles.nav}>{name}</span>
-        <div className={styles.banner}>
           <NavMobile src={image} title={name}/>
-        </div>
       </div>
     )
   }
 
   return (
-    <div>
+    <div className={styles.childList}>
       {linkedItem(name,link)}
     </div>
   );

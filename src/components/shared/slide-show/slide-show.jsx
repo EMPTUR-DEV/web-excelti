@@ -61,11 +61,13 @@ const PrincipalContainer = styled.div`
 `;
 
 const SlideshowContainer = styled.div`
+border-radius:10px;
     display: flex;
     flex-wrap:nowrap;
 `;
 
 const Slide = styled.div`
+border-radius:10px;
     min-width:100%;
     overflow:hidden;
     transition: .3 ease all;

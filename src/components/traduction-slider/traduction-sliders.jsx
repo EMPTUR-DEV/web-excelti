@@ -23,6 +23,11 @@ const theme = {
     ocean:"linear-gradient(to bottom right,#5b7fff, #33ccfc);",
     sunset:"linear-gradient(to bottom right,#ff9e68, #ff68de);"
 };
+const shadow = {
+    violet: "rgb(104,137,255, .8)",
+      ocean:"rgb(91, 127, 255, .8)",
+      sunset:"rgb(255, 104, 222, .8)"
+  };
 
 const PrincipalContainer = styled.div`
     position: relative;
@@ -43,12 +48,14 @@ const TitleTraduction = styled.div`
     border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
     background:${props => theme[props.color]};
     width: -webkit-fill-available;
+    box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
 `;
     
 const Books = styled.div`
     position:absolute;
     bottom:8%;
-    box-shadow: 1px 1px 20px var(--black);
+    border-radius:10px;
+    box-shadow: 10px 10px #fff,20px 20px rgba(0,0,0, .13);
 `;
 
 

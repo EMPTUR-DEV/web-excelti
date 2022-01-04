@@ -24,14 +24,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1px;
-        gap: 1px;
-        padding: 40% 0 40% 0;
-        >* {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        gap: 15px;
+        justify-content: center;
+        align-content: center;
+        padding: 20%;
     }
     .bars {
         height: 50px;
