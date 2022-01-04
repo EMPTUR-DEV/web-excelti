@@ -21,5 +21,6 @@ export const TRANSLATIONS_ES = {
     oralParagraph: " Versión oral (grabada o in situ) de material escrito.",
     translatedBooks: "Libros traducidos",
     otherPublishedTranslates: "Otras traducciones publicadas",
-    teamTranslates: 'Gestión de proyectos de traducción en equipo'
+    teamTranslates: 'Gestión de proyectos de traducción en equipo',
+    trainingParagraph: "Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su perfil personal"
 };
