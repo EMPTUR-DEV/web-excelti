@@ -10,7 +10,7 @@ const NavBar = () => {
 
     useEffect(()=>{
         setItems([{name: t("traduction"), link:'/traduction',image:'header/traduction-page.jpg'},
-                {name:t("training"), link:'/',image:'header/traduction-page.jpg'},
+                {name:t("training"), link:'/training',image:'header/traduction-page.jpg'},
                 {name:'E-learning', link:'/',image:'header/traduction-page.jpg'},
                 {name:t("audiovisualServices"), link:'/',image:'header/traduction-page.jpg'},
                 {name:t("ourProfessionals"), link:'/professionals',image:'header/traduction-page.jpg'},

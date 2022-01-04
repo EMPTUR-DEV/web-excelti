@@ -36,7 +36,7 @@
         align-items: center;
         justify-content: center;
         &:hover {
-            background-color: var(--greenMint);
+            text-decoration: underline 2px var(--greenMint);
         }
         .nav {
             display: block;
