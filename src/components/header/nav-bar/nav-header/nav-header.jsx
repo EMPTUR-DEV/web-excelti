@@ -7,7 +7,7 @@ const NavHeader = ({data})=>{
     if(linked) window.location.replace(linked);
   }
 
-  const linkedItem = (name,linked) =>{
+  const LinkedItem = ({name,linked}) =>{
     return (<div className={styles.container} onClick={()=>handleLink(linked)}>
         <span className={styles.nav}>{name}</span>
           <NavMobile src={image} title={name}/>
@@ -16,9 +16,9 @@ const NavHeader = ({data})=>{
   }
 
   return (
-    <div className={styles.childList}>
-      {linkedItem(name,link)}
-    </div>
+    
+    <LinkedItem name={name} linked={link} />
+    
   );
 }
 
