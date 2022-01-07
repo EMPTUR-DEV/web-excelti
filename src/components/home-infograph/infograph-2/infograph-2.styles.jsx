@@ -4,21 +4,27 @@ import styled from 'styled-components'
 export const GraphicContainer = styled.div`
     width: 100%;
     min-height: 100%;
-    display: grid;
-    place-items: center;
     
-    margin: 100px 0;
+    display: flex;
+    place-items: center;
+    justify-content:start;
+    flex-direction:column;
+    padding-top: 100px;
+    margin: 100px 0 300px;
     
 `
 
 export const CenterCircleContainer =styled.div`
         display: flex;
+        position:  ${({infoState})=> infoState ? 'fixed': 'relative'};
+        top: ${({infoState})=> infoState ? '0px': ''};
         justify-content: center;
         align-items: center;
         grid-gap: 20px;
-        height: 100%;
         width: 100%;
+        height:100vh;
         
+            
         @media (max-width: 992px) {
             width: 100%;
             height: 100%;

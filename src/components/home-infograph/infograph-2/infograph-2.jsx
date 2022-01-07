@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect,useRef} from 'react'
 
 import {RiTranslate} from 'react-icons/ri'
 import {RiArticleLine}  from 'react-icons/ri'
@@ -8,7 +8,7 @@ import {BsHeadset} from 'react-icons/bs'
 import {IoIosPeople} from 'react-icons/io'
 import {GraphicContainer,Double,Single, CenterCircleContainer} from './infograph-2.styles'
 import Circle from './circle-infograph/circle-infograph'
-import BoardInfo from './board-info/board-info'
+import useOnScreen from '../../../hooks/intersectionObserver';
 
 
 const InfoGraph2 = ({items}) => {
@@ -31,8 +31,6 @@ const InfoGraph2 = ({items}) => {
                                 'mid':'rgba(7.1, 30.6, 30.6,0)'}
                               ];
 
-    console.log(colors_alpha_pulse[0]['initial'])
-
   const dots = [
     "top:0px;left: 0px" ,
     'top:0px;left: 0px',
@@ -53,7 +51,16 @@ const InfoGraph2 = ({items}) => {
   const [showInfo,setShowInfo] = useState(false)
   const [infoToShow,setInfoToShow] = useState('')
   const [enterButtonColor,setEnterButtonColor] = useState('#338')
+  const [infoState,setInfoState] = useState(false)
 
+  const ref = useRef();
+  const onScreen = useOnScreen(ref, "-1000px");
+
+  useEffect(()=>{
+    onScreen ? setInfoState(true) : setInfoState(false);
+    console.log(onScreen)
+
+  }, [onScreen]);
 
 
   const setInfoItem = (item)=>{
@@ -62,20 +69,21 @@ const InfoGraph2 = ({items}) => {
     console.log(showInfo) 
   } 
     return (
-    <GraphicContainer>
+    <GraphicContainer ref={ref}>
       
-      <BoardInfo  enterButtonColor = {enterButtonColor} 
+      {/* <BoardInfo  enterButtonColor = {enterButtonColor} 
                   setShowInfo={setShowInfo}  
                   active = {showInfo} 
-                  info={infoToShow} /> 
-      <CenterCircleContainer>
+                  info={infoToShow} />  */}
+      
+      <CenterCircleContainer infoState={infoState} >
           <Single >
             
             <Circle background={colors[0]} size={large_circle_size} 
                     pulseColor = {colors_alpha_pulse[0]}
                     item = {items[0]} 
                     setInfoItem= {setInfoItem}
-                    setEnterButtonColor = {setEnterButtonColor}
+                    /* setEnterButtonColor = {setEnterButtonColor} */
                     box_shadows={box_shadows[0]} position_stats={dots[0]}
                     >
                   <RiTranslate/>
