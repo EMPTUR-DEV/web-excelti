@@ -1,7 +1,7 @@
 import { useState,useEffect, React}  from 'react'
 import styles from './home-infograph.module.scss'
 /*import CardInfograph from './card-infograph/card-infograph'*/
-import InfoGraph2 from './infograph-2/infograph-2'
+import InfoGraph from './infograph-2/infograph'
 import { useTranslation } from "react-i18next";
 
 
@@ -39,7 +39,7 @@ const HomeInfograph = (props) => {
     
     return (
         <div className={styles.container}>
-                <InfoGraph2 items={items}/>
+                <InfoGraph items={items}/>
         </div>
     )
 }
