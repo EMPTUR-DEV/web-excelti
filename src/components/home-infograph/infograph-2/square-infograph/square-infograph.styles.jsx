@@ -150,7 +150,7 @@ export const CircleContainer = styled.div`
             transition: 0.3s ease-in ;
             i {
                 
-                font-size: 3.5rem;
+                font-size: 4rem;
                 color: ${({item_active})=>
                     item_active  ? 
                     'var(--background);':
@@ -161,9 +161,12 @@ export const CircleContainer = styled.div`
             h3{
                 text-align:center;
                 overflow-wrap: break-word;
+                
+                ${({type_square})=>
+                    type_square =='single'?  'font-size: 2rem': 'font-size: 1.5rem'};
                 ${({item_active})=>
-                    item_active? 'font-size: 1.6rem;opacity: 100%; display:flex;color: var(--background);' : 
-                    'opacity: ;display:flex;font-size:1.6rem;'
+                    item_active? 'opacity: 100%; display:flex;color: var(--background);' : 
+                    'opacity: ;display:flex;'
                 }
                 padding: 0;
                 margin:0 0 10px 0;

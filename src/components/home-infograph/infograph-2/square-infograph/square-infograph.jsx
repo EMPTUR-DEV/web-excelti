@@ -7,7 +7,7 @@ import {Icon,Line, ContentContainer} from '../infograph.styles'
 
 const Square = ({size,box_shadows,position_stats,item,background,children,
                 setInfoItem,setEnterButtonColor,
-                pulseColor,backgroundImage}) => {
+                pulseColor,backgroundImage,type_square}) => {
     const [item_active, setItem_active] = useState(false);
 
     console.log(backgroundImage)
@@ -20,6 +20,7 @@ const Square = ({size,box_shadows,position_stats,item,background,children,
                             box_shadows={box_shadows} position_stats={position_stats}
                             onMouseLeave={()=>setItem_active(!item_active)} 
                             onMouseEnter={()=>setItem_active(!item_active)}
+                            type_square = {type_square}
                             onClick = {()=>{    
                                     window.location.replace(item.link)
                                     /* setInfoItem(item.name)
