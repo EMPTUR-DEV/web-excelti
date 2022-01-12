@@ -13,10 +13,12 @@ import useOnScreen from '../../../hooks/intersectionObserver';
 
 const InfoGraph = ({items}) => {
   
-  const large_circle_size = '100%';
-  const short_circle_size = '100%';
+  const large_square_size = '100%';
+  const short_square_size = '100%';
+  
   const colors = [ '#995522',"#228855","#124e99",
                   "purple","rgb(200, 30, 40)","#124e4e"];
+  const backgroundImages = ['home/traduction-background.jpg','home/learning-background.jpg']
   const colors_alpha_pulse = [{'initial':'rgba(0,0,0,0.5)',
                                 'mid':'rgba(0,0,0,0)'},
                               {'initial':'rgba(34,136,85,0.5)',
@@ -79,9 +81,11 @@ const InfoGraph = ({items}) => {
       <CenterCircleContainer infoState={infoState} >
           <Single >
             
-            <Square background={colors[0]} size={'100%'} 
+            <Square background={colors[0]} size={large_square_size} 
                     pulseColor = {colors_alpha_pulse[0]}
                     item = {items[0]} 
+                    type_square = {'single'}
+                    backgroundImage = {backgroundImages[0]}
                     setInfoItem= {setInfoItem}
                     /* setEnterButtonColor = {setEnterButtonColor} */
                     box_shadows={box_shadows[0]} position_stats={dots[0]}
@@ -91,9 +95,11 @@ const InfoGraph = ({items}) => {
             
           </Single>
           <Single>
-          <Square background={colors[1]} size={'100%'} 
+          <Square background={colors[1]} size={large_square_size} 
                     item={items[1]} box_shadows={box_shadows[1]}
                     pulseColor = {colors_alpha_pulse[1]}
+                    type_square = {'single'}
+                    backgroundImage = {backgroundImages[1]}
                     position_stats={dots[1]}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
@@ -104,7 +110,7 @@ const InfoGraph = ({items}) => {
           </Single>
           <Double> 
             
-            <Square background={colors[2]} size={"100%"} 
+            <Square background={colors[2]} size={short_square_size} 
                     item={items[2]} box_shadows={box_shadows[2]}
                     pulseColor = {colors_alpha_pulse[2]}
                     position_stats={dots[2]}
@@ -113,7 +119,7 @@ const InfoGraph = ({items}) => {
                     >
                     <RiArticleLine/>
             </Square>
-            <Square background={colors[3]} size={short_circle_size} 
+            <Square background={colors[3]} size={short_square_size} 
                     item={items[3]} box_shadows={box_shadows[3]}
                     pulseColor = {colors_alpha_pulse[3]}
                     position_stats={dots[3]}
@@ -125,7 +131,7 @@ const InfoGraph = ({items}) => {
           </Double>
           <Double>
             
-            <Square background={colors[4]} size={large_circle_size} 
+            <Square background={colors[4]} size={short_square_size} 
                     item={items[4]} box_shadows={box_shadows[4]}
                     pulseColor = {colors_alpha_pulse[4]}
                     position_stats={dots[4]}
@@ -134,7 +140,7 @@ const InfoGraph = ({items}) => {
                     >
                     <GiVideoConference/>
             </Square>
-            <Square background={colors[5]} size={large_circle_size} 
+            <Square background={colors[5]} size={short_square_size} 
                     item={items[5]} box_shadows={box_shadows[5]}
                     pulseColor = {colors_alpha_pulse[5]}
                     position_stats={dots[5]}

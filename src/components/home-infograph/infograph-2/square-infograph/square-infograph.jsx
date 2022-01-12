@@ -1,17 +1,20 @@
 import React, {useState} from 'react'
 import {CircleContainer} from './square-infograph.styles'
-import {Icon,Line, ContentContainer} from '../infograph-2.styles'
-import MagicComponent from '../../../shared/magic-component/magic-component';
+import {Icon,Line, ContentContainer} from '../infograph.styles'
 
 
 
-const Square = ({size,box_shadows,position_stats,item,background,children,setInfoItem,setEnterButtonColor,pulseColor}) => {
+
+const Square = ({size,box_shadows,position_stats,item,background,children,
+                setInfoItem,setEnterButtonColor,
+                pulseColor,backgroundImage}) => {
     const [item_active, setItem_active] = useState(false);
 
-
+    console.log(backgroundImage)
     return (
         
             <CircleContainer background={background} size={size} 
+                            
                             item_active={item_active}
                             pulseColor={pulseColor}
                             box_shadows={box_shadows} position_stats={position_stats}
@@ -24,12 +27,15 @@ const Square = ({size,box_shadows,position_stats,item,background,children,setInf
                                 }
                              }
                             >
-
+                <img src= {backgroundImage} alt="" />
                 <div className='dot'  />
+                
                 <div className='icon' >
                 <i className="far fa-building">{children}</i>
                 <h3>{item.name}</h3>
                 </div>
+                <div className="image-overlap"/>
+
                 
             </CircleContainer>
         

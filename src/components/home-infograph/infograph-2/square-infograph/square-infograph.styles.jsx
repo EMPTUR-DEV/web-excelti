@@ -15,6 +15,18 @@ const pulse = (pulseColor) => keyframes`
         box-shadow: 0 0 0 0 ${pulseColor['mid']};
     }
 `
+const pulse2 =  keyframes` 
+    
+    0% {
+        -moz-box-shadow: 0 0 0 0 #000;
+        box-shadow: 0 0 0 0 #000;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 100px #00000000;
+        box-shadow: 0 0 0 100px #00000000;
+    }
+    
+`
 
 export const CircleContainer = styled.div`
         
@@ -28,17 +40,20 @@ export const CircleContainer = styled.div`
         width: var(--size);
         height: var(--size);
         border-radius: 20px;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         place-items:center;
         position: relative;
         cursor:pointer;
         background-color:white;
         box-shadow: 0 0 0 500px inset var(--background);
+        overflow: hidden;
         transition-property: width, height;
         transition:  1s ease-in;
         
 
-
+            
         &:hover {
             background-color: white;
             box-shadow: 0 0 0 0 inset var(--background);
@@ -50,58 +65,96 @@ export const CircleContainer = styled.div`
         position: absolute;
         content: '';
         width: 100%;
-        z-index: -10;
+        z-index: 10;
         height: 100%;
         border-radius: 20px;
         top:0;
         left: 0;
         
-        animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor): 'none'} ;
+        animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor): 'none'};
         animation-duration: ${({item_active})=> item_active?  '4s': 'none'}; 
-        animation-iteration-count:${({item_active})=> item_active?  '1': 'none'} ;
+        animation-iteration-count:${({item_active})=> item_active?  '1': 'none'} ; 
             
-                /* rgba(100,100,100,1) */
+                
+        
     }
 
+    @keyframes pulse {
+        0% {
+            -moz-box-shadow: 0 0 0 0 #000;
+            box-shadow: 0 0 0 0 #000;
+        }
+        70% {
+            -moz-box-shadow: 0 0 0 100px #00000000;
+            box-shadow: 0 0 10 100px #00000000;
+        }
+    }
 
-    .dot{
-            ${({position_stats})=>
-                position_stats?
-                position_stats :
-                `top:  100px;right: 100px
-                `
-        };
-        
-            width: 2px;height: 2px;
-            position:absolute ;
+    & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 20px;
+            z-index:0;
             
-            background: ${({item_active})=> !item_active ? 'var(--background)' : 'white'};
-            opacity: ${({item_active})=> item_active? '100%': '0%'};
-            border-radius: 50%;
-            box-shadow: ${({item_active}) =>    
-                        item_active ?  'var(--box-shadows)'
-                        :
-                                        `100px 100px 0 6px var(--background), 
-                                        100px 100px 0 4px var(--background),
-                                        100px 100px 0 6px var(--background) `
-                        };
-            transition:  ease-in-out 0.2s ;
-            
-            }
-        
-        .icon{
+        }
+
+    & .image-overlap{
             position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width:100%;
+                border-left: solid  500px rgba(0,0,0,.5) ;
+                border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid 80px rgba(0,0,0,0)'};
+                height:${({item_active})=> item_active? '0px' : '30px'};
+                z-index: 100;
+                transition: ease-in 0.3s;
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                width:100%;
+                border-left: solid 500px rgba(0,0,0,0);
+                border-bottom: ${({item_active})=> item_active? 'solid 0px rgba(0,0,0,.5)': 'solid 80px rgba(0,0,0,.5)'};
+                /* border-right: solid 500px blue;
+                border-top: solid 80px rgba(0,0,0,0); */
+                height: 110px;
+                z-index: 100;
+                transition: ease-in 0.3s;
+            }
+        }
+        
+        & .icon{
+            background-color:${({item_active})=> item_active?  'rgba(255, 255, 255, 0.6 )': 'rgba(255, 255, 255, 0.15)'}; ;  
+            backdrop-filter: blur(5px)/* ${({item_active})=> item_active? '0px' : 'blur(5px)'} */;
+            height: ${({item_active})=> item_active?  '100%': '170px'};
+            width: ${({item_active})=> item_active?  '100%': '200px'};
+            border-radius: 15px;
+            position: absolute;
+            
             display: flex;
             flex-direction:column;
+            align-items: center;
             justify-content: center;
             padding:10px;
+            transition: 0.3s ease-in ;
             i {
                 
                 font-size: 3.5rem;
                 color: ${({item_active})=>
                     item_active  ? 
                     'var(--background);':
-                    'white;'
+                    'black;'
             };
 
             }
@@ -112,13 +165,11 @@ export const CircleContainer = styled.div`
                     item_active? 'font-size: 1.6rem;opacity: 100%; display:flex;color: var(--background);' : 
                     'opacity: ;display:flex;font-size:1.6rem;'
                 }
-                
                 padding: 0;
                 margin:0 0 10px 0;
                 
             }
-        }
-
+        }       
         transition: ease-in-out 0.2s;
 
         @media (max-width: 992px) {
