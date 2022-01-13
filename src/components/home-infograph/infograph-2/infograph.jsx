@@ -18,7 +18,28 @@ const InfoGraph = ({items}) => {
   
   const colors = [ '#995522',"#228855","#124e99",
                   "purple","rgb(200, 30, 40)","#124e4e"];
-  const backgroundImages = ['home/traduction-background.jpg','home/learning-background.jpg']
+
+
+  const backgroundImages = ['home/traduction-background.jpg',
+                            'home/learning-background.jpg',
+                            'home/learning-background.jpg',
+                            'home/servicios-audiovisuales-background.jpg',
+                            'home/professional-background.jpg',
+                            'home/professional-background.jpg'
+                          ]
+  
+  const exceltiColors = [ 'rgb(6,107,153)',
+                          'rgb(18,134,193)',
+                          'rgb(0,152,219)',
+                          'rgb(21,178,185)',
+                          'rgb(9,174,140)',
+                          'rgb(36,181,122)',
+                          'rgb(68,169,37)',
+                          'rgb(52,150,91)',
+
+
+                        ]  
+  
   const colors_alpha_pulse = [{'initial':'rgba(0,0,0,0.5)',
                                 'mid':'rgba(0,0,0,0)'},
                               {'initial':'rgba(34,136,85,0.5)',
@@ -81,7 +102,7 @@ const InfoGraph = ({items}) => {
       <CenterCircleContainer infoState={infoState} >
           <Single >
             
-            <Square background={colors[0]} size={large_square_size} 
+            <Square background={exceltiColors[1]} size={large_square_size} 
                     pulseColor = {colors_alpha_pulse[0]}
                     item = {items[0]} 
                     type_square = {'single'}
@@ -95,7 +116,7 @@ const InfoGraph = ({items}) => {
             
           </Single>
           <Single>
-          <Square background={colors[1]} size={large_square_size} 
+          <Square background={exceltiColors[6]} size={large_square_size} 
                     item={items[1]} box_shadows={box_shadows[1]}
                     pulseColor = {colors_alpha_pulse[1]}
                     type_square = {'single'}
@@ -110,18 +131,20 @@ const InfoGraph = ({items}) => {
           </Single>
           <Double> 
             
-            <Square background={colors[2]} size={short_square_size} 
+            <Square background={exceltiColors[2]} size={short_square_size} 
                     item={items[2]} box_shadows={box_shadows[2]}
                     pulseColor = {colors_alpha_pulse[2]}
                     position_stats={dots[2]}
+                    backgroundImage = {backgroundImages[2]}
                     setInfoItem= {setInfoItem}
                     setEnterButtonColor = {setEnterButtonColor}
                     >
                     <RiArticleLine/>
             </Square>
-            <Square background={colors[3]} size={short_square_size} 
+            <Square background={exceltiColors[3]} size={short_square_size} 
                     item={items[3]} box_shadows={box_shadows[3]}
                     pulseColor = {colors_alpha_pulse[3]}
+                    backgroundImage = {backgroundImages[3]}
                     position_stats={dots[3]}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
@@ -131,18 +154,20 @@ const InfoGraph = ({items}) => {
           </Double>
           <Double>
             
-            <Square background={colors[4]} size={short_square_size} 
+            <Square background={exceltiColors[4]} size={short_square_size} 
                     item={items[4]} box_shadows={box_shadows[4]}
                     pulseColor = {colors_alpha_pulse[4]}
+                    backgroundImage = {backgroundImages[4]}
                     position_stats={dots[4]}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
                     >
                     <GiVideoConference/>
             </Square>
-            <Square background={colors[5]} size={short_square_size} 
+            <Square background={exceltiColors[5]} size={short_square_size} 
                     item={items[5]} box_shadows={box_shadows[5]}
                     pulseColor = {colors_alpha_pulse[5]}
+                    backgroundImage = {backgroundImages[5]}
                     position_stats={dots[5]}
                     setInfoItem= {setInfoItem}
                     setEnterButtonColor = {setEnterButtonColor}

@@ -101,20 +101,36 @@ export const CircleContainer = styled.div`
         }
 
     & .image-overlap{
+            ${({type_square})=> type_square =='single' ? 
+             `--width-overlap:550px;
+            --height-overlap: 50px;`:
+            `--width-overlap: 275px;
+            --height-overlap: 25px;`
+            }
+            
             position: absolute;
             width: 100%;
             height: 100%;
             z-index: 100;
             
+            @media (max-width: 700px) {
+                
+                ${({type_square})=> type_square =='single' ? 
+                `--width-overlap:350px;
+                --height-overlap: 40px;`:
+                `--width-overlap: 175px;
+                --height-overlap: 20px;`
+                }
+            }
             &::before{
                 position: absolute;
                 top: 0;
                 left: 0;
                 content: '';
                 width:100%;
-                border-left: solid  500px rgba(0,0,0,.5) ;
-                border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid 80px rgba(0,0,0,0)'};
-                height:${({item_active})=> item_active? '0px' : '30px'};
+                border-left: solid var(--width-overlap)  rgba(0,0,0,.5) ;
+                border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid var(--height-overlap) rgba(0,0,0,0)'};
+                height: 0px/* ${({item_active})=> item_active? '0px' : 'var(--height-overlap)'}; */
                 z-index: 100;
                 transition: ease-in 0.3s;
             }
@@ -124,11 +140,9 @@ export const CircleContainer = styled.div`
                 left: 0;
                 content: '';
                 width:100%;
-                border-left: solid 500px rgba(0,0,0,0);
-                border-bottom: ${({item_active})=> item_active? 'solid 0px rgba(0,0,0,.5)': 'solid 80px rgba(0,0,0,.5)'};
-                /* border-right: solid 500px blue;
-                border-top: solid 80px rgba(0,0,0,0); */
-                height: 110px;
+                border-left: solid var(--width-overlap) rgba(0,0,0,0);
+                border-bottom: ${({item_active})=> item_active? 'solid 0px rgba(0,0,0,.5)': ' solid var(--height-overlap) rgba(0,0,0,.5)'};
+                height: var(--height-overlap);
                 z-index: 100;
                 transition: ease-in 0.3s;
             }

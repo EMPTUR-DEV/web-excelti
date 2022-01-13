@@ -15,6 +15,7 @@ export const GraphicContainer = styled.div`
 `
 
 export const CenterCircleContainer =styled.div`
+        --width-content: 550px;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -22,13 +23,13 @@ export const CenterCircleContainer =styled.div`
         width: 100%;
         padding: 0 20px;
         
-        grid-template-columns: 500px 500px;
-        grid-template-rows: 500px  250px;
+        grid-template-columns: var(--width-content) var(--width-content);
+        grid-template-rows: var(--width-content)  calc(var(--width-content)/2);
         
             
         @media (max-width: 992px) {
 
-            --width-content: 600px;
+            --width-content: 550px;
             width: 100%;
             height: 100%;
             display: grid;
