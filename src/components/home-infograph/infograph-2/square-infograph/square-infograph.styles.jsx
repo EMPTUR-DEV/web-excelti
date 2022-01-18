@@ -103,9 +103,9 @@ export const CircleContainer = styled.div`
     & .image-overlap{
             ${({type_square})=> type_square =='single' ? 
              `--width-overlap:550px;
-            --height-overlap: 50px;`:
+            --height-overlap: 90px;`:
             `--width-overlap: 275px;
-            --height-overlap: 25px;`
+            --height-overlap: 40px;`
             }
             
             position: absolute;
@@ -128,7 +128,7 @@ export const CircleContainer = styled.div`
                 left: 0;
                 content: '';
                 width:100%;
-                border-left: solid var(--width-overlap)  rgba(0,0,0,.5) ;
+                border-left: solid var(--width-overlap) var(--background);  /* rgba(0,0,0,.5) ; */
                 border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid var(--height-overlap) rgba(0,0,0,0)'};
                 height: 0px/* ${({item_active})=> item_active? '0px' : 'var(--height-overlap)'}; */
                 z-index: 100;
@@ -141,7 +141,7 @@ export const CircleContainer = styled.div`
                 content: '';
                 width:100%;
                 border-left: solid var(--width-overlap) rgba(0,0,0,0);
-                border-bottom: ${({item_active})=> item_active? 'solid 0px rgba(0,0,0,.5)': ' solid var(--height-overlap) rgba(0,0,0,.5)'};
+                border-bottom: ${({item_active})=> item_active? 'solid 0px var(--background)': ' solid var(--height-overlap) var(--background)'};
                 height: var(--height-overlap);
                 z-index: 100;
                 transition: ease-in 0.3s;
@@ -149,10 +149,10 @@ export const CircleContainer = styled.div`
         }
         
         & .icon{
-            background-color:${({item_active})=> item_active?  'rgba(255, 255, 255, 0.6 )': 'rgba(255, 255, 255, 0.15)'}; ;  
+            background-color:${({item_active})=> item_active?  'rgba(255, 255, 255, 0.9 )': 'rgba(255, 255, 255, 0.5)'}; ;  
             backdrop-filter: blur(5px)/* ${({item_active})=> item_active? '0px' : 'blur(5px)'} */;
-            height: ${({item_active})=> item_active?  '100%': '170px'};
-            width: ${({item_active})=> item_active?  '100%': '200px'};
+            height: ${({item_active})=> item_active?  '100%': '270px'};
+            width: ${({item_active})=> item_active?  '100%': '300px'};
             border-radius: 15px;
             position: absolute;
             
@@ -168,14 +168,14 @@ export const CircleContainer = styled.div`
                 color: ${({item_active})=>
                     item_active  ? 
                     'var(--background);':
-                    'black;'
+                    'var(--background);'
             };
 
             }
             h3{
                 text-align:center;
                 overflow-wrap: break-word;
-                
+                color: var(--background);
                 ${({type_square})=>
                     type_square =='single'?  'font-size: 2rem': 'font-size: 1.5rem'};
                 ${({item_active})=>
