@@ -151,8 +151,16 @@ export const CircleContainer = styled.div`
         & .icon{
             background-color:${({item_active})=> item_active?  'rgba(255, 255, 255, 0.9 )': 'rgba(255, 255, 255, 0.5)'}; ;  
             backdrop-filter: blur(5px)/* ${({item_active})=> item_active? '0px' : 'blur(5px)'} */;
-            height: ${({item_active})=> item_active?  '100%': '270px'};
-            width: ${({item_active})=> item_active?  '100%': '300px'};
+            ${({item_active})=> item_active? 
+            `height: 100%;
+            width: 100%;
+            `
+            : 
+            `height: 100%;
+            width: 100%;
+            `};
+            /* width: ${({item_active})=> item_active?  '100%': '300px'}; */
+            
             border-radius: 15px;
             position: absolute;
             

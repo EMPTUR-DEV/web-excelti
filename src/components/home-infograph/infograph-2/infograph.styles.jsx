@@ -9,13 +9,13 @@ export const GraphicContainer = styled.div`
     place-items: center;
     justify-content:start;
     flex-direction:column;
-    padding-top: 100px;
-    margin: 100px 0 300px;
+    
+    margin: 10px 0 300px;
     
 `
 
 export const CenterCircleContainer =styled.div`
-        --width-content: 550px;
+        --width-content: 400px;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -29,7 +29,7 @@ export const CenterCircleContainer =styled.div`
             
         @media (max-width: 992px) {
 
-            --width-content: 550px;
+            --width-content: 400px;
             width: 100%;
             height: 100%;
             display: grid;

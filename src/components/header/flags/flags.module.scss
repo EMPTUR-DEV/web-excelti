@@ -4,7 +4,7 @@
     cursor: pointer;
     justify-self: end;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
     align-self: flex-end;
     z-index: 100;
 }
@@ -13,6 +13,8 @@
     .container {
         grid-column: 2;
         grid-row: 1;
+        position: absolute;
+        top: 0px;
         align-self: center;
         justify-self: flex-end;
     }

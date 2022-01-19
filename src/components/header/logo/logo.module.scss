@@ -8,9 +8,6 @@
         width: 200px;
         height: 75px;
         margin: 5px;
-        top: 60%;
-        left: 70px;
-        position: absolute;
     }
     z-index: 100;
 }
@@ -20,8 +17,8 @@
         grid-column: 1;
         grid-row: 1;
         .logo {
-            width: 300px;
-            height: 150px;
+            width: 200px;
+            height: 100px;
             margin: 5px;
         }
     }
