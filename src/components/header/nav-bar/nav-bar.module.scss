@@ -27,7 +27,7 @@
         justify-content: center;
         align-content: center;
         gap: 3px;
-        padding: 150px 0 100% 0;
+        padding: 100px 0 100% 0;
         >* {
             width: 100%;
             display: flex;
@@ -53,7 +53,7 @@
             flex-direction: row;
             height: 100%;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             position: static;
             padding-right: 1px;
         }

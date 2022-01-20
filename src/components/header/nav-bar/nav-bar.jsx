@@ -13,8 +13,8 @@ const NavBar = () => {
                 {name:t("training"), link:'/training',image:'header/traduction-page.jpg'},
                 {name:'Interpretación', link:'/',image:'header/traduction-page.jpg'}, 
                 {name:t("audiovisualServices"), link:'/',image:'header/traduction-page.jpg'},
-                {name:t("ourProfessionals"), link:'/professionals',image:'header/traduction-page.jpg'},
-                {name:t("publications"), link:'/',image:'header/traduction-page.jpg'},
+                /* {name:t("ourProfessionals"), link:'/professionals',image:'header/traduction-page.jpg'},
+                {name:t("publications"), link:'/',image:'header/traduction-page.jpg'}, */
             ]);
     },[i18n.language]);
 

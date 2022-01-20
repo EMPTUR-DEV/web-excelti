@@ -170,6 +170,10 @@ export const CircleContainer = styled.div`
             justify-content: center;
             padding:10px;
             transition: 0.3s ease-in ;
+            text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+                             0 2px 0 #000, 0 -2px 0 #000, 
+                             1px 1px #000, -1px -1px 0 #000, 
+                             1px -1px 0 #000, -1px 1px 0 #000;
             i {
                 
                 font-size: 4rem;
@@ -178,6 +182,11 @@ export const CircleContainer = styled.div`
                     'var(--background);':
                     'var(--background);'
             };
+            text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+                             0 2px 0 #000, 0 -2px 0 #000, 
+                             1px 1px #000, -1px -1px 0 #000, 
+                             1px -1px 0 #000, -1px 1px 0 #000;
+            
 
             }
             h3{
@@ -192,7 +201,11 @@ export const CircleContainer = styled.div`
                 }
                 padding: 0;
                 margin:0 0 10px 0;
-                
+                text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+                             0 2px 0 #000, 0 -2px 0 #000, 
+                             1px 1px #000, -1px -1px 0 #000, 
+                             1px -1px 0 #000, -1px 1px 0 #000;
+
             }
         }       
         transition: ease-in-out 0.2s;

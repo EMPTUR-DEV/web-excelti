@@ -8,9 +8,9 @@ viewBox="0 0 28760.02 10625.69"
  <defs>
   <font id="FontID0" horiz-adv-x="632" font-variant="normal" class="str1" style="fill-rule:nonzero" font-style="normal" font-weight="400">
 	<font-face 
-		font-family="Dubai">
+		font-family="Arial">
 		<font-face-src>
-			<font-face-name name="Dubai Regular"/>
+			<font-face-name name="Arial Regular"/>
 		</font-face-src>
 	</font-face>
    <missing-glyph><path d="M0 0z"/></missing-glyph>
@@ -28,14 +28,14 @@ viewBox="0 0 28760.02 10625.69"
   </font>
   <style type="text/css">
    <![CDATA[
-    @font-face { font-family:"Dubai";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
     .str1 {stroke-width:4.31;stroke-miterlimit:22.9256}
     .str2 {stroke:#0098DA;stroke-width:7.51;stroke-miterlimit:22.9256}
     .str0 {stroke:#0098DA;stroke-width:834.53;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
     .fil2 {fill:#0098DA}
     .fil1 {fill:#44A924}
-    .fnt0 {font-weight:normal;font-size:1744.51px;font-family:'Dubai'}
+    .fnt0 {font-weight:normal;font-size:1744.51px;font-family:'Arial'}
    ]]>
   </style>
  </defs>

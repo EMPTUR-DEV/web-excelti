@@ -100,15 +100,15 @@ const InfoGraph = ({items}) => {
                   info={infoToShow} />  */}
       
       <CenterCircleContainer infoState={infoState} >
-          <Single >
-            
+
+           <Single>
             <Square background={exceltiColors[1]} size={large_square_size} 
                     pulseColor = {colors_alpha_pulse[0]}
                     item = {items[0]} 
                     type_square = {'single'}
                     backgroundImage = {backgroundImages[0]}
                     setInfoItem= {setInfoItem}
-                    /* setEnterButtonColor = {setEnterButtonColor} */
+                    
                     box_shadows={box_shadows[0]} position_stats={dots[0]}
                     >
                   <RiTranslate/>
@@ -129,30 +129,34 @@ const InfoGraph = ({items}) => {
             </Square>
             
           </Single>
-          <Double> 
+          <Single> 
             
             <Square background={exceltiColors[2]} size={short_square_size} 
                     item={items[2]} box_shadows={box_shadows[2]}
                     pulseColor = {colors_alpha_pulse[2]}
                     position_stats={dots[2]}
+                    type_square = {'single'}
                     backgroundImage = {backgroundImages[2]}
                     setInfoItem= {setInfoItem}
                     setEnterButtonColor = {setEnterButtonColor}
                     >
                     <RiArticleLine/>
             </Square>
+            </Single>
+            <Single>
             <Square background={exceltiColors[3]} size={short_square_size} 
                     item={items[3]} box_shadows={box_shadows[3]}
                     pulseColor = {colors_alpha_pulse[3]}
                     backgroundImage = {backgroundImages[3]}
                     position_stats={dots[3]}
+                    type_square = {'single'}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
                     >
                     <BsHeadset/>
             </Square>
-          </Double>
-          <Double>
+          </Single> 
+          {/* <Double>
             
             <Square background={exceltiColors[4]} size={short_square_size} 
                     item={items[4]} box_shadows={box_shadows[4]}
@@ -175,10 +179,14 @@ const InfoGraph = ({items}) => {
                     <IoIosPeople/>
             </Square>
           </Double>
-          
-          </CenterCircleContainer>
+           */}
+     
+
+           </CenterCircleContainer>
       </GraphicContainer>
     )
 }
 
 export default InfoGraph
+
+         

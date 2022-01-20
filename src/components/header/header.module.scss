@@ -5,11 +5,13 @@
     display: grid;
     position: fixed;
     z-index: 50;
+    box-shadow: 0 0 1px 1px #ddd;
 }
 
 @media (min-width: 1200px) {
     .headerContainer {
         background-color: transparent;
         position: absolute;
+        box-shadow: none;
     }
 }

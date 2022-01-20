@@ -12,6 +12,7 @@ const Professionals = () => {
     return (
         <div className='professionals-container'>
             <Banner src={'header/home-banner.jpg'} title={t("ourProfessionals").toUpperCase()} />
+            <h2>Tu vieja</h2>
 
             
             <div className='card-professionals-container'>

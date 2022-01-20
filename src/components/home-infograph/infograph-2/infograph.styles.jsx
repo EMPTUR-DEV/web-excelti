@@ -24,7 +24,7 @@ export const CenterCircleContainer =styled.div`
         padding: 0 20px;
         
         grid-template-columns: var(--width-content) var(--width-content);
-        grid-template-rows: var(--width-content)  calc(var(--width-content)/2);
+        grid-template-rows: var(--width-content)  var(--width-content);
         
             
         @media (max-width: 992px) {
@@ -35,7 +35,7 @@ export const CenterCircleContainer =styled.div`
             display: grid;
             gap: 20px;
             grid-template-columns: var(--width-content) ;
-            grid-template-rows:  var(--width-content) var(--width-content) calc(var(--width-content)/2) calc(var(--width-content)/2) ; 
+            grid-template-rows:  var(--width-content) var(--width-content) var(--width-content)var(--width-content); 
             position: relative;
         }
         @media (max-width: 700px) {
@@ -46,7 +46,7 @@ export const CenterCircleContainer =styled.div`
         display: grid;
         gap: 20px;
         grid-template-columns: var(--width-content) ;
-        grid-template-rows: var(--width-content) var(--width-content) calc(var(--width-content)*2) calc(var(--width-content)*2) ;
+        grid-template-rows: var(--width-content) var(--width-content) var(--width-content) var(--width-content) ;
         position: relative;
         }
 `
