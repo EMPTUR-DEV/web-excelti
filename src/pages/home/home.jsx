@@ -11,7 +11,8 @@ const Home = () => {
         <div className='home-page-container'>
             <Banner src={'header/home-banner.jpg'} title={t("homeTitle").toUpperCase()} />
             <Info
-            subtitle={`${t("homeSubtitle")} ${t("homeParagraph")}`}
+            subtitle={`${t("homeSubtitle")}`}
+            paragraph={t("homeParagraph")}
             
             />
             <HomeInfograph/>

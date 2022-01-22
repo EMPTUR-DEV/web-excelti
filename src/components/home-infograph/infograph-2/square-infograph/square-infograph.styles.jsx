@@ -170,10 +170,11 @@ export const CircleContainer = styled.div`
             justify-content: center;
             padding:10px;
             transition: 0.3s ease-in ;
-            text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+            /* text-shadow: 2px 0 0 #000, -2px 0 0 #000,
                              0 2px 0 #000, 0 -2px 0 #000, 
                              1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000;
+                             1px -1px 0 #000, -1px 1px 0 #000; */
+            
             i {
                 
                 font-size: 4rem;
@@ -182,17 +183,18 @@ export const CircleContainer = styled.div`
                     'var(--background);':
                     'var(--background);'
             };
-            text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+                color:black;
+/*             text-shadow: 2px 0 0 #000, -2px 0 0 #000,
                              0 2px 0 #000, 0 -2px 0 #000, 
                              1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000;
+                             1px -1px 0 #000, -1px 1px 0 #000; */
             
 
             }
             h3{
                 text-align:center;
                 overflow-wrap: break-word;
-                color: var(--background);
+                color: black;//var(--background);
                 ${({type_square})=>
                     type_square =='single'?  'font-size: 2rem': 'font-size: 1.5rem'};
                 ${({item_active})=>
@@ -201,10 +203,10 @@ export const CircleContainer = styled.div`
                 }
                 padding: 0;
                 margin:0 0 10px 0;
-                text-shadow: 2px 0 0 #000, -2px 0 0 #000,
+                /* text-shadow: 2px 0 0 #000, -2px 0 0 #000,
                              0 2px 0 #000, 0 -2px 0 #000, 
                              1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000;
+                             1px -1px 0 #000, -1px 1px 0 #000; */
 
             }
         }       

@@ -111,7 +111,7 @@ const InfoGraph = ({items}) => {
                     
                     box_shadows={box_shadows[0]} position_stats={dots[0]}
                     >
-                  <RiTranslate/>
+                  <RiTranslate />
             </Square>
             
           </Single>
