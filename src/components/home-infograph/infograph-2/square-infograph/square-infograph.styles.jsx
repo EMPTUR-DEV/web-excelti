@@ -66,9 +66,10 @@ export const CircleContainer = styled.div`
         box-shadow: 0px 0px 10px 0px var(--background); */
         
     }
-    animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor, '10px'): ''};
+    animation:  ${({item_active, pulseColor})=> item_active?  pulse(pulseColor, '10px') : ''} '1.2s 1';
+    /* animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor, '10px'): ''};
     animation-duration: ${({item_active})=> item_active?  '1.2s': '0'}; 
-    animation-iteration-count:${({item_active})=> item_active?  '1': '0'} ;  
+    animation-iteration-count:${({item_active})=> item_active?  '1': '0'} ;   */
     
     
 
