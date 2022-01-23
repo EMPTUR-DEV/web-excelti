@@ -1,31 +1,23 @@
 import styled, {keyframes} from 'styled-components'
 
-const pulse = (pulseColor) => keyframes` 
+const pulse = (pulseColor,range) => keyframes` 
     
     0% {
         -moz-box-shadow: 0 0 0 0 ${pulseColor['initial']};
         box-shadow: 0 0 0 0 ${pulseColor['initial']};
     }
-    70% {
-        -moz-box-shadow: 0 0 0 100px ${pulseColor['mid']};
-        box-shadow: 0 0 0 100px ${pulseColor['mid']};
+    30% {
+        -moz-box-shadow: 0 0 0 ${range} ${pulseColor['mid']};
+        box-shadow: 0 0 0 ${range} ${pulseColor['mid']};
     }
-    100% {
+    50% {
         -moz-box-shadow: 0 0 0 0 ${pulseColor['mid']};
         box-shadow: 0 0 0 0 ${pulseColor['mid']};
     }
-`
-const pulse2 =  keyframes` 
-    
-    0% {
-        -moz-box-shadow: 0 0 0 0 #000;
-        box-shadow: 0 0 0 0 #000;
+    100%{
+        box-shadow: 0 0 0 0 inset ${pulseColor['initial']};
+        box-shadow: 0px 0px 10px 0px ${pulseColor['initial']}; 
     }
-    70% {
-        -moz-box-shadow: 0 0 0 100px #00000000;
-        box-shadow: 0 0 0 100px #00000000;
-    }
-    
 `
 
 export const CircleContainer = styled.div`
@@ -49,15 +41,15 @@ export const CircleContainer = styled.div`
         background-color:white;
         box-shadow: 0 0 0 500px inset var(--background);
         overflow: hidden;
-        transition-property: width, height;
-        transition:  1s ease-in;
+        transition-property: width, height, background-color;
+        transition: width height background-color  1s ease-in;
         
 
             
         &:hover {
             background-color: white;
-            box-shadow: 0 0 0 0 inset var(--background);
-            box-shadow: 0px 0px 10px 0px var(--background);
+             
+            /* box-shadow: 0px 0px 10px 0px var(--background);  */
              /* width: calc(var(--size)*1.2);
                 height: calc(var(--size)*1.2); */
         };
@@ -70,25 +62,15 @@ export const CircleContainer = styled.div`
         border-radius: 20px;
         top:0;
         left: 0;
-        
-        animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor): 'none'};
-        animation-duration: ${({item_active})=> item_active?  '4s': 'none'}; 
-        animation-iteration-count:${({item_active})=> item_active?  '1': 'none'} ; 
-            
-                
+        /* box-shadow: 0 0 0 0 inset var(--background);
+        box-shadow: 0px 0px 10px 0px var(--background); */
         
     }
-
-    @keyframes pulse {
-        0% {
-            -moz-box-shadow: 0 0 0 0 #000;
-            box-shadow: 0 0 0 0 #000;
-        }
-        70% {
-            -moz-box-shadow: 0 0 0 100px #00000000;
-            box-shadow: 0 0 10 100px #00000000;
-        }
-    }
+    animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor, '10px'): ''};
+    animation-duration: ${({item_active})=> item_active?  '1.2s': '0'}; 
+    animation-iteration-count:${({item_active})=> item_active?  '1': '0'} ;  
+    
+    
 
     & img{
             width: 100%;
@@ -111,7 +93,7 @@ export const CircleContainer = styled.div`
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 100;
+            z-index: 200;
             
             @media (max-width: 700px) {
                 

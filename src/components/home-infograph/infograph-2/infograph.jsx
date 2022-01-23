@@ -15,10 +15,6 @@ const InfoGraph = ({items}) => {
   
   const large_square_size = '100%';
   const short_square_size = '100%';
-  
-  const colors = [ '#995522',"#228855","#124e99",
-                  "purple","rgb(200, 30, 40)","#124e4e"];
-
 
   const backgroundImages = ['home/traduction-background.jpg',
                             'home/learning-background.jpg',
@@ -36,23 +32,25 @@ const InfoGraph = ({items}) => {
                           'rgb(36,181,122)',
                           'rgb(68,169,37)',
                           'rgb(52,150,91)',
-
-
                         ]  
+    const exceltiColorsAlpha = [ {'initial':'rgba(6,107,153,0.5)',
+                                  'mid':'rgba(6,107,153,0)'},
+                                  {'initial':'rgba(18,134,193,0.5)',
+                                'mid':'rgba(18,134,193,0)'},
+                                  {'initial':'rgba(0,152,219,0.5)',
+                                'mid':'rgba(0,152,219,0)'},
+                                  {'initial':'rgba(21,178,185,0.5)',
+                                'mid':'rgba(21,178,185,0)'},
+                                  {'initial':'rgba(9,174,140,0.5)',
+                                'mid':'rgba(9,174,140,0)'},
+                                {'initial ':'rgba(36,181,122,0.5)',
+                                'mid':'rgba(36,181,122,0)'},
+                                {'initial':'rgba(68,169,37,0.5)',
+                                'mid':'rgba(68,169,37,0)'},
+                                {'initial':'rgba(52,150,91,0.5)',
+                                'mid':'rgba(52,150,91,0)'}
+                      ]  
   
-  const colors_alpha_pulse = [{'initial':'rgba(0,0,0,0.5)',
-                                'mid':'rgba(0,0,0,0)'},
-                              {'initial':'rgba(34,136,85,0.5)',
-                                'mid':'rgba(34,136,85,0)'},
-                              {'initial':'rgba(18, 78, 153,0.5)',
-                                'mid': 'rgba(18, 78, 153,0)'},
-                              {'initial':'rgba(50,0,50,0.5)',
-                                'mid':'rgba(50,0,50,0)'},
-                              {'initial':'rgba(200, 30, 40,0.5)',
-                                'mid':'rgba(200, 30, 40,0)'},
-                              {'initial':'rgba(7.1, 30.6, 30.6,0.5)',
-                                'mid':'rgba(7.1, 30.6, 30.6,0)'}
-                              ];
 
   const dots = [
     "top:0px;left: 0px" ,
@@ -103,7 +101,7 @@ const InfoGraph = ({items}) => {
 
            <Single>
             <Square background={exceltiColors[1]} size={large_square_size} 
-                    pulseColor = {colors_alpha_pulse[0]}
+                    pulseColor = {exceltiColorsAlpha[1]}
                     item = {items[0]} 
                     type_square = {'single'}
                     backgroundImage = {backgroundImages[0]}
@@ -118,7 +116,7 @@ const InfoGraph = ({items}) => {
           <Single>
           <Square background={exceltiColors[6]} size={large_square_size} 
                     item={items[1]} box_shadows={box_shadows[1]}
-                    pulseColor = {colors_alpha_pulse[1]}
+                    pulseColor = {exceltiColorsAlpha[6]}
                     type_square = {'single'}
                     backgroundImage = {backgroundImages[1]}
                     position_stats={dots[1]}
@@ -133,7 +131,7 @@ const InfoGraph = ({items}) => {
             
             <Square background={exceltiColors[2]} size={short_square_size} 
                     item={items[2]} box_shadows={box_shadows[2]}
-                    pulseColor = {colors_alpha_pulse[2]}
+                    pulseColor = {exceltiColorsAlpha[2]}
                     position_stats={dots[2]}
                     type_square = {'single'}
                     backgroundImage = {backgroundImages[2]}
@@ -146,7 +144,7 @@ const InfoGraph = ({items}) => {
             <Single>
             <Square background={exceltiColors[3]} size={short_square_size} 
                     item={items[3]} box_shadows={box_shadows[3]}
-                    pulseColor = {colors_alpha_pulse[3]}
+                    pulseColor = {exceltiColorsAlpha[3]}
                     backgroundImage = {backgroundImages[3]}
                     position_stats={dots[3]}
                     type_square = {'single'}
