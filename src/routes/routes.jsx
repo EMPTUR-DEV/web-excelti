@@ -1,6 +1,7 @@
 import { BrowserRouter,Route, Switch } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import LogoSpinner from '../components/shared/logo-spinner/logo-spinner';
+import ContactButton from '../components/contact-button/contact-button'
 
 const Router = () => {
     const Home = lazy(() => import('../pages/home/home'));
@@ -14,6 +15,7 @@ const Router = () => {
         <BrowserRouter>
             <Suspense fallback={<LogoSpinner/>}>
                 <Header/>
+                <ContactButton/>
                     <Switch>  
                         <Route exact path='/' component={Home} />
                         <Route exact path='/traduction' component={Traduction} />

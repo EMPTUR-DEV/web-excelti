@@ -5,18 +5,17 @@ const pulse = (pulseColor,range) => keyframes`
     0% {
         -moz-box-shadow: 0 0 0 0 ${pulseColor['initial']};
         box-shadow: 0 0 0 0 ${pulseColor['initial']};
+        outline: solid 2px ${pulseColor['initial']};
     }
-    30% {
+    40% {
         -moz-box-shadow: 0 0 0 ${range} ${pulseColor['mid']};
         box-shadow: 0 0 0 ${range} ${pulseColor['mid']};
+        /* border: solid 2px ${pulseColor['initial']}; */
     }
-    50% {
+    100% {
         -moz-box-shadow: 0 0 0 0 ${pulseColor['mid']};
         box-shadow: 0 0 0 0 ${pulseColor['mid']};
-    }
-    100%{
-        box-shadow: 0 0 0 0 inset ${pulseColor['initial']};
-        box-shadow: 0px 0px 10px 0px ${pulseColor['initial']}; 
+        
     }
 `
 
@@ -41,15 +40,15 @@ export const CircleContainer = styled.div`
         background-color:white;
         box-shadow: 0 0 0 500px inset var(--background);
         overflow: hidden;
-        transition-property: width, height, background-color;
-        transition: width height background-color  1s ease-in;
-        
+        transition-property: width, height, background-color, box-shadow;
+        transition: width height background-color box-shadow  1s ease-in;
+        outline: solid 2px rgba(255,255,255,0);
 
             
         &:hover {
             background-color: white;
              
-            /* box-shadow: 0px 0px 10px 0px var(--background);  */
+             /* box-shadow: 0px 0px 10px 0px var(--background);   */
              /* width: calc(var(--size)*1.2);
                 height: calc(var(--size)*1.2); */
         };
@@ -65,11 +64,11 @@ export const CircleContainer = styled.div`
         /* box-shadow: 0 0 0 0 inset var(--background);
         box-shadow: 0px 0px 10px 0px var(--background); */
         
-    }
-    animation:  ${({item_active, pulseColor})=> item_active?  pulse(pulseColor, '10px') : ''} '1.2s 1';
-    /* animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor, '10px'): ''};
-    animation-duration: ${({item_active})=> item_active?  '1.2s': '0'}; 
-    animation-iteration-count:${({item_active})=> item_active?  '1': '0'} ;   */
+        }
+
+        animation-name: ${({item_active,pulseColor})=> item_active?  pulse(pulseColor, '15px'): ''};
+        animation-duration: ${({item_active})=> item_active?  '1.5s': '0'}; 
+        animation-iteration-count:${({item_active})=> item_active?  '1': '0'} ;   
     
     
 

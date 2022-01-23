@@ -1,25 +1,43 @@
-import React, {useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import {CircleContainer} from './square-infograph.styles'
-import {Icon,Line, ContentContainer} from '../infograph.styles'
 
 
 
-
-const Square = ({size,box_shadows,position_stats,item,background,children,
-                setInfoItem,setEnterButtonColor,
+const Square = ({size,box_shadows,item,background,children,
                 pulseColor,backgroundImage,type_square}) => {
-    const [item_active, setItem_active] = useState(false);
 
-    console.log(backgroundImage)
+    const [itemActive, setItemActive] = useState(false);
+    const pulse = useRef(null);
+    
+    const shadow = ()=>{
+/*         pulse.current.style.boxShadow =`0px 0px 10px 0px ${background}` */    
+            pulse.current.style.outline =`solid 2px ${background}`
+    }
+    const shadowOff = ()=>{
+        /* pulse.current.style.boxShadow =`none` */
+        pulse.current.style.outline =`solid 2px rgba(255,255,255,0)`
+    } 
+    
+    useEffect(()=>{
+        const animation = () =>{
+            itemActive ? pulse.current.addEventListener('transitionend',shadow)
+            : pulse.current.addEventListener('transitionend',shadowOff);
+            console.log(pulse.current.style)
+
+        };
+        animation();
+    },[itemActive]);
+    
+    
     return (
         
             <CircleContainer background={background} size={size} 
-                            
-                            item_active={item_active}
+                            ref={pulse}
+                            item_active={itemActive}
                             pulseColor={pulseColor}
-                            box_shadows={box_shadows} position_stats={position_stats}
-                            onMouseLeave={()=>setItem_active(!item_active)} 
-                            onMouseEnter={()=>setItem_active(!item_active)}
+                            box_shadows={box_shadows}
+                            onMouseLeave={()=>setItemActive(!itemActive)} 
+                            onMouseEnter={()=>setItemActive(!itemActive)}
                             type_square = {type_square}
                             onClick = {()=>{    
                                     window.location.replace(item.link)
