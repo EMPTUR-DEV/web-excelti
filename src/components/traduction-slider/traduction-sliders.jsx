@@ -31,7 +31,6 @@ const shadow = {
 
 const PrincipalContainer = styled.div`
     position: relative;
-    max-width:100%;
     color:var(--white);
     display:flex;
     justify-content:center;
