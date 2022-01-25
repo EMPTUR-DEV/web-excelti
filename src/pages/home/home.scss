@@ -4,3 +4,14 @@
     flex-direction: column;
     z-index: 0;
 }
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.world {
+    width: 400px;
+    margin: 20px;
+}

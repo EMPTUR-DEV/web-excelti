@@ -10,7 +10,7 @@ export const GraphicContainer = styled.div`
     justify-content:start;
     flex-direction:column;
     
-    margin: 10px 0 300px;
+    margin: 10px 0 100px;
     
 `
 
