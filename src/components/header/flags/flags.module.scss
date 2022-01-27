@@ -9,12 +9,14 @@
     z-index: 100;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .container {
         position: absolute;
         top: 0px;
         align-self: center;
         justify-self: flex-end;
+        grid-column: 3;
+        grid-row: 1;
     }
 }
 
