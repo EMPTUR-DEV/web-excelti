@@ -12,6 +12,7 @@
 }
 
 .world {
-    width: 400px;
+    max-width: 400px;
     margin: 20px;
+    filter: drop-shadow(0 0 1em var(--lightBlue));
 }
