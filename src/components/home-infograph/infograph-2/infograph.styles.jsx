@@ -10,7 +10,7 @@ export const GraphicContainer = styled.div`
     justify-content:start;
     flex-direction:column;
     padding: 0 20px;
-    margin: 10px 0 100px 20px;
+    margin: 10px 0 100px 0px;
     
 `
 
@@ -56,7 +56,7 @@ export const CenterCircleContainer =styled.div`
         display: grid;
         gap: 20px;
         grid-template-columns: var(--width-content) ;
-        grid-template-rows: var(--width-content) var(--width-content) var(--width-content) var(--width-content) ;
+        grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
         position: relative;
         }
 `
@@ -84,7 +84,10 @@ export const Full = styled.div`
             margin-bottom: 50px;
             width: 100%;
             height: 100%;
-            
+            padding: 0 0px 0 0; 
+        }
+        @media (max-width: 700px){
+            padding: 0 0px 0 0;
         }
 `
 
