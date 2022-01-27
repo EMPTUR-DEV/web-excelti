@@ -9,7 +9,7 @@ const Footer = () => {
     const currentYear  = new Date().getFullYear()
     
     return (
-        <div className= {styles.container}>
+        <div id='footer' className= {styles.container}>
             
             <div className={styles.grid}>
                 

@@ -2,32 +2,48 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 100px;
-    margin: 5px;
-    .banner {
-        border-radius: 15px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        overflow: hidden;
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    .bars {
+        height: 50px;
+        width: 50px;
+        padding: 3px;
+        cursor: pointer;
+        z-index: 100;
     }
-    .cover {
-        border-radius: 15px;
+    .itemsContainer {
+        background: var(--white);
+        width: 100vw;
+        height: 100vh;
         position: absolute;
-        background-color: var(--darkBlueWave);
-        color: var(--blue);
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: .7rem;
-        h2 {
-            color: var(--blue);
-            text-shadow: 4px -4px 8px #000074, -4px 4px 8px #0000be;
+        right: 0;
+        .itemContainer {
+            position: relative;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            h2 {
+                color: var(--blue);
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
+                color: var(--blue);
+                &::before {
+                    content: "";
+                    background-color: var(--greenLeaf);
+                    height: 100px;
+                    width: 100px;
+                }
+            }
         }
+    }
+    .hideItemsContainer {
+        display: none;
     }
 }
 

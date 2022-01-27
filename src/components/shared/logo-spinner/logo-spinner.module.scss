@@ -1,6 +1,6 @@
 $color-far: rgb(18, 134, 193);
 $color-medium:rgb(9, 174, 140);
-$color-close: rgb(68, 169, 37);
+$color-close: var(--greenLeaf);
 .preloader {
     position: fixed;
     top: 0;

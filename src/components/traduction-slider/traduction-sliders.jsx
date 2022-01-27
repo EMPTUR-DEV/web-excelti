@@ -5,8 +5,8 @@ const TraductionSlider = (props) => {
     const { title,color,wide } = props;
     
     return (
-        <PrincipalContainer width={wide} >
-                <TitleTraduction color={color} width={wide}>
+        <PrincipalContainer color={color}  width={wide} >
+                <TitleTraduction width={wide}>
                     {title}
                 </TitleTraduction>
                 <Books>
@@ -36,18 +36,22 @@ const PrincipalContainer = styled.div`
     justify-content:center;
     margin:20px;
     flex-wrap:wrap;
-    min-width:500px;
+    min-width:1000px;
     height:${props => `${props.width*2.8}px`};
+    flex-grow:1;
+    flex-shrink:1;
+    flex-basis:1;
+    min-width: 325px;
+    border-radius: 20px;
+    background:${props => theme[props.color]};
+    box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
 `;
     
 const TitleTraduction = styled.div`
+position: absolute;
     color:white;
     font-size:1.4rem;
     padding:15%;
-    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
-    background:${props => theme[props.color]};
-    width: -webkit-fill-available;
-    box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
 `;
     
 const Books = styled.div`

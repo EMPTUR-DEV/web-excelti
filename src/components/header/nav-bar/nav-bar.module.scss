@@ -3,112 +3,16 @@
     align-items: center;
     text-align: end;
     justify-content: end;
-    grid-column: 2;
-    grid-row: 1;
     font-size: .8em;
-    .nodeContainer {
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        z-index: 51;
-        position: absolute;
-        top: 0;
-    }
-    .openNodeContainer {
-        box-sizing: border-box;
-        @extend .animationBackground;
-        width: 100%;
-        background-color: var(--green);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1px;
-        justify-content: center;
-        align-content: center;
-        gap: 3px;
-        padding: 100px 0 100% 0;
-        >* {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    .bars {
-        height: 50px;
-        width: 50px;
-        padding: 3px;
-        cursor: pointer;
-        z-index: 100;
-    }
+    margin-right: 3px;
+    grid-column: 2;
+    grid-row: 2;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .container {
-        align-items: center;
+        grid-column: 2;
+        grid-row: 1;
         display: flex;
-        .nodeContainer {
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            align-items: center;
-            justify-content: flex-start;
-            position: static;
-            padding-right: 1px;
-        }
-        .bars {
-            display: none;
-        }
-        .openNodeContainer {
-            display: flex;
-            width: inherit;
-            height: inherit;
-            background-color: none;
-        }
-    }
-}
-
-.animationBackground {
-    background: linear-gradient(227deg, #6889ff, #5b7fff, #33ccfc);
-    background-size: 400% 400%;
-    -webkit-animation: mobileNavAnimation 30s ease infinite;
-    -moz-animation: mobileNavAnimation 30s ease infinite;
-    animation: mobileNavAnimation 30s ease infinite;
-}
-
-@-webkit-keyframes mobileNavAnimation {
-    0% {
-        background-position: 91% 0%
-    }
-    50% {
-        background-position: 10% 100%
-    }
-    100% {
-        background-position: 91% 0%
-    }
-}
-
-@-moz-keyframes mobileNavAnimation {
-    0% {
-        background-position: 91% 0%
-    }
-    50% {
-        background-position: 10% 100%
-    }
-    100% {
-        background-position: 91% 0%
-    }
-}
-
-@keyframes mobileNavAnimation {
-    0% {
-        background-position: 91% 0%
-    }
-    50% {
-        background-position: 10% 100%
-    }
-    100% {
-        background-position: 91% 0%
     }
 }

@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .App {
     text-align: center;
     width: 100%;
@@ -32,7 +36,7 @@ p {
     --darkBlue: #000099;
     --purple: #9995c8;
     --lime: #a6ce37;
-    --greenLeaf: #00a54f;
+    --greenLeaf: rgb(68, 169, 37);
     --green: #4ca392;
     --greenMint: #0b6d5e;
     --white: #fff;
