@@ -1,4 +1,4 @@
-import React,{ useContext,useState } from "react";
+import React from "react";
 import styles from "./flags.module.scss";
 //import { changeLang }  from "../../../translations/i18n";
 import { useTranslation } from 'react-i18next';
