@@ -7,7 +7,7 @@ export const TRANSLATIONS_EN = {
     module: "Module {{count}}",
     contact: "CONTACT",
     homeTitle: "EXCELTI",
-    homeSubtitle: "Traductor's team and Interpreters committed to the profession.",
+    homeSubtitle: "Traduction's team and Interpreters committed to the profession.",
     interpretation: 'Interpretation',
     tecnic: "Técnica:",
     tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos",
