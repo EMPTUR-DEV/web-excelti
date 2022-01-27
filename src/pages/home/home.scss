@@ -16,4 +16,7 @@
     max-width: 400px;
     margin: 30px;
     filter: drop-shadow(0 0 1em var(--lightBlue));
+    @media (max-width: 400px) {
+        max-width: 300px;
+    }
 }

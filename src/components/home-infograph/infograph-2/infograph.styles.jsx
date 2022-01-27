@@ -9,8 +9,10 @@ export const GraphicContainer = styled.div`
     place-items: center;
     justify-content:start;
     flex-direction:column;
-    padding: 0 20px;
+    padding: 0 0px;
+    margin:auto;
     margin: 10px 0 100px 0px;
+
     
 `
 
