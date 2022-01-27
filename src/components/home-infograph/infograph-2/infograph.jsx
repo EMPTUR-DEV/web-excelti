@@ -6,7 +6,7 @@ import {FiEdit3} from 'react-icons/fi'
 import {GiVideoConference} from 'react-icons/gi'
 import {BsHeadset} from 'react-icons/bs'
 import {IoIosPeople} from 'react-icons/io'
-import {GraphicContainer,Double,Single, CenterCircleContainer} from './infograph.styles'
+import {GraphicContainer,Double,Single, CenterCircleContainer,Full} from './infograph.styles'
 import Square from './square-infograph/square-infograph'
 import useOnScreen from '../../../hooks/intersectionObserver';
 
@@ -114,10 +114,23 @@ const InfoGraph = ({items}) => {
             
           </Single>
           <Single>
-          <Square background={exceltiColors[6]} size={large_square_size} 
-                    item={items[1]} box_shadows={box_shadows[1]}
+            <Square background={exceltiColors[6]} size={short_square_size} 
+                    item={items[3]} box_shadows={box_shadows[3]}
                     pulseColor = {exceltiColorsAlpha[6]}
+                    backgroundImage = {backgroundImages[3]}
+                    position_stats={dots[3]}
                     type_square = {'single'}
+                    setEnterButtonColor = {setEnterButtonColor}
+                    setInfoItem= {setInfoItem}
+                    >
+                    <BsHeadset/>
+            </Square>
+          </Single> 
+          <Full>
+          <Square background={exceltiColors[3]} size={large_square_size} 
+                    item={items[1]} box_shadows={box_shadows[1]}
+                    pulseColor = {exceltiColorsAlpha[3]}
+                    
                     backgroundImage = {backgroundImages[1]}
                     position_stats={dots[1]}
                     setEnterButtonColor = {setEnterButtonColor}
@@ -126,8 +139,8 @@ const InfoGraph = ({items}) => {
                     <FiEdit3/>
             </Square>
             
-          </Single>
-          <Single> 
+          </Full>
+          {/* <Single> 
             
             <Square background={exceltiColors[2]} size={short_square_size} 
                     item={items[2]} box_shadows={box_shadows[2]}
@@ -141,19 +154,8 @@ const InfoGraph = ({items}) => {
                     <RiArticleLine/>
             </Square>
             </Single>
-            <Single>
-            <Square background={exceltiColors[3]} size={short_square_size} 
-                    item={items[3]} box_shadows={box_shadows[3]}
-                    pulseColor = {exceltiColorsAlpha[3]}
-                    backgroundImage = {backgroundImages[3]}
-                    position_stats={dots[3]}
-                    type_square = {'single'}
-                    setEnterButtonColor = {setEnterButtonColor}
-                    setInfoItem= {setInfoItem}
-                    >
-                    <BsHeadset/>
-            </Square>
-          </Single> 
+           */}  
+           
           {/* <Double>
             
             <Square background={exceltiColors[4]} size={short_square_size} 

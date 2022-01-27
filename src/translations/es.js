@@ -9,6 +9,7 @@ export const TRANSLATIONS_ES = {
     homeTitle: "EXCELTI",
     homeSubtitle: "Equipo de traductores e intérpretes comprometidos con la profesión.",
     homeParagraph: "Dirigido por Olga Álvarez-Barr",
+    interpretation: 'Interpretación',
     tecnic: "Técnica:",
     tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos",
     cientific: "Científica:",

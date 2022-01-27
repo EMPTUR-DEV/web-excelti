@@ -8,6 +8,7 @@ export const TRANSLATIONS_EN = {
     contact: "CONTACT",
     homeTitle: "EXCELTI",
     homeSubtitle: "Traductor's team and Interpreters committed to the profession.",
+    interpretation: 'Interpretation',
     tecnic: "Técnica:",
     tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos",
     cientific: "Cientific:",

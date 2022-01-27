@@ -86,8 +86,8 @@ export const CircleContainer = styled.div`
             ${({type_square})=> type_square =='single' ? 
              `--width-overlap:550px;
             --height-overlap: 90px;`:
-            `--width-overlap: 275px;
-            --height-overlap: 40px;`
+            `--width-overlap: 1140px;
+            --height-overlap: 90px;`
             }
             
             position: absolute;
@@ -100,8 +100,8 @@ export const CircleContainer = styled.div`
                 ${({type_square})=> type_square =='single' ? 
                 `--width-overlap:350px;
                 --height-overlap: 40px;`:
-                `--width-overlap: 175px;
-                --height-overlap: 20px;`
+                `--width-overlap: 350px;
+                --height-overlap: 40px;`
                 }
             }
             &::before{

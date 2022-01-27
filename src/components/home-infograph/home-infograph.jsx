@@ -30,7 +30,7 @@ const HomeInfograph = (props) => {
         setItems([{name: t("traduction"), link:'/traduction',key:0},
                 {name:t("training"), link:'/training', key:1},
                 {name:'E-learning', link:'/elearning', key:2},
-                {name:t("audiovisualServices"), link:'/audiovisual', key:3},
+                {name:t("interpretation"), link:'/interpretation', key:3},
                 {name:t("ourProfessionals"), link:'/professionals', key:4},
                 {name:t("publications"), link:'/publications', key:5},
             ]);
