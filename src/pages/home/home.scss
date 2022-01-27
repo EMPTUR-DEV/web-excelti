@@ -9,10 +9,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0 8% 8% 8%;
 }
 
 .world {
     max-width: 400px;
-    margin: 20px;
+    margin: 30px;
     filter: drop-shadow(0 0 1em var(--lightBlue));
 }

@@ -4,8 +4,9 @@
     text-align: end;
     justify-content: end;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
     font-size: .8em;
+    margin-right: 3px;
     .nodeContainer {
         width: 100%;
         display: none;
@@ -46,13 +47,15 @@
 
 @media (min-width: 1200px) {
     .container {
+        grid-column: 2;
+        grid-row: 1;
         align-items: center;
         display: flex;
         .nodeContainer {
             display: flex;
             flex-direction: row;
             height: 100%;
-            align-items: center;
+            align-items: start;
             justify-content: flex-start;
             position: static;
             padding-right: 1px;

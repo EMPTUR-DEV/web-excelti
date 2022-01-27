@@ -26,20 +26,39 @@
         display: block;
     }
     .container {
+        position: relative;
+        .nav {
+            display: block;
+        }
         background-image: none;
         width: 160px;
-        height: 60px;
-        font-size: 1.4em;
+        height: 50px;
+        font-size: 1.3em;
+        padding: 10px 20px;
         color: var(--green);
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        &:hover {
-            text-decoration: underline 2px var(--greenMint);
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            background-color: var(--blue);
+            transition: all .5s;
+            z-index: -1;
+            opacity: 0;
+            border-radius: 0px 0px 20px 20px;
         }
-        .nav {
-            display: block;
+        &:hover::before {
+            opacity: 1;
+        }
+        &:hover {
+            color: var(--white);
         }
     }
     .childsContainerShow {
