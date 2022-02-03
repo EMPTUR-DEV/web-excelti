@@ -5,10 +5,22 @@ import useTraductions from '../../hooks/useTraductions';
 import { useTranslation } from "react-i18next";
 import Books from './../../components/books/books';
 import Banner from '../../components/header/banner/banner';
+import TeamList from '../../components/shared/team-list/team-list';
 
 const Traduction = () => {
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
+
+    const professionals = [
+        'Cynthia Abad Quintaié',
+        'Olga Álvarez',
+        'Cristina Cucchi',
+        'Pamela Fioravanti',
+        'Nancy Lynch',
+        'Laura Tavolai',
+        'Melisa Tello' ,
+        'Gabriela Yañez']
+
 
     const paragraph =()=>{
         return(
@@ -53,6 +65,7 @@ const Traduction = () => {
                     )
                 }
             </div>
+            <TeamList teamTitle={'traductores'} teamList={professionals}/>
         </div>
     )
 }

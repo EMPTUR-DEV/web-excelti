@@ -12,6 +12,7 @@ const Router = () => {
     const Header = lazy(() => import('../components/header/header'));
     const InterpretationPage = lazy(() => import('../pages/interpretation/interpretation'));
     
+
     return (
         <BrowserRouter>
             <Suspense fallback={<LogoSpinner/>}>
@@ -23,7 +24,6 @@ const Router = () => {
                         <Route exact path='/professionals' component={Professionals} />
                         <Route exact path='/training' component={Training} />
                         <Route exact path='/interpretation' component={InterpretationPage} />
-                        <Route exact path='/training' component={Training} />
                     </Switch>
                 <Footer/>
             </Suspense>
