@@ -10,6 +10,7 @@ const Router = () => {
     const Traduction = lazy(() => import('../pages/traduction/traduction'));
     const Training = lazy(() => import('../pages/training/training'));
     const Header = lazy(() => import('../components/header/header'));
+    const InterpretationPage = lazy(() => import('../pages/interpretation/interpretation'));
     
     return (
         <BrowserRouter>
@@ -20,6 +21,8 @@ const Router = () => {
                         <Route exact path='/' component={Home} />
                         <Route exact path='/traduction' component={Traduction} />
                         <Route exact path='/professionals' component={Professionals} />
+                        <Route exact path='/training' component={Training} />
+                        <Route exact path='/interpretation' component={InterpretationPage} />
                         <Route exact path='/training' component={Training} />
                     </Switch>
                 <Footer/>

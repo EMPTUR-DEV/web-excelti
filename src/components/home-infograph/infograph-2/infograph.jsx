@@ -129,8 +129,7 @@ const InfoGraph = ({items}) => {
           <Full>
           <Square background={exceltiColors[3]} size={large_square_size} 
                     item={items[1]} box_shadows={box_shadows[1]}
-                    pulseColor = {exceltiColorsAlpha[3]}
-                    
+                    pulseColor = {exceltiColorsAlpha[3]}               
                     backgroundImage = {backgroundImages[1]}
                     position_stats={dots[1]}
                     setEnterButtonColor = {setEnterButtonColor}

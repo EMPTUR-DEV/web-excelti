@@ -11,18 +11,18 @@ export const GraphicContainer = styled.div`
     flex-direction:column;
     padding: 0 0px;
     margin:auto;
-    margin: 10px 0 100px 0px;
+    margin-top: 10px;
+    margin-bottom: 100px;
 
     
 `
 
 export const CenterCircleContainer =styled.div`
-        --width-content: 400px;
         display: grid;
         justify-content: center;
         align-items: center;
         grid-gap: 20px;
-        width: 100%;
+        width: 90%;
         
         grid-template-areas:
         "a a b b"
@@ -35,31 +35,31 @@ export const CenterCircleContainer =styled.div`
          */
             
         @media (max-width: 992px) {
+            --width-content: 500px;
+            
             grid-template-areas:
             "a" 
             "b"
             "c"
             ;
-            
-            --width-content: 400px;
-            width: 100%;
             height: 100%;
             display: grid;
             gap: 20px;
+            grid-template-columns: var(--width-content) ;
+            grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
             /* grid-template-columns: var(--width-content) ;
             grid-template-rows:  var(--width-content) var(--width-content) var(--width-content)var(--width-content);  */
             position: relative;
         }
         @media (max-width: 700px) {
-
-        --width-content: 350px;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        gap: 20px;
-        grid-template-columns: var(--width-content) ;
-        grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
-        position: relative;
+  
+            --width-content: 350px;
+            height: 100%;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: var(--width-content) ;
+            grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
+            position: relative;
         }
 `
 
@@ -86,10 +86,10 @@ export const Full = styled.div`
             margin-bottom: 50px;
             width: 100%;
             height: 100%;
-            padding: 0 0px 0 0; 
+            padding: 0; 
         }
         @media (max-width: 700px){
-            padding: 0 0px 0 0;
+            padding: 0;
         }
 `
 

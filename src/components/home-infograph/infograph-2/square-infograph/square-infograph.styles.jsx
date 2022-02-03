@@ -28,8 +28,8 @@ export const CircleContainer = styled.div`
                                         100px 100px 0 4px var(--background),
                                         100px 100px 0 6px var(--background) `};
         
-        width: var(--size);
-        height: var(--size);
+        width: ${({type_square})=> type_square =='single' ?  '550px': '1120px'};
+        height: 100%;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -59,7 +59,7 @@ export const CircleContainer = styled.div`
         z-index: 10;
         height: 100%;
         border-radius: 20px;
-        top:0;
+        top: 0px;
         left: 0;
         /* box-shadow: 0 0 0 0 inset var(--background);
         box-shadow: 0px 0px 10px 0px var(--background); */
@@ -85,16 +85,24 @@ export const CircleContainer = styled.div`
     & .image-overlap{
             ${({type_square})=> type_square =='single' ? 
              `--width-overlap:550px;
-            --height-overlap: 90px;`:
-            `--width-overlap: 1140px;
-            --height-overlap: 90px;`
+            --height-overlap: 80px;`:
+            `--width-overlap: 1120px;
+            --height-overlap: 80px;`
             }
             
             position: absolute;
             width: 100%;
             height: 100%;
             z-index: 200;
-            
+            @media (max-width: 992px) {
+                
+                ${({type_square})=> type_square =='single' ? 
+                `--width-overlap:550px;
+                --height-overlap: 70px;`:
+                `--width-overlap: 550px;
+                --height-overlap: 70px;`
+                }
+            }
             @media (max-width: 700px) {
                 
                 ${({type_square})=> type_square =='single' ? 
@@ -112,7 +120,7 @@ export const CircleContainer = styled.div`
                 width:100%;
                 border-left: solid var(--width-overlap) var(--background);  /* rgba(0,0,0,.5) ; */
                 border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid var(--height-overlap) rgba(0,0,0,0)'};
-                height: 0px/* ${({item_active})=> item_active? '0px' : 'var(--height-overlap)'}; */
+                height: 0px;/* ${({item_active})=> item_active? '0px' : 'var(--height-overlap)'}; */
                 z-index: 100;
                 transition: ease-in 0.3s;
             }
@@ -202,11 +210,18 @@ export const CircleContainer = styled.div`
             left: 0px;
             `
         };  
+            width: 550px;
+            height: 100%;
+
         }
         @media (max-width: 700px) {
             height: 100%;
+            width: 400px;
         }
-        
+        @media (max-width: 400px) {
+            height: 100%;
+            width: 300px;
+        }
 `
 
 
