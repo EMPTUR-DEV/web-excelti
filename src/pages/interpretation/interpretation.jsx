@@ -12,7 +12,7 @@ const InterpretationPage = () => {
       'alt':'simultanea'
     },
     { 'title': 'Intérprete consultora',
-      'content':'Asesoramiento para organizadores de conferencias, empresas, organizaciones y otros clientes en materia de contratación de intérpretes. Formación y gestión de equipos de intérpretes en congresos, convenciones, seminarios, actividades de capacitación, negociaciones, conferencias de prensa y otro tipo de reuniones en las que los participantes de diversas lenguas y culturas requieran la interpretación para poder comunicarse.',
+      'content':'Asesoramiento para organizadores de conferencias, empresas, organizaciones y otros clientes en materia de contratación de intérpretes. Formación y gestión de equipos de intérpretes en congresos, convenciones, seminarios, actividades de capacitación, negociaciones, conferencias de prensa y otro tipo de reuniones en las que los participantes de diversas lenguas y culturas requieran la interpretación para poder comunicarse.  Asesoramiento sobre otros servicios audiovisuales relacionados con la interpretación.',
       'image': '/interpretation/interprete_consultora21a.jpg',
       'alt':'consultora'    
     },
@@ -30,13 +30,22 @@ const InterpretationPage = () => {
       'content': 'Los participantes de la reunión se encuentran en diferentes sedes y se comunican a través de medios de telecomunicación, plataformas de videoconferencias o de interpretación.',
       'image':'/interpretation/interpretacionremota21.png',  
       'alt':'susurrada'
-    }    
+    },
+    { 'title':'Eventos híbridos',
+    'content': 'Modalidad en la que se combina la interpretación presencial con la virtual. ',
+    'image':'/interpretation/interpretacionremota21.png',  
+    'alt':'susurrada'
+  }    
   ]
   const professionals = [
-  'Cynthia Abad Quintalé',
+  /* 'Cynthia Abad Quintalé',
   'Olga Álvarez',
-  'Cristina Cucchi',
-  'Violeta Harfuch'
+  'Cristina Cucchi', */
+  'Violeta Harfuch',
+  'Isolda Rodriguez Villegas',
+  'Laura Tavolai',
+  'Vivien Perez Moran'
+  
 ]
 
   return <InterpretationPageContainer>

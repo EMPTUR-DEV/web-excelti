@@ -27,11 +27,17 @@ export const TrainingListContainer = styled.ul`
         }
         & span{
             margin: auto;
-                
+        }
+        @media screen and (max-width: 500px){
+            
+            margin:10px auto;
+            height:100%;
+            width:90%;
         }
     }
 
     @media screen and (max-width: 500px){
         flex-direction:column;
     }
+}
 `

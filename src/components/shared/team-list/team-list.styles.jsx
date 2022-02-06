@@ -27,4 +27,7 @@ export const List = styled.ul`
         border-radius: 5px;
         box-shadow: 0px 0px 0px 1px grey;
     }
+    @media screen and (max-width: 400px){
+        width:280px;
+    }
 `
