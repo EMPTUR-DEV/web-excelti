@@ -11,7 +11,6 @@ const FormationContentList = ({formationItems}) => {
         }else{
             setItemActive(key)
         }
-
     }
     return (
         <FormationContentListContainer itemActive={itemActive!=''}>
