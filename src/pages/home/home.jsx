@@ -32,6 +32,10 @@ const Home = () => {
                 }
                 <img className='world' src='home/world.svg'/>
             </div>
+            <Info
+            subtitle={'Los invitamos a contactarse con nosotros. Será un gusto poder escucharlos y orientarlos en función de sus necesidades.'} 
+            paragraph={' '}
+            />
         </div>
     )
 }

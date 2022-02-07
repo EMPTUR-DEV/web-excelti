@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./flags.module.scss";
-//import { changeLang }  from "../../../translations/i18n";
 import { useTranslation } from 'react-i18next';
-
 
 const Flags = () => {
     const { i18n } = useTranslation();
-    const flags =[ {flag:styles.spain,lenguage:'es'},{flag:styles.british,lenguage:'en'} ]
+    const flags =[ {flag:styles.spain,lenguage:'es'},{flag:styles.british,lenguage:'en'},{flag:styles.portugal,lenguage:'es'} ]
 
     return (
         <div className={styles.container}>

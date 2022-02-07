@@ -27,6 +27,18 @@
     display: flex;
     background: rgb(170, 21, 27);
     background: linear-gradient(0deg, rgba(170, 21, 27, 1) 25%, rgba(241, 191, 0, 1) 25%, rgba(241, 191, 0, 1) 75%, rgba(170, 21, 27, 1) 75%);
+    position: relative;
+    &:after {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        background: url('./spain-shield.png') no-repeat;
+        background-size: 7px;
+        top: 6px;
+        left: 6px;
+        position: absolute;
+        display: inline-block;
+    }
 }
 
 .british {
@@ -36,4 +48,26 @@
     border-radius: 5px;
     display: flex;
     background: linear-gradient(90deg, transparent 46%, red 46%, red 56%, transparent 56%), linear-gradient(transparent 38%, white 38%, white 42%, red 42%, red 58%, white 58%, white 62%, transparent 62%), linear-gradient(90deg, transparent 44%, white 44%, white 46%, red 46%, red 56%, white 56%, white 58%, transparent 58%), linear-gradient(33deg, transparent 45%, white 45%, white 48%, red 48%, red 54%, white 54%, white 57%, transparent 57%), linear-gradient(-33deg, mediumblue 45%, white 45%, white 48%, red 48%, red 54%, white 54%, white 57%, mediumblue 57%);
+}
+
+.portugal {
+    margin-left: 5px;
+    height: 20px;
+    width: 30px;
+    border-radius: 5px;
+    display: flex;
+    background: #ff0000;
+    background: linear-gradient(270deg, #ff0000 61%, rgba(4, 106, 56, 1) 61%);
+    position: relative;
+    &:after {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        background: url('./portugal-shield.png') no-repeat;
+        background-size: 10px;
+        top: 5.5px;
+        left: 7px;
+        position: absolute;
+        display: inline-block;
+    }
 }
