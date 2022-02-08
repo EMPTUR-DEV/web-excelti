@@ -9,7 +9,6 @@ const NavBar = () => {
     const { t, i18n } = useTranslation();
     const isDesktop = useMediaQuery('(min-width: 1024px)');
     const [ items,setItems ] = useState([]);
-    console.log('(screenSize',isDesktop);
     useEffect(()=>{
         setItems([{name: t("traduction"), link:'/traduction',image:'header/traduction-page.jpg'},
                 {name:'Interpretación', link:'/interpretation',image:'header/traduction-page.jpg'}, 
