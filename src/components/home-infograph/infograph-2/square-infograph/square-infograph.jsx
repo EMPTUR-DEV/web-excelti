@@ -22,7 +22,6 @@ const Square = ({size,box_shadows,item,background,children,
         const animation = () =>{
             itemActive ? pulse.current.addEventListener('transitionend',shadow)
             : pulse.current.addEventListener('transitionend',shadowOff);
-            console.log(pulse.current.style)
 
         };
         animation();

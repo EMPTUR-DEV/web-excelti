@@ -4,7 +4,6 @@ import { FormationContentListContainer,FormationList, ItemContent, FormationButt
 const FormationContentList = ({formationItems}) => {
 
     const [itemActive, setItemActive] = useState('');
-    console.log(itemActive!='')
     const handleItemClick = (key)=>{
         if (itemActive ===key){
             setItemActive('')

@@ -58,7 +58,6 @@ const InfoGraph2 = ({items}) => {
 
   useEffect(()=>{
     onScreen ? setInfoState(true) : setInfoState(false);
-    console.log(onScreen)
 
   }, [onScreen]);
 
@@ -66,7 +65,6 @@ const InfoGraph2 = ({items}) => {
   const setInfoItem = (item)=>{
     setInfoToShow(item)
     setShowInfo(!showInfo)   
-    console.log(showInfo) 
   } 
     return (
     <GraphicContainer ref={ref}>
