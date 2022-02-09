@@ -28,8 +28,8 @@ export const CircleContainer = styled.div`
                                         100px 100px 0 4px var(--background),
                                         100px 100px 0 6px var(--background) `};
         
-        width: ${({type_square})=> type_square =='single' ?  '550px': '1120px'};
-        height: 100%;
+        width: 300px;
+        height: 300px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -43,7 +43,7 @@ export const CircleContainer = styled.div`
         transition-property: width, height, background-color, box-shadow;
         transition: width height background-color box-shadow  1s ease-in;
         outline: solid 2px rgba(255,255,255,0);
-
+        margin:auto;
             
         &:hover {
             background-color: white;
@@ -84,23 +84,29 @@ export const CircleContainer = styled.div`
 
     & .image-overlap{
             ${({type_square})=> type_square =='single' ? 
-             `--width-overlap:550px;
-            --height-overlap: 80px;`:
+             `--width-overlap:300px;
+            --height-overlap: 50px;`:
             `--width-overlap: 1120px;
-            --height-overlap: 80px;`
+            --height-overlap: 50px;`
             }
             
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width:100%;
+            height:100%;            
             z-index: 200;
+
+            @media (min-width: 1200px) {
+                --width-overlap:380px;
+                --height-overlap: 40px;
+            }
+            
             @media (max-width: 992px) {
                 
                 ${({type_square})=> type_square =='single' ? 
-                `--width-overlap:550px;
-                --height-overlap: 70px;`:
+                `--width-overlap:250px;
+                --height-overlap: 40px;`:
                 `--width-overlap: 550px;
-                --height-overlap: 70px;`
+                --height-overlap: 40px;`
                 }
             }
             @media (max-width: 700px) {
@@ -117,7 +123,7 @@ export const CircleContainer = styled.div`
                 top: 0;
                 left: 0;
                 content: '';
-                width:100%;
+                width:var(--width-overlap);
                 border-left: solid var(--width-overlap) var(--background);  /* rgba(0,0,0,.5) ; */
                 border-bottom: ${({item_active})=> item_active?  'solid 0px rgba(0,0,0,0)':  'solid var(--height-overlap) rgba(0,0,0,0)'};
                 height: 0px;/* ${({item_active})=> item_active? '0px' : 'var(--height-overlap)'}; */
@@ -129,7 +135,7 @@ export const CircleContainer = styled.div`
                 bottom: 0;
                 left: 0;
                 content: '';
-                width:100%;
+                width:var(--width-overlap);
                 border-left: solid var(--width-overlap) rgba(0,0,0,0);
                 border-bottom: ${({item_active})=> item_active? 'solid 0px var(--background)': ' solid var(--height-overlap) var(--background)'};
                 height: var(--height-overlap);
@@ -185,14 +191,16 @@ export const CircleContainer = styled.div`
                 text-align:center;
                 overflow-wrap: break-word;
                 color: black;//var(--background);
-                ${({type_square})=>
-                    type_square =='single'?  'font-size: 2rem': 'font-size: 1.5rem'};
+                font-size: 2rem;
                 ${({item_active})=>
                     item_active? 'opacity: 100%; display:flex;color: var(--background);' : 
                     'opacity: ;display:flex;'
                 }
                 padding: 0;
                 margin:0 0 10px 0;
+                @media (max-width: 992px) {
+                    font-size:1.5rem;
+                }
                 /* text-shadow: 2px 0 0 #000, -2px 0 0 #000,
                              0 2px 0 #000, 0 -2px 0 #000, 
                              1px 1px #000, -1px -1px 0 #000, 
@@ -202,6 +210,12 @@ export const CircleContainer = styled.div`
         }       
         transition: ease-in-out 0.2s;
 
+
+        @media (min-width: 1200px) {
+            width: 380px;
+            height: 380px;
+            margin:10px;
+        }
         @media (max-width: 992px) {
             ${({posicion_mobile})=>
             posicion_mobile ?
@@ -210,17 +224,19 @@ export const CircleContainer = styled.div`
             left: 0px;
             `
         };  
-            width: 550px;
-            height: 100%;
+            margin:5px;
+            width: 250px;
+            height: 250px;
+            
 
         }
         @media (max-width: 700px) {
-            height: 100%;
-            width: 400px;
+            width: 350px;
+            height: 350px;
         }
         @media (max-width: 400px) {
-            height: 100%;
-            width: 300px;
+            width: 350px;
+            height: 350px;
         }
 `
 

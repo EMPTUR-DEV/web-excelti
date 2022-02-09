@@ -124,7 +124,7 @@ const InfoGraph = ({items}) => {
                     <BsHeadset/>
             </Square>
           </Single> 
-          <Full>
+          <Single>
           <Square background={exceltiColors[3]} size={large_square_size} 
                     item={items[1]} box_shadows={box_shadows[1]}
                     pulseColor = {exceltiColorsAlpha[3]}               
@@ -137,7 +137,7 @@ const InfoGraph = ({items}) => {
                     <FiEdit3/>
             </Square>
             
-          </Full>
+          </Single>
           {/* <Single> 
             
             <Square background={exceltiColors[2]} size={short_square_size} 

@@ -18,44 +18,29 @@ export const GraphicContainer = styled.div`
 `
 
 export const CenterCircleContainer =styled.div`
-        display: grid;
-        justify-content: center;
+        
+        
         align-items: center;
-        grid-gap: 20px;
+        
         width: 90%;
         
-        grid-template-areas:
-        "a a b b"
-        "a a b b"
-        "c c"
-        "c c";
+        display: flex;
+        justify-content: center;
+        align-items:center;
         
-        /* grid-template-columns: var(--width-content) var(--width-content);
-        grid-template-rows: var(--width-content)  var(--width-content);
-         */
             
         @media (max-width: 992px) {
             --width-content: 500px;
             
-            grid-template-areas:
-            "a" 
-            "b"
-            "c"
-            "d"
-            ;
             height: 100%;
-            display: grid;
-            gap: 20px;
-            grid-template-columns: var(--width-content) ;
-            grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
+            
             position: relative;
         }
         @media (max-width: 700px) {
   
             --width-content: 350px;
             height: 100%;
-            display: grid;
-            gap: 20px;
+            flex-direction:column;
             
         }
 `
@@ -72,8 +57,6 @@ export const Single = styled.div`
 
 export const Full = styled.div`
     height: 100%;
-    grid-area: c;
-    gap: 20px;
     padding: 0 40px 0 0;
         @media (max-width: 992px) {
             position: relative;
