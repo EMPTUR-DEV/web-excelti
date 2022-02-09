@@ -34,7 +34,12 @@ const InterpretationPage = () => {
     { 'title':'Eventos híbridos',
     'content': 'Modalidad en la que se combina la interpretación presencial con la virtual. ',
     'image':'/interpretation/interpretacionremota21.png',  
-    'alt':'susurrada'
+    'alt':'hibridos'
+  },
+  { 'title':'Actuación pericial',
+    'content': 'Servicios de traductores públicos con peritos intérpretes.',
+    'image':'/interpretation/interpretacionremota21.png',  
+    'alt':'peritos'
   }    
   ]
   const professionals = [

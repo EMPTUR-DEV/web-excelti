@@ -27,8 +27,8 @@ export const CenterCircleContainer =styled.div`
         grid-template-areas:
         "a a b b"
         "a a b b"
-        "c c c c"
-        "c c c c";
+        "c c"
+        "c c";
         
         /* grid-template-columns: var(--width-content) var(--width-content);
         grid-template-rows: var(--width-content)  var(--width-content);
@@ -41,14 +41,13 @@ export const CenterCircleContainer =styled.div`
             "a" 
             "b"
             "c"
+            "d"
             ;
             height: 100%;
             display: grid;
             gap: 20px;
             grid-template-columns: var(--width-content) ;
             grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
-            /* grid-template-columns: var(--width-content) ;
-            grid-template-rows:  var(--width-content) var(--width-content) var(--width-content)var(--width-content);  */
             position: relative;
         }
         @media (max-width: 700px) {
@@ -57,9 +56,7 @@ export const CenterCircleContainer =styled.div`
             height: 100%;
             display: grid;
             gap: 20px;
-            grid-template-columns: var(--width-content) ;
-            grid-template-rows: var(--width-content) var(--width-content) var(--width-content) ;
-            position: relative;
+            
         }
 `
 
@@ -69,10 +66,7 @@ export const Single = styled.div`
     
         @media (max-width: 992px) {
             position: relative;
-            margin-bottom: 50px;
-            width: 100%;
-            height: 100%;
-            
+            margin-bottom: 50px;            
         }
 `
 
@@ -93,29 +87,5 @@ export const Full = styled.div`
         }
 `
 
-
-export const Double = styled.div`
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        
-
-        @media (max-width: 992px) {
-            position: relative;
-            row-gap:50px;
-            column-gap:0;
-            margin-bottom: 50px;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
-            
-        }
-        @media (max-width: 700px) {
-            
-            flex-direction: column;
-        }
-
-`
 
 

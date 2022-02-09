@@ -6,7 +6,6 @@ export const FormationContentListContainer = styled.div`
     --course-title-width:24px;
     background-color: white;
     position:relative;
-    overflow-x: hidden;
     height:auto;
     width:${({itemActive})=> itemActive ? 'var(--ul-width)' : 'var(--li-width)'  } ;
     transition: width ease-in 0.4s;
@@ -79,9 +78,8 @@ export const FormationButton = styled.h2`
 export const FormationDescription = styled.div`
     position: absolute;
     left:0;
-    top:16px;
-    
-    min-height: 311px;
+    top:0;
+    min-height: 100%;
     width: calc(var(--ul-width) - var(--li-width));
     background-color:#eee;
     transition: all ease-in 0.4s ;

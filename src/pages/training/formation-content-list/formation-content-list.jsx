@@ -14,12 +14,20 @@ const FormationContentList = ({formationItems}) => {
     return (
         <FormationContentListContainer itemActive={itemActive!=''}>
             <FormationList >
-                {formationItems.map(({title,description,key})=> 
+                {formationItems.map(({title,topics,key})=> 
                 <ItemContent itemActive={itemActive===key} onClick={()=>handleItemClick(key)} key={key}>
                     <FormationButton>{title}  </FormationButton>
                     {
-                        itemActive ===key?
-                        <FormationDescription>{description}</FormationDescription>:
+                        itemActive ===key?                            
+                            <FormationDescription>
+                                {topics.map(({topicTitle,description})=>
+                                    <>
+                                        <h3>{topicTitle}</h3>
+                                        <p>{description}</p>
+                                    </>
+                                )}
+                                </FormationDescription>
+                        :
                         ''
                     }
                 </ItemContent>)}

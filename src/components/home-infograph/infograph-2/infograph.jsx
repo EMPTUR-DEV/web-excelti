@@ -130,6 +130,7 @@ const InfoGraph = ({items}) => {
                     pulseColor = {exceltiColorsAlpha[3]}               
                     backgroundImage = {backgroundImages[1]}
                     position_stats={dots[1]}
+                    type_square = {'single'}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
                     >
