@@ -47,10 +47,6 @@ export const CircleContainer = styled.div`
             
         &:hover {
             background-color: white;
-             
-             /* box-shadow: 0px 0px 10px 0px var(--background);   */
-             /* width: calc(var(--size)*1.2);
-                height: calc(var(--size)*1.2); */
         };
         &:before{
         position: absolute;
@@ -61,8 +57,6 @@ export const CircleContainer = styled.div`
         border-radius: 20px;
         top: 0px;
         left: 0;
-        /* box-shadow: 0 0 0 0 inset var(--background);
-        box-shadow: 0px 0px 10px 0px var(--background); */
         
         }
 
@@ -83,13 +77,8 @@ export const CircleContainer = styled.div`
         }
 
     & .image-overlap{
-            ${({type_square})=> type_square =='single' ? 
-             `--width-overlap:300px;
-            --height-overlap: 50px;`:
-            `--width-overlap: 1120px;
-            --height-overlap: 50px;`
-            }
-            
+            --width-overlap:300px;
+            --height-overlap: 50px;
             position: absolute;
             width:100%;
             height:100%;            
@@ -101,22 +90,12 @@ export const CircleContainer = styled.div`
             }
             
             @media (max-width: 992px) {
-                
-                ${({type_square})=> type_square =='single' ? 
-                `--width-overlap:250px;
-                --height-overlap: 40px;`:
-                `--width-overlap: 550px;
-                --height-overlap: 40px;`
-                }
+                --width-overlap:250px;
+                --height-overlap: 40px;
             }
             @media (max-width: 700px) {
-                
-                ${({type_square})=> type_square =='single' ? 
-                `--width-overlap:350px;
-                --height-overlap: 40px;`:
-                `--width-overlap: 350px;
-                --height-overlap: 40px;`
-                }
+                --width-overlap:350px;
+                --height-overlap: 40px;
             }
             &::before{
                 position: absolute;
@@ -155,7 +134,6 @@ export const CircleContainer = styled.div`
             `height: 100%;
             width: 100%;
             `};
-            /* width: ${({item_active})=> item_active?  '100%': '300px'}; */
             
             border-radius: 15px;
             position: absolute;
@@ -166,10 +144,6 @@ export const CircleContainer = styled.div`
             justify-content: center;
             padding:10px;
             transition: 0.3s ease-in ;
-            /* text-shadow: 2px 0 0 #000, -2px 0 0 #000,
-                             0 2px 0 #000, 0 -2px 0 #000, 
-                             1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000; */
             
             i {
                 
@@ -180,11 +154,7 @@ export const CircleContainer = styled.div`
                     'var(--background);'
             };
                 color:black;
-/*             text-shadow: 2px 0 0 #000, -2px 0 0 #000,
-                             0 2px 0 #000, 0 -2px 0 #000, 
-                             1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000; */
-            
+
 
             }
             h3{
@@ -201,10 +171,7 @@ export const CircleContainer = styled.div`
                 @media (max-width: 992px) {
                     font-size:1.5rem;
                 }
-                /* text-shadow: 2px 0 0 #000, -2px 0 0 #000,
-                             0 2px 0 #000, 0 -2px 0 #000, 
-                             1px 1px #000, -1px -1px 0 #000, 
-                             1px -1px 0 #000, -1px 1px 0 #000; */
+
 
             }
         }       
