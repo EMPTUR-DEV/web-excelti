@@ -28,17 +28,6 @@ const Container = styled.div`
     margin:50px;
 `;
 
-// const BookList = styled.div`
-//     margin: auto;
-//     justify-content:center;
-//     display:flex;
-//     flex-wrap:wrap;
-// `;
-
-// const Title = styled.h2`
-//     display:block;
-// `;
-
 const BookList = styled.div`
     display: grid;
      grid-template-columns: repeat(auto-fill, 1fr);

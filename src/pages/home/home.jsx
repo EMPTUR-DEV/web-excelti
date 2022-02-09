@@ -7,6 +7,7 @@ import TraductionSlider from '../../components/traduction-slider/traduction-slid
 import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
 import './home.scss'
+import World from '../../components/shared/world/world';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -30,7 +31,7 @@ const Home = () => {
                         )
                     )
                 }
-                <img className='world' src='home/world.svg'/>
+                <World/>
             </div>
             <Info
             subtitle={'Los invitamos a contactarse con nosotros. Será un gusto poder escucharlos y orientarlos en función de sus necesidades.'} 

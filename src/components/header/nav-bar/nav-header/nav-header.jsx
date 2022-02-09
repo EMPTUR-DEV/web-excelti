@@ -7,7 +7,7 @@ const NavHeader = ({items})=>{
   return (<div className={styles.container}>
       {
         items.map(item => (
-            <div className={styles.itemContainer} onClick={()=>handleLink(item.link)}>
+            <div className={styles.itemContainer} key={item.name} onClick={()=>handleLink(item.link)}>
               <span className={styles.nav}>{item.name}</span>
             </div>
         ))

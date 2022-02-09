@@ -1,7 +1,8 @@
 import { BrowserRouter,Route, Switch } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 import LogoSpinner from '../components/shared/logo-spinner/logo-spinner';
-// import ContactButton from '../components/contact-button/contact-button'
+import { BooksProvider } from '../hooks/booksContext';
+import NavBarMobile from '../components/header/nav-bar-mobile/nav-bar-mobile';
 
 const Router = () => {
     const Home = lazy(() => import('../pages/home/home'));
@@ -16,7 +17,10 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Suspense fallback={<LogoSpinner/>}>
-                <Header/>
+                <BooksProvider>
+                    <Header/>
+                    <NavBarMobile/>
+                </BooksProvider>
                 {/* <ContactButton/> */}
                     <Switch>  
                         <Route exact path='/' component={Home} />

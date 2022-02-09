@@ -2,7 +2,7 @@ import styles from './nav-bar.module.scss';
 import NavHeader from './nav-header/nav-header';
 import { useState,useEffect } from 'react';
 import { useTranslation } from "react-i18next";
-import NavMobile from './nav-mobile/nav-mobile';
+import NavMobileMenu from './nav-mobile-menu/nav-mobile-menu';
 import useMediaQuery from '../../../hooks/useScreenSize'
 
 const NavBar = () => {
@@ -26,7 +26,7 @@ const NavBar = () => {
             {
                 isDesktop ? 
                 <NavHeader items={items}/> :
-                <NavMobile items={items}/>
+                <NavMobileMenu />
             }
         </div>
     );

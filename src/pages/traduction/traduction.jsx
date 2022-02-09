@@ -65,12 +65,6 @@ const Traduction = () => {
             />
             <div className={styles.traductions}>
                 {
-                    // GetTraductions.map(x=>(
-                    //     <TraductionSlider time={2.5} key={x.title} title={x.title} color={x.color} wide={160}>
-                    //         <Slideshow time={2.5} key={x.title} items={x.list} wide={160}/>
-                    //     </TraductionSlider>
-                    //     )
-                    // )
                     GetTraductions.map(x=>(
                         <Books title={x.title} list={x.list}/>
                         )
