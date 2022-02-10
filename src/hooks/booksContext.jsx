@@ -3,15 +3,14 @@ import React, {createContext,useState} from 'react';
 const BooksContext = createContext({});
 
 const BooksProvider  = ({children}) => {
-    const [ standInLineBook, setStandInLineBook] = useState();
-    const [ nextInList,setNextInList ] = useState();
-    
-    const changeBook = (book) =>{
-        setStandInLineBook(book);
+    const [ showMobileMenu, setshowMobileMenu] = useState(false);
+   
+    const changeShowMobile = (book) =>{
+        setshowMobileMenu(book);
     }
     
      return (
-        <BooksContext.Provider value={{ standInLineBook,changeBook,setNextInList,nextInList }}>
+        <BooksContext.Provider value={{changeShowMobile,showMobileMenu }}>
             {children}
         </BooksContext.Provider>
     )

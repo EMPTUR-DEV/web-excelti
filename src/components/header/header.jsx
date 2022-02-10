@@ -5,7 +5,6 @@ import NavBar from './nav-bar/nav-bar';
 
 const Header =()=>{
 
-
 return (
     <div className={styles.headerContainer}>
         <Logo/>

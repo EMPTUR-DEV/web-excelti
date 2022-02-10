@@ -1,0 +1,9 @@
+.world {
+    max-width: 400px;
+    margin: 30px;
+    filter: drop-shadow(0 0 1em var(--lightBlue));
+    transform: rotate(180deg) scaleX(-1);
+    @media (max-width: 800px) {
+        max-width: 300px;
+    }
+}
