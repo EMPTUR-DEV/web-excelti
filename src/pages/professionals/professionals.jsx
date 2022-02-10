@@ -5,6 +5,17 @@ import Banner from '../../components/header/banner/banner';
 import { useTranslation } from "react-i18next";
 
 
+const professionalsData = [
+    {name:'Olga Alvarez',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''},
+    {name:'',profession:'', linkedInLink:'',pdfLink:''}
+]
 
 const Professionals = () => {
     const { t } = useTranslation();

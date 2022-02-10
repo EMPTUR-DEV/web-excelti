@@ -30,10 +30,10 @@ viewBox="0 0 28760.02 10625.69"
    <![CDATA[
     @font-face { font-family:"Dubai";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
     .str1 {stroke-width:4.31;stroke-miterlimit:22.9256}
-    .str2 {stroke:#0098DA;stroke-width:7.51;stroke-miterlimit:22.9256}
-    .str0 {stroke:#0098DA;stroke-width:834.53;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str2 {stroke:#0B6D9E;stroke-width:7.51;stroke-miterlimit:22.9256}
+    .str0 {stroke:#0B6D9E;stroke-width:834.53;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
-    .fil2 {fill:#0098DA}
+    .fil2 {fill:#0B6D9E}
     .fil1 {fill:#44A924}
     .fnt0 {font-weight:normal;font-size:1744.51px;font-family:'Dubai'}
    ]]>
