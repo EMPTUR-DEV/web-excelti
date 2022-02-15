@@ -43,8 +43,7 @@ export const CircleContainer = styled.div`
         transition-property: width, height, background-color, box-shadow;
         transition: width height background-color box-shadow  1s ease-in;
         outline: solid 2px rgba(255,255,255,0);
-        margin:auto;
-            
+                
         &:hover {
             background-color: white;
         };
@@ -177,11 +176,11 @@ export const CircleContainer = styled.div`
         }       
         transition: ease-in-out 0.2s;
 
+        margin:10px;
 
         @media (min-width: 1200px) {
             width: 380px;
             height: 380px;
-            margin:10px;
         }
         @media (max-width: 992px) {
             ${({posicion_mobile})=>

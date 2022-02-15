@@ -18,12 +18,7 @@ export const GraphicContainer = styled.div`
 `
 
 export const CenterCircleContainer =styled.div`
-        
-        
         align-items: center;
-        
-        width: 90%;
-        
         display: flex;
         justify-content: center;
         align-items:center;
