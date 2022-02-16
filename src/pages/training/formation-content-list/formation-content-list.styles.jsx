@@ -53,7 +53,7 @@ export const FormationList =  styled.ul`
 
 export const ItemContent = styled.li`
     width:var(--li-width);
-    box-shadow:${({itemActive}) => itemActive ? '-3px 2px 3px 0px #AAA' : 'none'};
+    box-shadow:${({itemActive}) => itemActive ? '-3px 2 px 3px 0px #AAA' : 'none'};
     background-color: var(--blue);   
     align-items:center; 
     cursor:pointer;
