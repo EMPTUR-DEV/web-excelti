@@ -26,6 +26,7 @@ const NavBarMobile = () => {
     return (
         !isDesktop&showMobileMenu ?
         <div className={styles.itemsContainer}>
+            <div className={styles.scrollableContainer}>
                 {
                     items.map(item => (
                         (<div key={item.name} className={styles.itemContainer} onClick={()=>handleLink(item.link)}>
@@ -34,7 +35,8 @@ const NavBarMobile = () => {
                     )
                 }
                 <World/>
-            </div> 
+            </div>
+        </div> 
         :
         <></>
     );
