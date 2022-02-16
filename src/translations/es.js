@@ -23,13 +23,13 @@ export const TRANSLATIONS_ES = {
     translatedBooks: "Libros traducidos",
     otherPublishedTranslates: "Otras traducciones publicadas",
     teamTranslates: 'Gestión de proyectos de traducción en equipo',
-    trainingParagraph: "Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su perfil personal",
+    trainingParagraph: " Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su perfil personal",
     correction: "Correción y edición:",
-    correctionParagraph: "TEXTO CORRECCIONES",
+    correctionParagraph: " Mejora de textos originales.",
     transcAudio: "Transcripción de audios:",
-    transcAudioParagraph: "TEXTO TRANSCRIPCIONES",
+    transcAudioParagraph: " Conversión de audio a un texto escrito.",
     tradAudio: "Traducción de audios:",
-    tradAudioParagraph: "TEXTO TRADUCCIONES AUDIO",
-    subVideo: "Subtitulado de videos:",
+    tradAudioParagraph: " Conversión de audio en un idioma a un texto escrito en otro idioma.",
+    subVideo: " Subtitulado de videos:",
     subVideoParagraph: "TEXTO SUB AUDIO"
 };

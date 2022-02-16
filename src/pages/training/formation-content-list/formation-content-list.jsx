@@ -15,8 +15,9 @@ const FormationContentList = ({formationItems}) => {
         <FormationContentListContainer itemActive={itemActive!=''}>
             <FormationList >
                 {formationItems.map(({title,topics,key})=> 
-                <ItemContent itemActive={itemActive===key} onClick={()=>handleItemClick(key)} key={key}>
-                    <FormationButton selected={itemActive === key}>{title}  </FormationButton>
+                <ItemContent    itemActive={itemActive===key} 
+                                onClick={()=>handleItemClick(key)} key={key}>
+                    <FormationButton >{title}  </FormationButton>
                     {
                         itemActive ===key?                            
                             <FormationDescription>

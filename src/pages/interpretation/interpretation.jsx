@@ -33,7 +33,7 @@ const InterpretationPage = () => {
     },
     { 'title':'Eventos híbridos',
     'content': 'Modalidad en la que se combina la interpretación presencial con la virtual. ',
-    'image':'/interpretation/interpretacionremota21.png',  
+    'image':'/interpretation/hibridos21.jpg',  
     'alt':'hibridos'
   },
   { 'title':'Actuación pericial',

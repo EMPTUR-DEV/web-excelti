@@ -49,9 +49,9 @@ const Traduction = () => {
                     <span className={styles.paragraph} >
                         <span className={styles.topic}>{t("tradAudio")}</span>{t("tradAudioParagraph")}
                     </span>
-                    <span className={styles.paragraph} >
+                    {/* <span className={styles.paragraph} >
                         <span className={styles.topic}>{t("subVideo")}</span>{t("subVideoParagraph")}
-                    </span>
+                    </span> */}
                 </div>
         )
     }

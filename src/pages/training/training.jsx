@@ -35,9 +35,10 @@ const Training = () => {
         {title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
     ]
 
+    
     const cursos = [
         // ACA VA UN FORMATO HTML YA PRE DISEÑADO PARA CADA CURSO O HACEMOS UN FORMATO GENERAL Y LO RELLENAMOS CON ESTA INFORMACIÓN
-        {title: 'Módulo 1',topics: [{topicTitle: 'Consecutiva', description: 'En esta sección se encontrará el esquema del curso...  1' }], key:1 },
+        {title: 'Módulo 1',topics: [{topicTitle: 'Enlace', description: ''},{topicTitle: 'Consecutiva', description: 'En esta sección se encontrará el esquema del curso...  1' }], key:1 },
         {title: 'Módulo 2',topics: [{topicTitle:'Consecutiva Formal', description: 'Descripcion 2'},{topicTitle:'Introducción a la simultánea', description: 'Descripcion 2.5'}],key:2 },
         {title: 'Módulo 3',topics: [{topicTitle:'Simultánea - Organísmos internacionales', description: 'Descripcion 3'}], key:3  },
         {title: 'Módulo 4',topics: [{topicTitle:'Simultánea remóta - Mercados especializados', description: 'Descripcion 4'}], key:4 },
