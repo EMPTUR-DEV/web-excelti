@@ -3,7 +3,7 @@ import { FormationContentListContainer,FormationList, ItemContent, FormationButt
 
 const FormationContentList = ({formationItems}) => {
 
-    const [itemActive, setItemActive] = useState('');
+    const [itemActive, setItemActive] = useState(1);
     const handleItemClick = (key)=>{
         if (itemActive ===key){
             setItemActive('')
@@ -16,7 +16,7 @@ const FormationContentList = ({formationItems}) => {
             <FormationList >
                 {formationItems.map(({title,topics,key})=> 
                 <ItemContent itemActive={itemActive===key} onClick={()=>handleItemClick(key)} key={key}>
-                    <FormationButton>{title}  </FormationButton>
+                    <FormationButton selected={itemActive === key}>{title}  </FormationButton>
                     {
                         itemActive ===key?                            
                             <FormationDescription>

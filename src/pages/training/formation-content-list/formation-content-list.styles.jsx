@@ -53,7 +53,7 @@ export const FormationList =  styled.ul`
 
 export const ItemContent = styled.li`
     width:var(--li-width);
-    padding:10px 0;
+    
     background-color: var(--blue);   
     align-items:center; 
     cursor:pointer;
@@ -73,7 +73,8 @@ export const FormationButton = styled.h2`
     color: white;
     font-size:var(--course-title-width);
     align-items:center;
-    
+    box-shadow:${({selected}) => selected ? '0 3px 2px 2px #999' : 'none'};
+    height:50px;
 `
 export const FormationDescription = styled.div`
     position: absolute;
