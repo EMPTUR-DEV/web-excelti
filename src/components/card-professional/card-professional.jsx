@@ -27,21 +27,9 @@ const CardProfessional = () => {
                 <ContactBox>
                     <span>Contacto</span>
                     <ProfessionalSocialNetworksContainer>
-                      {/*   <SocialIconContainer>
-                            <SocialIcon url="https://facebook.com/" network='facebook'  fgColor="#fff"/>
-                        </SocialIconContainer>
-                        <SocialIconContainer>
-                            <SocialIcon  url="https://twitter.com/" network="twitter" fgColor="#fff"/>
-                        </SocialIconContainer>
-                        <SocialIconContainer>
-                            <SocialIcon  url="https://instagram.com/" network='instagram' fgColor="#fff"/>
-                        </SocialIconContainer> */}
                         <SocialIconContainer>
                             <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
                         </SocialIconContainer>
-                       {/*  <SocialIconContainer>
-                            <SocialIcon  url="" network='email' fgColor="#fff"/>
-                        </SocialIconContainer> */}
                         <SocialIconContainer>
                             <CvLink><span>CV</span></CvLink>
                         </SocialIconContainer>
