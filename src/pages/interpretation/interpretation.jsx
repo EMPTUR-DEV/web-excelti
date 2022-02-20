@@ -64,7 +64,7 @@ const InterpretationPage = () => {
             <Title title={'Interpretacion'} color={'parrotGreen'}/>
 
             {interpretationBannerContent.map(({title,content,image,alt}) => 
-                                            <InterpretationBanner title={title} content = {content}
+                                            <InterpretationBanner key={title} title={title} content = {content}
                                                                   image={image} alt={alt} />)}
             <TeamList teamTitle='intérpretes' teamList={professionals}/>
             

@@ -34,7 +34,6 @@ const NavBarMobile = () => {
                     </div>))
                     )
                 }
-                <World/>
             </div>
         </div> 
         :

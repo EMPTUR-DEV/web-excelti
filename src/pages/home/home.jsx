@@ -6,6 +6,7 @@ import Banner from '../../components/header/banner/banner';
 import TraductionSlider from '../../components/traduction-slider/traduction-sliders';
 import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
+import Title from '../../components/shared/title/title';
 import './home.scss'
 
 const Home = () => {
@@ -23,9 +24,9 @@ const Home = () => {
     return (
         <div className='home-page-container'>
             <Banner src={'header/home-banner.jpg'} title={t("homeTitle").toUpperCase()} />
+            <Title color={'black'} title={t("homeSubtitle")}/>
             <Info
-            subtitle={`${t("homeSubtitle")}`}
-            paragraph={t("homeParagraph")}
+             paragraph={t("homeParagraph")}
             
             />
             <HomeInfograph/>
