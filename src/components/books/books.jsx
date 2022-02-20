@@ -25,7 +25,6 @@ export default Books;
 
 const Container = styled.div`
     width: 100%;
-    margin:50px;
 `;
 
 const BookList = styled.div`

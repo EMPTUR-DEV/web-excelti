@@ -23,12 +23,8 @@ const Home = () => {
 
     return (
         <div className='home-page-container'>
-            <Banner src={'header/home-banner.jpg'} title={t("homeTitle").toUpperCase()} />
             <Title color={'black'} title={t("homeSubtitle")}/>
-            <Info
-             paragraph={t("homeParagraph")}
-            
-            />
+            <h4>{t("homeParagraph")}</h4>
             <HomeInfograph/>
             <div className='slider-container'>
             
