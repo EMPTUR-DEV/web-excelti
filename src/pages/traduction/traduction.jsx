@@ -25,6 +25,9 @@ const Traduction = () => {
     const paragraph =()=>{
         return(
             <div className={styles.paragraphContainer}>
+                <span className={styles.paragraph} >
+                        <span className={styles.topic}>{t("asesoria")}</span>{` ${t("asesoriaParagraph")}`}
+                    </span>
                     <span className={styles.paragraph} >
                         <span className={styles.topic}>{t("tecnic")}</span>{t("tecnicParagraph")}
                     </span>
