@@ -4,8 +4,8 @@ import Info from '../../components/shared/info/info';
 import useTraductions from '../../hooks/useTraductions';
 import { useTranslation } from "react-i18next";
 import Books from './../../components/books/books';
-import Banner from '../../components/header/banner/banner';
 import TeamList from '../../components/shared/team-list/team-list';
+import Title from '../../components/shared/title/title';
 
 const Traduction = () => {
     const { t } = useTranslation();
@@ -25,6 +25,9 @@ const Traduction = () => {
     const paragraph =()=>{
         return(
             <div className={styles.paragraphContainer}>
+                <span className={styles.paragraph} >
+                        <span className={styles.topic}>{t("asesoria")}</span>{` ${t("asesoriaParagraph")}`}
+                    </span>
                     <span className={styles.paragraph} >
                         <span className={styles.topic}>{t("tecnic")}</span>{t("tecnicParagraph")}
                     </span>
@@ -58,9 +61,8 @@ const Traduction = () => {
     
     return (
         <div className={styles.traductionContainer}>
-            <Banner src={'header/traduction-page.jpg'} title={t("traduction").toUpperCase()} />
+            <Title title={t("traduction")} color={'blue'} />
             <Info
-            subtitle={t("traduction")}
             paragraph={paragraph()}
             />
             <div className={styles.traductions}>

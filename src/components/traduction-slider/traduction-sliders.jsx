@@ -2,13 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TraductionSlider = (props) => {
-    const { title,color,wide } = props;
+    const { color,wide } = props;
     
     return (
         <PrincipalContainer color={color}  width={wide} >
-                <TitleTraduction width={wide}>
-                    {title}
-                </TitleTraduction>
                 <Books>
                     {props.children}
                 </Books>
@@ -19,12 +16,12 @@ const TraductionSlider = (props) => {
 export default TraductionSlider;
 
 const theme = {
-  violet: "linear-gradient(to bottom right,#6889ff, #c668ff);",
+  blue: "linear-gradient(to bottom right,#0b6d9e,rgb(18,134,193));",
     ocean:"linear-gradient(to bottom right,#5b7fff, #33ccfc);",
     sunset:"linear-gradient(to bottom right,#ff9e68, #ff68de);"
 };
 const shadow = {
-    violet: "rgb(104,137,255, .8)",
+    blue: "rgba(18,134,193,.8)",
       ocean:"rgb(91, 127, 255, .8)",
       sunset:"rgb(255, 104, 222, .8)"
   };
@@ -47,16 +44,9 @@ const PrincipalContainer = styled.div`
     box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
 `;
     
-const TitleTraduction = styled.div`
-position: absolute;
-    color:white;
-    font-size:1.4rem;
-    padding:15%;
-`;
-    
 const Books = styled.div`
     position:absolute;
-    bottom:8%;
+    bottom:20%;
     border-radius:10px;
     box-shadow: 10px 10px #fff,20px 20px rgba(0,0,0, .13);
 `;

@@ -1,11 +1,17 @@
 import React from 'react';
-import { InterpretationPageContainer } from './interpretation.styles';
+import styled from 'styled-components'
 import InterpretationBanner from './interpretaton-banner/interpretation-banner'
 import TeamList from '../../components/shared/team-list/team-list';
+import Title from '../../components/shared/title/title';
 
 const InterpretationPage = () => {
 
   const interpretationBannerContent = [
+    { 'title':'Asesoramiento en interpretacion',
+      'content': 'Asesoramiento para organizadores de conferencias, empresas, organizaciones y otros clientes en materia de contratación de intérpretes. Formación y gestión de equipos de intérpretes en congresos, convenciones, seminarios, actividades de capacitación, negociaciones, conferencias de prensa y otro tipo de reuniones en las que los participantes de diversas lenguas y culturas requieran la interpretación para poder comunicarse.  Asesoramiento sobre otros servicios audiovisuales relacionados con la interpretación.',
+      'image':'/interpretation/simultanea21.jpg',
+      'alt':'asesoramiento'
+    },
     { 'title':'Simultánea',
       'content': 'Los intérpretes trabajan en una cabina, aislados acústicamente del resto de la reunión, y se valen del equipamiento específico para este servicio para interpretar a los oradores de manera simultánea.',
       'image':'/interpretation/simultanea21.jpg',
@@ -55,10 +61,10 @@ const InterpretationPage = () => {
 
   return <InterpretationPageContainer>
             
-            <h1>Título</h1>
+            <Title title={'Interpretacion'} color={'parrotGreen'}/>
 
             {interpretationBannerContent.map(({title,content,image,alt}) => 
-                                            <InterpretationBanner title={title} content = {content}
+                                            <InterpretationBanner key={title} title={title} content = {content}
                                                                   image={image} alt={alt} />)}
             <TeamList teamTitle='intérpretes' teamList={professionals}/>
             
@@ -66,3 +72,15 @@ const InterpretationPage = () => {
 };
 
 export default InterpretationPage;
+
+const InterpretationPageContainer = styled.div`
+    margin-top: 100px;
+    align-items: center;
+
+    & > :nth-child(2n+2){
+        flex-direction: row-reverse;
+    }
+
+
+`
+

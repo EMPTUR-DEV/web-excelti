@@ -6,32 +6,32 @@ import Banner from '../../components/header/banner/banner';
 import TraductionSlider from '../../components/traduction-slider/traduction-sliders';
 import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
+import Title from '../../components/shared/title/title';
 import './home.scss'
-import World from '../../components/shared/world/world';
 
 const Home = () => {
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
+    const traductions = () =>{
+        let traductionList = [];
+        GetTraductions.forEach(traduction =>{
+            traductionList = [...traductionList, ...traduction.list];
+        });
+        
+        return traductionList;
+    }
 
     return (
         <div className='home-page-container'>
-            <Banner src={'header/home-banner.jpg'} title={t("homeTitle").toUpperCase()} />
-            <Info
-            subtitle={`${t("homeSubtitle")}`}
-            paragraph={t("homeParagraph")}
-            
-            />
+            <Title color={'black'} title={t("homeSubtitle")}/>
+            <h4>{t("homeParagraph")}</h4>
             <HomeInfograph/>
             <div className='slider-container'>
-                {
-                    GetTraductions.map(x=>(
-                        <TraductionSlider time={2.5} key={x.title} title={x.title} color={x.color} wide={160}>
-                                <Slideshow time={2.5} key={x.title} items={x.list} wide={160}/>
-                            </TraductionSlider>
-                        )
-                    )
-                }
-                <World/>
+            
+            <TraductionSlider time={2.5} color={'blue'} wide={160}>
+                <Slideshow time={2.5} items={traductions()} wide={160}/>
+            </TraductionSlider>
+            
             </div>
             <Info
             subtitle={'Los invitamos a contactarse con nosotros. Será un gusto poder escucharlos y orientarlos en función de sus necesidades.'} 

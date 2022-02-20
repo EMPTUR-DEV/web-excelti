@@ -24,25 +24,25 @@ const GetTraductions = () =>
     const projectTraductions = {
         color:'sunset',
         title:t("teamTranslates"),
-        list:[{key:1,name:'Diana, su verdadera historia',url:'traductions/diana-verdadera-historia.jpg',urlTraduction:'traductions/diana-verdadera-historia-2.jpg'},
-        {key:2,name:'Parques Nacionales de Sudamérica',url:'traductions/south-america.jpg',urlTraduction:'traductions/south-america-2.jpg'},
-        {key:3,name:'50 cosas que Ud. puede hacer para salvar la Tierra',url:'traductions/50-cosas-para-salvar-la-tie.jpg',urlTraduction:'traductions/50-cosas-para-salvar-la-tie-2.jpg'},
-        {key:4,name:'Curación fatal',url:'traductions/curacion-fatal.jpg',urlTraduction:'traductions/curacion-fatal-2.jpg'},
-        {key:5,name:'El mundo perdido de Jurassic Park',url:'traductions/mundo-perdido.jpg',urlTraduction:'traductions/mundo-perdido-2.jpg'},
-        {key:6,name:'Cómo dejar de fumar',url:'traductions/dejar-de-fumar.jpg',urlTraduction:'traductions/dejar-de-fumar-2.jpg'},
-        {key:7,name:'Ah...Todo lo que no se puede decir con palabrash',url:'traductions/ah.jpg',urlTraduction:'traductions/ah-2.jpg'},
-        {key:8,name:'El libro de los juguetes',url:'traductions/toy.jpg',urlTraduction:'traductions/toy-2.jpg'},
-        {key:9,name:'Los signos del zodíaco',url:'traductions/zoodiaco.jpg',urlTraduction:'traductions/zoodiaco-2.jpg'},
-        {key:10,name:'El libro de los jugos',url:'traductions/jugos.jpg',urlTraduction:'traductions/jugos-2.jpg'},
-        {key:11,name:'Informe del INTAL',url:'traductions/intal.jpg',urlTraduction:'traductions/intal-2.jpg'}]
+        list:[{key:11,name:'Diana, su verdadera historia',url:'traductions/diana-verdadera-historia.jpg',urlTraduction:'traductions/diana-verdadera-historia-2.jpg'},
+        {key:12,name:'Parques Nacionales de Sudamérica',url:'traductions/south-america.jpg',urlTraduction:'traductions/south-america-2.jpg'},
+        {key:13,name:'50 cosas que Ud. puede hacer para salvar la Tierra',url:'traductions/50-cosas-para-salvar-la-tie.jpg',urlTraduction:'traductions/50-cosas-para-salvar-la-tie-2.jpg'},
+        {key:14,name:'Curación fatal',url:'traductions/curacion-fatal.jpg',urlTraduction:'traductions/curacion-fatal-2.jpg'},
+        {key:15,name:'El mundo perdido de Jurassic Park',url:'traductions/mundo-perdido.jpg',urlTraduction:'traductions/mundo-perdido-2.jpg'},
+        {key:16,name:'Cómo dejar de fumar',url:'traductions/dejar-de-fumar.jpg',urlTraduction:'traductions/dejar-de-fumar-2.jpg'},
+        {key:17,name:'Ah...Todo lo que no se puede decir con palabrash',url:'traductions/ah.jpg',urlTraduction:'traductions/ah-2.jpg'},
+        {key:18,name:'El libro de los juguetes',url:'traductions/toy.jpg',urlTraduction:'traductions/toy-2.jpg'},
+        {key:19,name:'Los signos del zodíaco',url:'traductions/zoodiaco.jpg',urlTraduction:'traductions/zoodiaco-2.jpg'},
+        {key:20,name:'El libro de los jugos',url:'traductions/jugos.jpg',urlTraduction:'traductions/jugos-2.jpg'},
+        {key:21,name:'Informe del INTAL',url:'traductions/intal.jpg',urlTraduction:'traductions/intal-2.jpg'}]
     };
         
         const othersTraductions ={
             color:'ocean',
             title:t("otherPublishedTranslates"),
-            list:[{key:1,name:'Mealtime Memo Series',url:'traductions/mealtime-memo.jpg',urlTraduction:'traductions/mealtime-memo.jpg'},
-                {key:2,name:'Justice of Justices',url:'traductions/justice-of-justices.jpg',urlTraduction:'traductions/justice-of-justices.jpg'},
-                {key:3,name:'Líneas directrices de la OCDE para empresas multinacionales',url:'traductions/lineas-directrices.jpg',urlTraduction:'traductions/lineas-directrices.jpg'}
+            list:[{key:22,name:'Mealtime Memo Series',url:'traductions/mealtime-memo.jpg',urlTraduction:'traductions/mealtime-memo.jpg'},
+                {key:23,name:'Justice of Justices',url:'traductions/justice-of-justices.jpg',urlTraduction:'traductions/justice-of-justices.jpg'},
+                {key:24,name:'Líneas directrices de la OCDE para empresas multinacionales',url:'traductions/lineas-directrices.jpg',urlTraduction:'traductions/lineas-directrices.jpg'}
             ]
         };
   
