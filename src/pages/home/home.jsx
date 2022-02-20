@@ -16,7 +16,6 @@ const Home = () => {
         GetTraductions.forEach(traduction =>{
             traductionList = [...traductionList, ...traduction.list];
         });
-        console.log(traductionList);
         
         return traductionList;
     }
