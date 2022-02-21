@@ -23,13 +23,13 @@ const Home = () => {
 
     return (
         <div className='home-page-container'>
-            <Title color={'black'} title={t("homeSubtitle")}/>
+            <Title className='title' color={'black'} title={t("homeSubtitle")}/>
             <h4>{t("homeParagraph")}</h4>
             <HomeInfograph/>
             <div className='slider-container'>
             
-            <TraductionSlider time={2.5} color={'blue'} wide={160}>
-                <Slideshow time={2.5} items={traductions()} wide={160}/>
+            <TraductionSlider time={10} color={'blue'} wide={160}>
+                <Slideshow time={10} items={traductions()} wide={160}/>
             </TraductionSlider>
             
             </div>
