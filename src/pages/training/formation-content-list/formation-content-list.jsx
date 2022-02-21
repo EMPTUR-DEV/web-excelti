@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { FormationContentListContainer,FormationList, ItemContent, FormationButton,FormationDescription } from './formation-content-list.styles';
+import { FormationContentListContainer,FormationList, ItemContent, FormationButton } from './formation-content-list.styles';
+import FormationDescription from './formation-description/formation-description'
 
 const FormationContentList = ({formationItems}) => {
 
@@ -14,20 +15,15 @@ const FormationContentList = ({formationItems}) => {
     return (
         <FormationContentListContainer itemActive={itemActive!=''}>
             <FormationList >
-                {formationItems.map(({title,topics,key})=> 
-                <ItemContent    itemActive={itemActive===key} 
-                                onClick={()=>handleItemClick(key)} key={key}>
-                    <FormationButton >{title}  </FormationButton>
+                {formationItems.map((formationItem)=> 
+                
+                <ItemContent    itemActive={itemActive===formationItem.key} 
+                                onClick={()=>handleItemClick(formationItem.key)} key={formationItem.key}>
+
+                    <FormationButton >{formationItem.title}  </FormationButton>
                     {
-                        itemActive ===key?                            
-                            <FormationDescription>
-                                {topics.map(({topicTitle,description})=>
-                                    <>
-                                        <h3>{topicTitle}</h3>
-                                        <p>{description}</p>
-                                    </>
-                                )}
-                                </FormationDescription>
+                        itemActive ===formationItem.key?                            
+                            <FormationDescription formationItem= {formationItem}/>
                         :
                         ''
                     }

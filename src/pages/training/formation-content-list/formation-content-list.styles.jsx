@@ -13,7 +13,8 @@ export const FormationContentListContainer = styled.div `
     --ul-width : 100%;
     --li-width: 100%;
     --ul-height: 300px;
-    --li-height: 60px;
+    --li-height: 75px;
+    align-items: center;
     --course-title-width: 20px;
     overflow-x:visible;
     margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) - 150px) 0' : '0'  } ;
@@ -55,7 +56,7 @@ export const ItemContent = styled.li `
     }
 
     height:var(--li-height);
-    padding:0;
+    
 
 @media screen and (max-width: 450px){        
         margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) )  0' :'0'  } ;
@@ -68,24 +69,4 @@ export const FormationButton = styled.h2 `
     align-items:center;
     
     height:50px;
-`
-export const FormationDescription = styled.div `
-    
-    width: calc(var(--ul-width) - var(--li-width));
-    background-color:#eee;
-    transition: all ease-in 0.4s ;
-
-    left:0;
-    top:var(--li-height);
-    border-radius:0;
-    position:absolute;
-    width:100%;
-    min-height: var(--ul-height) ;
-
-    @media screen and (max-width: 450px){
-        position:relative;
-        top:0;
-    }
-
-    
 `
