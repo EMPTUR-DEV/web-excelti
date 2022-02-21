@@ -3,7 +3,7 @@ import NavHeader from './nav-header/nav-header';
 import { useState,useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import NavMobileMenu from './nav-mobile-menu/nav-mobile-menu';
-import useMediaQuery from '../../../hooks/useScreenSize'
+import useMediaQuery from '../../../hooks/useScreenSize';
 
 const NavBar = () => {
     const { t, i18n } = useTranslation();
