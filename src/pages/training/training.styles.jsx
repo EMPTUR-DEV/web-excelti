@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 
-export const TrainingContainer = styled.div`
+export const TrainingContainer = styled.div `
+
+    margin-top: 80px;
     padding: 30px;
 
     & p{
@@ -14,13 +16,13 @@ export const TrainingContainer = styled.div`
     }
 `
 
-export const CoachingList = styled.ul`
+export const CoachingList = styled.ul `
     list-style:none;
     margin-top:40px;
     width:100%;
 `
 
-export const CoachingItem = styled.li`
+export const CoachingItem = styled.li `
     padding:20px;
     margin: 40px auto;
     background-color:var(--blue);
