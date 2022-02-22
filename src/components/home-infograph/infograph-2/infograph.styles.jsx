@@ -11,10 +11,7 @@ export const GraphicContainer = styled.div`
     flex-direction:column;
     padding: 0 0px;
     margin:auto;
-    margin-top: 10px;
-    margin-bottom: 100px;
-
-    
+    margin-top: 10px;    
 `
 
 export const CenterCircleContainer =styled.div`
