@@ -3,10 +3,15 @@ import React from 'react';
 import {TrainingListContainer} from './training-list.styles'
 
 
-const TrainingList = ({handleOption,trainingList}) => {
+const TrainingList = ({handleOption,trainingDic}) => {
     
+  
   return <TrainingListContainer>
-            {trainingList.map(({title,link,key}) => <li key={key} onClick={()=>handleOption(key)}><span>{title}</span></li>)}
+            { 
+              Object.keys(trainingDic).map((key)=>
+              <li key={key} onClick={()=>handleOption(key)}><span>{trainingDic[key].title}</span></li> )
+              
+            }
         </TrainingListContainer>;
 };
 

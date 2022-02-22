@@ -1,72 +1,83 @@
 import styled from "styled-components";
 
 export const FormationContentListContainer = styled.div `
-    --ul-width : 1150px;
-    --li-width: 200px;
-    --course-title-width:24px;
-    background-color: white;
-    position:relative;
-    height:auto;
-    width:${({itemActive})=> itemActive ? 'var(--ul-width)' : 'var(--li-width)'  } ;
-    transition: width ease-in 0.4s;
-
     --ul-width : 100%;
     --li-width: 100%;
-    --ul-height: 300px;
-    --li-height: 75px;
-    align-items: center;
-    --course-title-width: 20px;
-    overflow-x:visible;
-    margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) - 150px) 0' : '0'  } ;
-    height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ;
-    transition: height ease-in 0.4s;
+    --ul-height: 400px;
+    --li-height: 100px;
 
+    height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ;
+    width:${({itemActive})=> itemActive ? 'var(--ul-width)' : 'var(--li-width)'  } ;
+    margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) - 150px) 0' : '0'  } ;
+    
+    background-color: white;
+
+    position:relative;
+    overflow-x:visible;
+    align-items: center;
+    transition: height ease-in 0.4s;
+    transition: width ease-in 0.4s;
+    
     @media screen and (max-width: 450px){
-        --ul-height: 300px;
-        --li-height: 60px;
-        margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) )  0' :'0 0 var(--ul-height) 0'  } ;
-        height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ;
+        
+        --li-height: 100px;
+        
+        margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) + 50px)  0' :'0 0 50px 0'  } ;
+        height:var(--li-height) ;
+        
         transition: height ease-in 0.4s;
 
     }
 `
 export const FormationList = styled.ul `
     list-style:none;
-    height:100%;
-    display:flex;
     
+    width:100%;    
+    display:flex;
     flex-direction:row;
-    width:100%;
-    justify-content:space-evenly;
+    overflow-x: auto;
+    
+    scroll-snap-type: x mandatory;
 
-    @media screen and (max-width: 400px){
-        flex-direction:column;
-        height:auto;
+    & > li{
+        scroll-snap-align: start;
     }
+    
+    /* @media screen and (max-width: 400px){
+        
+
+    } */
 `
 
 export const ItemContent = styled.li `
     width:var(--li-width);
+    height:var(--li-height);
+    
+    display: flex;
+    align-items:center; 
+    
     box-shadow:${({itemActive}) => itemActive ? '-3px 2 px 3px 0px #AAA' : 'none'};
     background-color: var(--blue);   
-    align-items:center; 
+    min-width: 200px;      
+    
     cursor:pointer;
     &:hover{
         background-color: var(--greenLeaf);
     }
 
-    height:var(--li-height);
     
-
-@media screen and (max-width: 450px){        
-        margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) )  0' :'0'  } ;
-    }
 `
 
-export const FormationButton = styled.h2 `
-    color: white;
-    font-size:var(--course-title-width);
-    align-items:center;
+export const FormationButton = styled.div `
     
-    height:50px;
+    height:75px;
+    margin: auto;
+
+    display: flex;
+    align-items:center;
+    & h4{
+        margin: auto;
+        display: flex;
+        color: white;
+    }
 `

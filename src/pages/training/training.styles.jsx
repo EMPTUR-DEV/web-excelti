@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const TrainingContainer = styled.div `
 
     margin-top: 80px;
-    padding: 30px;
+    padding: 30px 10px;
 
     & p{
         font-size:14px; 

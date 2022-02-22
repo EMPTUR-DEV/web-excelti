@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TrainingListContainer = styled.ul`
+export const TrainingListContainer = styled.ul `
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -8,8 +8,11 @@ export const TrainingListContainer = styled.ul`
     & li{
         width: 250px;
         padding: 10px;
-        background-color: var(--blue) ;
+        margin:0 5px;
+
         display: flex;
+
+        background-color: var(--blue) ;
         border-radius: 5px;
         box-shadow: 0px 0px 0 1px grey;
         color: white;

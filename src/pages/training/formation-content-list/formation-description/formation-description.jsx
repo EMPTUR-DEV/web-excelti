@@ -23,11 +23,12 @@ import { FormationDescriptionContainer } from './formation-description.styles'
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación simultánea remota',
             key:'organismos' */
-const FormationDescription = (formationItem) => {
+const FormationDescription = ({formationItem}) => {
+    
   return (
         <FormationDescriptionContainer>
-            <h1>{formationItem.topicTitle}</h1>
-            <span>{formationItem.requisitos}</span>
+            <h2>{formationItem.title}</h2>
+            <span>{formationItem.requirements}</span>
         </FormationDescriptionContainer>
         )
 }

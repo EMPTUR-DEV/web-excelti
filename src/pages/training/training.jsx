@@ -30,11 +30,7 @@ const Training = () => {
         'Gabriela Yáñez'
     ]
 
-    const trainingList = [
-        {title: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA '} ,
-        {title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
-    ]
-
+    
     
     const cursos = [
         // ACA VA UN FORMATO HTML YA PRE DISEÑADO PARA CADA CURSO O HACEMOS UN FORMATO GENERAL Y LO RELLENAMOS CON ESTA INFORMACIÓN
@@ -193,27 +189,31 @@ const Training = () => {
         topics: [{topicTitle:'Ingresantes en instituciones internacionales', description: 'Descripcion 4'}], 
         key:4 },
     ]
+    const trainingContent = {
+        modalidad:[],
+        coaching:coaching,
+        curso:cursos
+    }
+    const trainingList = {
+        modalidad:{title: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.'} ,
+        coaching:{title: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA '} ,
+        curso:{title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
+    }
+    
+    console.log(trainingContent[trainingOption])
+    console.log(trainingList[trainingOption])
 
     return (
         <TrainingContainer>
             <Info className='info' paragraph={paragraph()}/>
-            <TrainingList handleOption ={handleOption} trainingList={trainingList}>
+            <TrainingList handleOption ={handleOption} trainingDic={trainingList}>
             </TrainingList>
-                { trainingOption ==='curso' ?
-                        <>
-                            <h2>Curso de Interpretación remóta</h2>
-                            <p>{trainingList[0].subTitle}</p>
-                            <FormationContentList  formationItems={cursos}/>
-                        </>
-                        :
-                        <>
-                            <h2>Coaching</h2>
-                            <p>{trainingList[1].subTitle}</p>
-                            <FormationContentList  formationItems={coaching}/>
-
-                        </>
-                }
-            <TeamList teamTitle={'docentes'} teamList={teachers}/>
+                
+                    <h2>{trainingList[trainingOption].title}</h2>
+                    <p>{trainingList[trainingOption].subTitle}</p>
+                    <FormationContentList  formationItems={trainingContent[trainingOption]}/>
+                
+                <TeamList teamTitle={'docentes'} teamList={teachers}/>
         </TrainingContainer>
     )
 }
