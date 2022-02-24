@@ -1,6 +1,5 @@
 import React from 'react'
 import {CardProfessionalContainer,
-        
         ProfessionalDataContainer,
         ProfessionalImage,
         NameTitle,
@@ -12,8 +11,9 @@ import {CardProfessionalContainer,
     } from './card-professional.styles'
 
 import {SocialIcon} from 'react-social-icons'
+import ProfessionalDescription from './professional-description/professional-description'
 
-const CardProfessional = () => {
+const CardProfessional = ({showContacBox,professions,name}) => {
     return (
         <CardProfessionalContainer>
             
@@ -22,19 +22,27 @@ const CardProfessional = () => {
                 </ProfessionalImage>
             
             <ProfessionalDataContainer>
-                <NameTitle>Lucas Turco</NameTitle>
-                <ProfessionTitle><span>Profesión:</span> Lorem ipsum dolor sit amet consectetur adipisicing </ProfessionTitle>
-                <ContactBox>
-                    <span>Contacto</span>
-                    <ProfessionalSocialNetworksContainer>
-                        <SocialIconContainer>
-                            <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
-                        </SocialIconContainer>
-                        <SocialIconContainer>
-                            <CvLink><span>CV</span></CvLink>
-                        </SocialIconContainer>
-                    </ProfessionalSocialNetworksContainer>
-                </ContactBox>
+                <NameTitle>{name}</NameTitle>
+                {
+                    professions ?
+                    <ProfessionalDescription professions={professions}/>
+                    :<></>
+                }
+                {
+                    showContacBox?
+                    <ContactBox>
+                        <span>Contacto</span>
+                        <ProfessionalSocialNetworksContainer>
+                            <SocialIconContainer>
+                                <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
+                            </SocialIconContainer>
+                            <SocialIconContainer>
+                                <CvLink><span>CV</span></CvLink>
+                            </SocialIconContainer>
+                        </ProfessionalSocialNetworksContainer>
+                    </ContactBox>
+                    :<></>
+                }
             </ProfessionalDataContainer>
         </CardProfessionalContainer>
     )

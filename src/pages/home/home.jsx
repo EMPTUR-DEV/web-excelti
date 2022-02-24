@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{ useState,useEffect } from 'react'
 import HomeInfograph from '../../components/home-infograph/home-infograph'
 import Info from '../../components/shared/info/info';
 import useTraductions from '../../hooks/useTraductions';
-import Banner from '../../components/header/banner/banner';
+import useProfessionals from '../../hooks/useProfessionals';
+import ProfessionalSlider from '../../components/professional-slider/professional-slider'; 
 import TraductionSlider from '../../components/traduction-slider/traduction-sliders';
 import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
@@ -12,6 +13,8 @@ import './home.scss'
 const Home = () => {
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
+    const { getAllProfessionals } = useProfessionals();
+    const [ professionals,setProfessionals ] = useState(null);
     const traductions = () =>{
         let traductionList = [];
         GetTraductions.forEach(traduction =>{
@@ -20,6 +23,10 @@ const Home = () => {
         
         return traductionList;
     }
+
+    useEffect(()=>{
+        setProfessionals(getAllProfessionals());
+    },[]);
 
     return (
         <div className='home-page-container'>
@@ -33,6 +40,7 @@ const Home = () => {
             </TraductionSlider>
             
             </div>
+            <ProfessionalSlider professionals={professionals}/>
             <Info
             subtitle={'Los invitamos a contactarse con nosotros. Será un gusto poder escucharlos y orientarlos en función de sus necesidades.'} 
             paragraph={' '}
