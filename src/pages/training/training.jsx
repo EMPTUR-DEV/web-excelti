@@ -190,9 +190,9 @@ const Training = () => {
         key:4 },
     ]
     const trainingContent = {
-        modalidad:[],
-        coaching:coaching,
-        curso:cursos
+        modalidad:{content:[], key:'modalidad'},
+        coaching:{content:coaching, key:'coaching'},
+        curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
         modalidad:{title: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.'} ,
@@ -200,8 +200,6 @@ const Training = () => {
         curso:{title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
     }
     
-    console.log(trainingContent[trainingOption])
-    console.log(trainingList[trainingOption])
 
     return (
         <TrainingContainer>

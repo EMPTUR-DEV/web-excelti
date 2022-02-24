@@ -12,26 +12,27 @@ const FormationContentList = ({formationItems}) => {
             setItemActive(key)
         }
     }
-    console.log(formationItems)
+    
     return (
         <FormationContentListContainer itemActive={itemActive}>
             <FormationList >
-                {formationItems.map((formationItem)=> 
+                {formationItems.content.map((formationItem)=> 
                 
-                <ItemContent    itemActive={itemActive===formationItem.key} 
+                <ItemContent  itemActive={itemActive===formationItem.key} 
                                 onClick={()=>handleItemClick(formationItem.key)} key={formationItem.key}>
 
-                    <FormationButton ><h4>{formationItem.title}</h4>  </FormationButton>
+                    <FormationButton key={formationItem.key} ><h4>{formationItem.title}</h4>  </FormationButton>
                     
                 </ItemContent>)}
             </FormationList>
-                {formationItems.map((formationItem)=>
+                {formationItems.content.map((formationItem)=>
                     {
-                    return(
+                        if (formationItems.key ==='curso'){
+                        return(
                         itemActive ===formationItem.key?                            
-                            <FormationDescription formationItem= {formationItem}/>
+                            <FormationDescription key={formationItem.key}  formationItem= {formationItem}/>
                         :
-                        '')
+                        '')}
                     })
                 }
             

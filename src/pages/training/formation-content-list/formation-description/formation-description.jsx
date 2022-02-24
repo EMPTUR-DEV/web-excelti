@@ -24,7 +24,7 @@ import { FormationDescriptionContainer } from './formation-description.styles'
             evaluacion: 'Interpretación simultánea remota',
             key:'organismos' */
 const FormationDescription = ({formationItem}) => {
-    console.log(formationItem.cursosArticulados)
+    
   return (
         <FormationDescriptionContainer>
             <h2>{formationItem.title}</h2>
