@@ -6,7 +6,8 @@ export const FormationContentListContainer = styled.div `
     --ul-height: 400px;
     --li-height: 100px;
 
-    height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ;
+    height: auto;
+    /* height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ; */
     width:${({itemActive})=> itemActive ? 'var(--ul-width)' : 'var(--li-width)'  } ;
     margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) - 150px) 0' : '0'  } ;
     
@@ -22,8 +23,8 @@ export const FormationContentListContainer = styled.div `
         
         --li-height: 100px;
         
-        margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) + 50px)  0' :'0 0 50px 0'  } ;
-        height:var(--li-height) ;
+        margin: 0 50px 0 0;
+        height:auto;
         
         transition: height ease-in 0.4s;
 
@@ -36,8 +37,16 @@ export const FormationList = styled.ul `
     display:flex;
     flex-direction:row;
     overflow-x: auto;
+    margin: 0;
+    padding: 0;
     
     scroll-snap-type: x mandatory;
+    
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+    }
 
     & > li{
         scroll-snap-align: start;
