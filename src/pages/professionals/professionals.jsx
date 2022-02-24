@@ -27,14 +27,14 @@ const Professionals = () => {
 
             
             <div className='card-professionals-container'>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
-                <li><CardProfessional/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
+                <li><CardProfessional showContacBox={true}/></li>
             </div>
         </div>
     )
