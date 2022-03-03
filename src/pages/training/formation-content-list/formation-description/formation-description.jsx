@@ -1,48 +1,109 @@
-import React from 'react'
-import { FormationDescriptionContainer } from './formation-description.styles'
+import React, {useState} from 'react';
+import {  FormationDescriptionContainer, 
+          ContentOverviewContainer,
+          LeftSide, 
+          HeadTitleCourse, 
+          ContentInformationContainer, 
+          SpanInfoCourse, 
+          IconInfoCourseContainer, 
+          ExtraInfoContent, 
+          ExtraInfoTitle,  
+          ArticulatedCoursesList,
+          TeachersListCourse,
+          SpanExtraInfo} from './formation-description.styles';
+import {BsCardChecklist, BsFillBookmarkCheckFill} from 'react-icons/bs';
+import {FaUserEdit,FaPeopleArrows} from 'react-icons/fa';
+import {IoPeopleCircle} from 'react-icons/io5';
+import {SiGoogleclassroom} from 'react-icons/si';
+import {MdAccountTree} from 'react-icons/md';
+import {RiTeamFill} from 'react-icons/ri';
+import {AiOutlineCheckCircle} from 'react-icons/ai'
+import { List } from '../../../../components/shared/team-list/team-list.styles';
 
 
-/* topicTitle:'Simultánea - Organísmos internacionales', 
-            requisitos:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
-            admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
-            entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
-            resumen:'Este curso de simultánea se articula con los siguientes',
-            cursosArticulados: ['Enlace',
-                                'Consecutivas',
-                                'Consecutiva formal',
-                                'Introducción a la simultánea',
-                                'Simultánea - Mercados especializados' ],
-            infoPedagogica: 'El curso de introducción a la interpretación simultánea remota tiene una duración de 4 meses, según el siguiente detalle',
-            duracion: '4 meses (abril a julio)',
-            objetivos:' a) adquirir las habilidades necesarias para actuar como intérprete simultáneo (inglés-español y viceversa); y b) familiarizarse con el mercado internacional de la interpretación',
-            modulosTematicos:'Organizaciones internacionales. Política internacional',
-            periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:'Clase remota: lunes de 18.00 a 19.30 horas',
-            tutoria: ' a convenir',
-            profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
-            evaluacion: 'Interpretación simultánea remota',
-            key:'organismos' */
-const FormationDescription = ({formationItem}) => {
-    
+const iconSize = '75px';
+const iconColor = 'var(--green)';
+const FormationDescription = ({handleItemClick,formationItem}) => {
+  
+  const [itemsActiveArticulated, setItemsActiveArticulated] = useState(false);
+  const [itemsActiveTeachers, setItemsActiveTeachers] = useState(false);
+
+  const handleItemActive = (item) =>{
+    /* const temp = itemsActive;
+    temp[item] = !temp[item]; */
+    if (item ==='articlulated') setItemsActiveArticulated(!itemsActiveArticulated);
+    else if (item ==='teachers') setItemsActiveTeachers(!itemsActiveTeachers);
+  }
+
+  const handleArticulatedItemsClick = (key)=>{
+    window.scrollTo(0,300);
+    handleItemClick(key);
+  }
+
   return (
-        <FormationDescriptionContainer>
-            <h2>{formationItem.title}</h2>
-            <span><strong><h4>Requisitos:</h4>              </strong><p> {formationItem.requirements}</p></span>
-            <span><strong><h4>Admisión: </h4>               </strong><p>{formationItem.admision}</p></span>
-            <span><strong><h4>Entrevistas: </h4>            </strong><p>{formationItem.entrevistas}</p></span>
-            <span><strong><h4>Modalidad: </h4>              </strong><p>{formationItem.modalidad}</p></span>
-            <span><strong><h4>Resumen: </h4>                </strong><p>{formationItem.resumen}</p></span>
-            <span><strong><h4>Cursos articulados: </h4>     </strong><ul>{formationItem.cursosArticulados.map((curso)=><li>{curso}</li>)}</ul></span>
-            <span><strong><h4>Información pedagógica: </h4> </strong><p>{formationItem.infoPedagogica}</p></span>
-            <span><strong><h4>Duración: </h4>               </strong><p>{formationItem.duracion}</p></span>
-            <span><strong><h4>Objetivos: </h4>              </strong><p>{formationItem.objetivos}</p></span>
-            <span><strong><h4>Módulos temáticos: </h4>      </strong><p>{formationItem.modulosTematicos}</p></span>
-            <span><strong><h4>Periodicidad semanal: </h4>   </strong><p>{formationItem.periodicidadSemanal}</p></span>
-            <span><strong><h4>Clase: </h4>                  </strong><p>{formationItem.clase}</p></span>
-            <span><strong><h4>Tutorías: </h4>               </strong><p>{formationItem.tutoria}</p></span>
-            <span><strong><h4>Profesores: </h4>             </strong><ul>{formationItem.profesores.map((profesor)=> <li>{profesor}</li>) } </ul></span>
+        <FormationDescriptionContainer itemID='HeadTitleCourse'>
+            <HeadTitleCourse>
+              <span>Curso {formationItem.modalidad}</span>
+              <h1>{formationItem.title}</h1>
+            </HeadTitleCourse>
+            <ContentOverviewContainer>
+              <LeftSide>
+                <span><strong><h4>Duración: </h4></strong><p>{formationItem.duracion}</p></span>
+                <span><strong><h4>Módulos temáticos: </h4>      </strong><p>{formationItem.modulosTematicos}</p></span>
+                <span><strong><h4>Periodicidad: </h4>   </strong><p>Semanalmente {formationItem.periodicidadSemanal}</p></span>
+              </LeftSide>
+              <img src='../../miniLogo1.png' alt="Logo Excelti" />
+            </ContentOverviewContainer>
+            <ContentInformationContainer>
 
+              <SpanInfoCourse><strong>
+                  <IconInfoCourseContainer><BsCardChecklist size={iconSize} color={iconColor}/></IconInfoCourseContainer>
+                  <h4>Requisitos:</h4>              </strong><p> {formationItem.requirements}</p>                                     </SpanInfoCourse>
+              <SpanInfoCourse><strong>
+                <IconInfoCourseContainer><FaUserEdit size={iconSize} color={iconColor}/></IconInfoCourseContainer>
+                <h4>Admisión: </h4>               </strong><p>{formationItem.admision}</p>                                          </SpanInfoCourse>
+              <SpanInfoCourse><strong>
+                <IconInfoCourseContainer><IoPeopleCircle size={iconSize} color={iconColor}/></IconInfoCourseContainer>
+                <h4>Entrevistas: </h4>            </strong><p>{formationItem.entrevistas}</p>                                       </SpanInfoCourse>
+              
+              <SpanInfoCourse><strong>  
+                <IconInfoCourseContainer><AiOutlineCheckCircle size={iconSize} color={iconColor}/></IconInfoCourseContainer>  
+                <h4>Objetivos: </h4>              </strong><p>{formationItem.objetivos}</p>                                         </SpanInfoCourse>
+              <SpanInfoCourse><strong>
+              <IconInfoCourseContainer><SiGoogleclassroom size={iconSize} color={iconColor}/></IconInfoCourseContainer>  
+                <h4>Clase: </h4>                  </strong><p>{formationItem.clase}</p>                                             </SpanInfoCourse>
+              <SpanInfoCourse><strong>
+                <IconInfoCourseContainer><FaPeopleArrows size={iconSize} fill={iconColor} stroke={iconColor} /></IconInfoCourseContainer>  
+                <h4>Tutorías: </h4>               </strong><p>{formationItem.tutoria}</p>                                           </SpanInfoCourse>
+              <SpanInfoCourse><strong>
+                <IconInfoCourseContainer><BsFillBookmarkCheckFill size={iconSize} fill={iconColor} stroke={iconColor} /></IconInfoCourseContainer>  
+                <h4>Evaluación final</h4>               </strong><p>{formationItem.evaluacion}</p>                                           </SpanInfoCourse>
+              
+              <ExtraInfoContent>
+                
+                <SpanExtraInfo >
+                    <ExtraInfoTitle onClick={() => handleItemActive('articlulated')}>
+                        <MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Cursos articulados </h4>     
+                    </ExtraInfoTitle>
+                    <ArticulatedCoursesList itemActive={itemsActiveArticulated}> 
+                        {formationItem.resumen}: {formationItem.cursosArticulados.map((curso)=><li onClick={()=>handleArticulatedItemsClick(curso.key) }> <h5>{curso.name}</h5></li>)}
+                    </ArticulatedCoursesList>
+                </SpanExtraInfo>
+                {/* <span><ExtraInfoTitle><MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Información pedagógica: </h4> </ExtraInfoTitle><p>{formationItem.infoPedagogica}</p>                                    </span> */}
+                <SpanExtraInfo >
+                  <ExtraInfoTitle onClick={() => handleItemActive('teachers')}>
+                    <RiTeamFill size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Profesores: </h4>             
+                  </ExtraInfoTitle>
+
+                  <TeachersListCourse itemActive = {itemsActiveTeachers}>
+                    {formationItem.profesores.map((profesor)=> <li>{profesor}</li>) } 
+                  </TeachersListCourse>
+
+                </SpanExtraInfo>
+              </ExtraInfoContent>
+              
+
+            </ContentInformationContainer>
 
         </FormationDescriptionContainer>
         )

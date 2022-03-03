@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { FormationContentListContainer,FormationList, ItemContent, FormationButton } from './formation-content-list.styles';
 import FormationDescription from './formation-description/formation-description'
 
-const FormationContentList = ({formationItems}) => {
+const FormationContentList = ({handleOption,formationItems}) => {
 
     const [itemActive, setItemActive] = useState(1);
     const handleItemClick = (key)=>{
@@ -30,7 +30,7 @@ const FormationContentList = ({formationItems}) => {
                         if (formationItems.key ==='curso'){
                         return(
                         itemActive ===formationItem.key?                            
-                            <FormationDescription key={formationItem.key}  formationItem= {formationItem}/>
+                            <FormationDescription handleItemClick= {handleItemClick} key={formationItem.key}  formationItem= {formationItem}/>
                         :
                         '')}
                     })
