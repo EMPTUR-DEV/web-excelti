@@ -7,9 +7,9 @@ const RedesSociales = () => {
     return (
         <div className = {styles.container}>
             <SocialIcon className={styles.socialIcon} url="https://www.facebook.com/excelti.traduccion/" network='facebook'  fgColor="#fff"/>
-            <SocialIcon className={styles.socialIcon} url="https://twitter.com/" network="twitter" fgColor="#fff"/>
+            <SocialIcon className={styles.socialIcon} url="https://twitter.com/" network="mailto" fgColor="#000" bgColor='white'/>
             <SocialIcon className={styles.socialIcon} url="https://instagram.com/" network='instagram' fgColor="#fff"/>
-            <SocialIcon className={styles.socialIcon} url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
+            
         </div>
     )
 }

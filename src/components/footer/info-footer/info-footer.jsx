@@ -8,10 +8,9 @@ const InfoFooter = () => {
             <h3>CAPACITACIÓN</h3>
             <nav>
                 <ul>
-                    <li>Aprendizaje en línea</li>
-                    <li>Interpretación</li>
-                    <li>Doblaje simultaneo</li>
-                    <li>Traducción</li>
+                    <li>Curso de Interpretación (inglés - español)</li>
+                    <li>Coaching</li>
+                    <li>Modalidades</li>
                 </ul>
             </nav>
         </div>

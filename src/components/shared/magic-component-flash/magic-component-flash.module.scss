@@ -1,0 +1,32 @@
+.show {
+    border-radius: 20px;
+    animation: flash-item 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.notShow {
+    border: none;
+}
+
+@-webkit-keyframes flash-item {
+    0% {
+        box-shadow: 0 0 0 0px var(--greenLeaf) solid;
+    }
+    30% {
+        box-shadow: 0 0 0px 10px var(--greenLeaf) solid;
+    }
+    100% {
+        box-shadow: 0 0 0 0px var(--greenLeaf) solid;
+    }
+}
+
+@keyframes flash-item {
+    0% {
+        box-shadow: 0 0 0 0px var(--white);
+    }
+    30% {
+        box-shadow: 0 0 0px 10px var(--white);
+    }
+    100% {
+        box-shadow: 0 0 0 0px var(--white);
+    }
+}

@@ -5,6 +5,10 @@ export const TrainingListContainer = styled.ul `
     flex-direction: row;
     list-style: none;
     justify-content: space-evenly;
+    
+    @media screen and (max-width: 500px){
+        flex-direction:column;
+    }
     & li{
         width: 250px;
         padding: 10px;
@@ -39,8 +43,6 @@ export const TrainingListContainer = styled.ul `
         }
     }
 
-    @media screen and (max-width: 500px){
-        flex-direction:column;
-    }
+    
 }
 `

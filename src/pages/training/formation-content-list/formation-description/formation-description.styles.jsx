@@ -42,6 +42,7 @@ export const ContentOverviewContainer = styled.div `
 
         @media screen and (max-width: 800px){
             margin-bottom: 20px;
+            display: none;
         }
     }
 
@@ -152,7 +153,7 @@ export const SpanInfoCourse = styled.div `
     & p{
         width: 300px;
         text-align: left;
-        
+
         font-size: 13px;
             
     }
@@ -231,9 +232,24 @@ export const ArticulatedCoursesList = styled.div `
     text-align: left;
     list-style:none;
 
+    padding-left:5px;
     margin-top:10px;
+    
      
-    display: ${({itemActive})=> itemActive ? 'block': 'none'};
+    ${({itemActive})=> itemActive ? 
+            `
+            height: 100% ;
+            padding-top: 10px;
+            padding-bottom:10px;
+            `: 
+                        `
+            height: 0;
+            padding-top: 0;
+            padding-bottom:0px;
+            `};
+    overflow-y: hidden;
+
+    transition: all 0.2s ease-in;
 
     & li{
         align-items: left;
@@ -264,9 +280,25 @@ export const ArticulatedCoursesList = styled.div `
 export const TeachersListCourse = styled.ul `
     
     list-style:none;
+    
+    padding-left:5px;
     margin-top:10px;
     
-    display: ${({itemActive})=> itemActive ? 'block': 'none'};
+     
+    ${({itemActive})=> itemActive ? 
+            `
+            height: 100% ;
+            padding-top: 10px;
+            padding-bottom:10px;
+            `: 
+                        `
+            height: 0;
+            padding-top: 0;
+            padding-bottom:0px;
+            `};
+    overflow-y: hidden;
+
+    transition: height 0.2s ease-in;
 
     & li{
         margin: 10px 10px ;

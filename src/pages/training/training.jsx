@@ -6,6 +6,7 @@ import {CoachingList, CoachingItem, TrainingContainer} from './training.styles'
 import TrainingList from './training-list/training-list';
 import TeamList from '../../components/shared/team-list/team-list';
 import FormationContentList from './formation-content-list/formation-content-list';
+import Title from '../../components/shared/title/title';
 
 const Training = () => {
     const { t } = useTranslation();
@@ -50,8 +51,8 @@ const Training = () => {
             objetivos:' Interpretación de enlace. Presencialidad vs Virtualidad. Técnicas de desverbalización. Técnicas de expresión oral. Traducción a primera vista. Introducción a las técnicas de interpretación consecutiva sin notas. Primeros pasos para la interpretación simultánea. Nuevos medios técnicos para la interpretación.',
             modulosTematicos:'Gestión empresarial. Negociaciones. Temas de actualidad.',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:' Miércoles de 18.00 a 19.30 horas </br> Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
-            tutoria: 'Día y horario a convenir <br/> Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
+            clase:' Miércoles de 18.00 a 19.30 horas Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
+            tutoria: 'Día y horario a convenir Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación de enlace y primera vista',
             key:1},
@@ -72,8 +73,8 @@ const Training = () => {
             objetivos:'Consecutivas sin notas. Con notas. Corta. Formal. Diplomática. Diferentes dispositivos para las consecutivas. Tablet interpretation. Consecutiva remota. Técnicas de expresión oral. Aplicación de la consecutiva a la simultanea',
             modulosTematicos:'Medio ambiente. Salud pública. Temas de actualidad.',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:'Miércoles de 18.00 a 19.30 horas. <br/> Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
-            tutoria: 'Día y horario a convenir <br/> Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
+            clase:'Miércoles de 18.00 a 19.30 horas. Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
+            tutoria: 'Día y horario a convenir, actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación de enlace y primera vista',
             key:2
@@ -119,7 +120,7 @@ const Training = () => {
             objetivos:'Introducción a las técnicas de interpretación simultánea. Escuchas intensivas. Uso profesional de la voz (español e ingles). Expresión para la simultánea. Preparación de conferencias (lengua y terminología). El pasaje de lo presencial a la virtualidad',
             modulosTematicos:'Medio ambiente. Educación. Empleo. Temas de actualidad',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:'Lunes de 18.00 a 19.30 horas <br/> Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir',
+            clase:'Lunes de 18.00 a 19.30 horas, actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir',
             tutoria: 'dia y horario a convenir. Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación simultánea remota',
@@ -203,6 +204,8 @@ const Training = () => {
 
     return (
         <TrainingContainer>
+            <Title title={t("training")} color={'green'} />
+
             <Info className='info' paragraph={paragraph()}/>
             <TrainingList handleOption ={handleOption} trainingDic={trainingList}>
             </TrainingList>

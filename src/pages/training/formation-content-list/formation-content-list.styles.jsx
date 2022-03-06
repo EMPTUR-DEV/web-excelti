@@ -4,12 +4,13 @@ export const FormationContentListContainer = styled.div `
     --ul-width : 100%;
     --li-width: 100%;
     --ul-height: 400px;
-    --li-height: 100px;
+    --li-height: 80px;
+    position: relative;
 
     height: auto;
     /* height:${({itemActive})=> itemActive ? 'var(--ul-height)' : 'var(--li-height)'  } ; */
     width:${({itemActive})=> itemActive ? 'var(--ul-width)' : 'var(--li-width)'  } ;
-    margin:${({itemActive})=> itemActive ? '0 0 calc(var(--ul-height) - 150px) 0' : '0'  } ;
+    margin:${({itemActive})=> itemActive ? '0 0 100px 0' : '0'  } ;
     
     background-color: white;
 
@@ -39,11 +40,43 @@ export const FormationList = styled.ul `
     overflow-x: auto;
     margin: 0;
     padding: 0;
-    
+    box-shadow: 0 0 10px #aaa ;
     scroll-snap-type: x mandatory;
-    
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; 
+    
+
+    @media screen and (max-width: 1150px){
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr  ;
+    }
+    @media screen and (max-width: 500px){
+        display: flex;
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            height: 50px;
+            color: white;
+
+            border-bottom: 25px solid white;
+            border-top: 25px solid white;
+            top:0px;
+            filter: drop-shadow(0 0 10px #444);
+        }
+        &::before{
+            right: 0%;
+            border-left:15px solid transparent;
+            display: ${({arrowActiveEnd})=>arrowActiveEnd? 'flex' : 'none' };
+        }
+        &::after{
+            border-right:15px solid transparent;
+            left: 0%;
+            display: ${({arrowActiveStart})=>arrowActiveStart? 'flex' : 'none' };
+        }
+
+    }
+
     &::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
     }

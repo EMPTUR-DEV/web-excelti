@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect,useRef} from 'react';
 import {  FormationDescriptionContainer, 
           ContentOverviewContainer,
           LeftSide, 
@@ -18,7 +18,8 @@ import {SiGoogleclassroom} from 'react-icons/si';
 import {MdAccountTree} from 'react-icons/md';
 import {RiTeamFill} from 'react-icons/ri';
 import {AiOutlineCheckCircle} from 'react-icons/ai'
-import { List } from '../../../../components/shared/team-list/team-list.styles';
+
+import useOnScreen from '../../../../hooks/intersectionObserver';
 
 
 const iconSize = '75px';
@@ -28,9 +29,22 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
   const [itemsActiveArticulated, setItemsActiveArticulated] = useState(false);
   const [itemsActiveTeachers, setItemsActiveTeachers] = useState(false);
 
+  const ref = useRef();
+  const onScreen = useOnScreen(ref,"300px")
+
+  const setBothExtraItems= (b)=>{
+    setItemsActiveArticulated(b) 
+    setItemsActiveTeachers(b)
+  }
+
+
+  useEffect(()=>{
+    onScreen ? setBothExtraItems(true)
+                : console.log('i');
+
+  }, [onScreen]);
+
   const handleItemActive = (item) =>{
-    /* const temp = itemsActive;
-    temp[item] = !temp[item]; */
     if (item ==='articlulated') setItemsActiveArticulated(!itemsActiveArticulated);
     else if (item ==='teachers') setItemsActiveTeachers(!itemsActiveTeachers);
   }
@@ -39,6 +53,8 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
     window.scrollTo(0,300);
     handleItemClick(key);
   }
+
+  
 
   return (
         <FormationDescriptionContainer itemID='HeadTitleCourse'>
@@ -77,12 +93,12 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
                 <h4>Tutorías: </h4>               </strong><p>{formationItem.tutoria}</p>                                           </SpanInfoCourse>
               <SpanInfoCourse><strong>
                 <IconInfoCourseContainer><BsFillBookmarkCheckFill size={iconSize} fill={iconColor} stroke={iconColor} /></IconInfoCourseContainer>  
-                <h4>Evaluación final</h4>               </strong><p>{formationItem.evaluacion}</p>                                           </SpanInfoCourse>
+                <h4>Evaluación final</h4>               </strong><p style={{"text-align":"center"}}>{formationItem.evaluacion}</p>                                           </SpanInfoCourse>
               
               <ExtraInfoContent>
                 
                 <SpanExtraInfo >
-                    <ExtraInfoTitle onClick={() => handleItemActive('articlulated')}>
+                    <ExtraInfoTitle ref={ref} onClick={() => handleItemActive('articlulated')}>
                         <MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Cursos articulados </h4>     
                     </ExtraInfoTitle>
                     <ArticulatedCoursesList itemActive={itemsActiveArticulated}> 
@@ -92,7 +108,7 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
                 {/* <span><ExtraInfoTitle><MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Información pedagógica: </h4> </ExtraInfoTitle><p>{formationItem.infoPedagogica}</p>                                    </span> */}
                 <SpanExtraInfo >
                   <ExtraInfoTitle onClick={() => handleItemActive('teachers')}>
-                    <RiTeamFill size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Profesores: </h4>             
+                    <RiTeamFill size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Profesores del curso: </h4>             
                   </ExtraInfoTitle>
 
                   <TeachersListCourse itemActive = {itemsActiveTeachers}>
