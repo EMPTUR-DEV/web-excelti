@@ -102,7 +102,7 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
                         <MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Cursos articulados </h4>     
                     </ExtraInfoTitle>
                     <ArticulatedCoursesList itemActive={itemsActiveArticulated}> 
-                        {formationItem.resumen}: {formationItem.cursosArticulados.map((curso)=><li onClick={()=>handleArticulatedItemsClick(curso.key) }> <h5>{curso.name}</h5></li>)}
+                        {formationItem.resumen}: {formationItem.cursosArticulados.map((curso)=><li key={curso.key} onClick={()=>handleArticulatedItemsClick(curso.key) }> <h5>{curso.name}</h5></li>)}
                     </ArticulatedCoursesList>
                 </SpanExtraInfo>
                 {/* <span><ExtraInfoTitle><MdAccountTree size={iconSize} fill={iconColor} stroke={iconColor} /><h4>Información pedagógica: </h4> </ExtraInfoTitle><p>{formationItem.infoPedagogica}</p>                                    </span> */}
@@ -112,7 +112,7 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
                   </ExtraInfoTitle>
 
                   <TeachersListCourse itemActive = {itemsActiveTeachers}>
-                    {formationItem.profesores.map((profesor)=> <li>{profesor}</li>) } 
+                    {formationItem.profesores.map((profesor,i)=> <li key={i}>{profesor}</li>) } 
                   </TeachersListCourse>
 
                 </SpanExtraInfo>

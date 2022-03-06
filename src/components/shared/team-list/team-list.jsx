@@ -8,7 +8,7 @@ const TeamList = ({teamTitle,teamList}) => {
 
   return <TeamContainer>
             <h2>Equipo de {teamTitle}</h2>
-            <List>{teamList.map(prof => <li>{prof}</li>)}</List>
+            <List>{teamList.map((prof,i) => <li key={i}>{prof}</li>)}</List>
           <span onClick={()=>handleLink('/professionals')}>Conocé a todos nuestros profesionales </span>
         </TeamContainer>
 };
