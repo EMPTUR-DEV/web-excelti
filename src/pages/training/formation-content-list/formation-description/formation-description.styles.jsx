@@ -158,6 +158,42 @@ export const SpanInfoCourse = styled.div `
             
     }
 `
+export const SpanInfoModalidad = styled.div`
+    min-width: 350px;
+    
+    ${({itemVisible}) => itemVisible ? '' :'height:250px'};
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 5px 10px 20px 10px;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0 20px #ddd;
+    transition: all 0.2s ease-out;
+    & strong {
+        display: flex;
+        height: 120px;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px ;
+        text-align: center;     
+        transition: all 0.4s ease-out;      
+    }
+
+
+    & p{
+        width: 375px;
+
+        text-align: left;
+        ${({itemVisible}) => itemVisible ? '' :'height:100px'};
+        font-size: 13px;
+        overflow-y:hidden;
+        transition: all 0.4s ease-out;
+        box-shadow:${({itemVisible, isItemLarge}) => itemVisible ? 'none' : isItemLarge? 'inset 0px -15px 15px -20px rgba(0,0,0,0.75) ':'none'}; 
+    }
+`
+
 export const IconInfoCourseContainer = styled.div `
     width: 100%;
     display: flex;

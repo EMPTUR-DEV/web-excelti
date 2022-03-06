@@ -44,6 +44,8 @@ export const FormationList = styled.ul `
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; 
+
+    background-color: var(--blue);
     
 
     @media screen and (max-width: 1150px){
@@ -53,24 +55,25 @@ export const FormationList = styled.ul `
     }
     @media screen and (max-width: 500px){
         display: flex;
+        overflow-y: hidden;
         &::before,&::after{
             content: '';
             position: absolute;
-            height: 50px;
+            height: 0px;
             color: white;
 
-            border-bottom: 25px solid white;
-            border-top: 25px solid white;
+            border-bottom: 50px solid white;
+            border-top: 50px solid white;
             top:0px;
-            filter: drop-shadow(0 0 10px #444);
+            filter: drop-shadow(0 0 5px #444);
         }
         &::before{
             right: 0%;
-            border-left:15px solid transparent;
+            border-left:25px solid transparent;
             display: ${({arrowActiveEnd})=>arrowActiveEnd? 'flex' : 'none' };
         }
         &::after{
-            border-right:15px solid transparent;
+            border-right:25px solid transparent;
             left: 0%;
             display: ${({arrowActiveStart})=>arrowActiveStart? 'flex' : 'none' };
         }
@@ -91,6 +94,9 @@ export const FormationList = styled.ul `
     } */
 `
 
+export const  FormationDescriptionWrapper = styled.div`
+    width: 100%;
+`
 export const ItemContent = styled.li `
     width:var(--li-width);
     height:var(--li-height);
