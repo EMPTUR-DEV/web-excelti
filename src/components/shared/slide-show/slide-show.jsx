@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import useSlideShow from '../../../hooks/useSlideShow';
 
-const Slideshow = ({ items,wide }) => {
+const Slideshow = ({ items,wide, linked }) => {
     const { next } = useSlideShow(2.5);
-
+    const handleLink = (linked) => {
+        console.log(linked)
+        if(linked) {
+            window.location.replace(linked)
+        };
+      }
     return (
         <PrincipalContainer wide={wide}>
             <SlideshowContainer ref={next()}>
@@ -12,7 +17,7 @@ const Slideshow = ({ items,wide }) => {
                     items.map(item=>
                         (
                         <Slide key={item.key}>
-                            <img src={item.url} />
+                            <img  onClick={()=>handleLink(linked)} src={item.url} />
                             <TextSlide>{item.name}</TextSlide>
                         </Slide>
                         )
@@ -27,6 +32,7 @@ const PrincipalContainer = styled.div`
     max-width: ${(props) => `${props.wide}px` || "230px"};
     overflow:hidden;
     border-radius:10px ;
+    cursor:pointer ;
 `;
 
 const SlideshowContainer = styled.div`

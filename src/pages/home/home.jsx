@@ -25,6 +25,8 @@ const Home = () => {
         return traductionList;
     }
 
+    
+
     useEffect(()=>{
         setProfessionals(getAllProfessionals());
     },[]);
@@ -36,14 +38,14 @@ const Home = () => {
             <HomeInfograph/>
             <div className='slider-container'>
             
-            <TraductionSlider time={10} color={'blue'} wide={160}>
-                <Slideshow time={10} items={traductions()} wide={195}/>
+            <TraductionSlider  time={10} color={'blue'} wide={160}>
+                <Slideshow linked ={'/traduction'}  time={10} items={traductions()} wide={180}/>
             </TraductionSlider>
-            <TraductionSlider time={10} color={'green'} wide={160}>
-                <Slideshow time={10} items={interpretationBannerContent} wide={230}/>
+            <TraductionSlider  time={10} color={'green'} wide={160}>
+                <Slideshow linked ={'/interpretation'}  time={10} items={interpretationBannerContent} wide={220}/>
             </TraductionSlider>
             <TraductionSlider time={10} color={'cyan'} wide={160}>
-                <Slideshow time={10} items={interpretationBannerContent} wide={230}/>
+                <Slideshow linked ={'/training'}  time={10} items={interpretationBannerContent} wide={220}/>
             </TraductionSlider>
             
             </div>
