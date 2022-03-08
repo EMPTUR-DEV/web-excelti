@@ -4,28 +4,30 @@ import InterpretationBanner from './interpretaton-banner/interpretation-banner'
 import TeamList from '../../components/shared/team-list/team-list';
 import Title from '../../components/shared/title/title';
 import { interpretationBannerContent } from '../../components/shared/content';
+import useProfessionals from '../../hooks/useProfessionals';
+import ProfessionalSlider from '../../components/professional-slider/professional-slider';
+import { useTranslation } from 'react-i18next';
 
 const InterpretationPage = () => {
 
-  const professionals = [
-    /* 'Cynthia Abad Quintalé',
-    'Olga Álvarez',
-    'Cristina Cucchi', */
-    'Violeta Harfuch',
-    'Isolda Rodriguez Villegas',
-    'Laura Tavolai',
-    'Vivien Perez Moran'
-  
-]
+
+
+const {getAllProfessionals} =  useProfessionals()
+const topic = 'Interpreter'
+const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
+
+const { t } = useTranslation();
+
 
   return <InterpretationPageContainer>
             
-            <Title title={'Interpretacion'} color={'parrotGreen'}/>
+            <Title title={t('interpretation')} color={'parrotGreen'}/>
 
             {interpretationBannerContent.map(({name,content,url,alt,key}) => 
                                             <InterpretationBanner key={key} title={name} content = {content}
                                                                   image={url} alt={alt} order={key} />)}
-            <TeamList teamTitle='intérpretes' teamList={professionals}/>
+            {/* <TeamList teamTitle='intérpretes' teamList={professionals}/> */}
+            <ProfessionalSlider professionals={professionals}/>
             
         </InterpretationPageContainer>;
 };

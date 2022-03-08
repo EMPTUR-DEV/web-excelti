@@ -24,20 +24,20 @@ export const ProfessionalDataContainer =  styled.div`
     justify-content:space-evenly;  
     flex-direction:column;
     margin:auto;
-    margin-top: 80px;
+    margin-top: 40px;
 `
 
 export const ProfessionalImage = styled.div`
     --width: ${imageWidth};
-    position:absolute;
+    position:relative;
     border-radius:100%;
     margin-top:calc(var(--width)/2);
     justify-content:flex-start;
     width:var(--width);
     height:var(--width);
+    /* left: calc(var(--general-width)/2 - var(--width)/2);
+    top:calc(-1*var(--width)/2); */
     margin:auto;
-    left: calc(var(--general-width)/2 - var(--width)/2);
-    top:calc(-1*var(--width)/2);
     
     &:after{
         content:'';

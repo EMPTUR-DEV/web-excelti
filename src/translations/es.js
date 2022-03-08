@@ -32,6 +32,6 @@ export const TRANSLATIONS_ES = {
     tradAudioParagraph: " Conversión de audio en un idioma a un texto escrito en otro idioma.",
     subVideo: " Subtitulado de videos:",
     subVideoParagraph: "TEXTO SUB AUDIO",
-    asesoria: "Asesoria en traducción:",
-    asesoriaParagraph: "Asesoria en traducción."
+    asesoria: "Asesoramiento:",
+    asesoriaParagraph: "Asesoramiento para empresas, organizaciones, organizadores de conferencias, y otros clientes en materia de producción de textos a traducir y  otros servicios audiovisuales relacionados con la traducción.                                                         ."
 };

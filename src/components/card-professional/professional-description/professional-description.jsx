@@ -5,6 +5,7 @@ const ProfessionalDescription = ({professions}) =>{
         Traductor:'var(--blue)',
         Interpreter:'var(--parrotGreen)',
         Teacher: 'var(--green)',
+        Lead: '#959500',
     }
       
 
@@ -31,10 +32,15 @@ export default ProfessionalDescription;
 const ProfessionlDefinition =  styled.span`
     display:flex;
     flex-direction:row;   
+    flex-wrap:wrap ;
+    text-align: center ;
+    justify-content: center ;
 `
 const Color =  styled.div`
     color:${(props) => props.type};
     font-weight:400;
     font-size:15px;
+    margin:auto;
     margin:2px;
+    text-align: center ;
 `

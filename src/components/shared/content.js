@@ -1,8 +1,8 @@
 export const interpretationBannerContent = [{
         'key': 1,
-        'name': 'Asesoramiento en interpretacion',
+        'name': 'Asesoramiento en interpretación',
         'content': 'Asesoramiento para organizadores de conferencias, empresas, organizaciones y otros clientes en materia de contratación de intérpretes. Formación y gestión de equipos de intérpretes en congresos, convenciones, seminarios, actividades de capacitación, negociaciones, conferencias de prensa y otro tipo de reuniones en las que los participantes de diversas lenguas y culturas requieran la interpretación para poder comunicarse.  Asesoramiento sobre otros servicios audiovisuales relacionados con la interpretación.',
-        'url': '/interpretation/simultanea21.jpg',
+        'url': '/interpretation/interprete_consultora21a.jpg',
         'alt': 'asesoramiento'
     },
     {

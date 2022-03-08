@@ -5,7 +5,7 @@ const InfoFooter = () => {
     
     return (
         <div className={`${styles.container}`}>
-            <h3>CAPACITACIÓN</h3>
+            <h3 >CAPACITACIÓN</h3>
             <nav>
                 <ul>
                     <li>Curso de Interpretación (inglés - español)</li>

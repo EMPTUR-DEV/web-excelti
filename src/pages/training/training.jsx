@@ -7,6 +7,8 @@ import TrainingList from './training-list/training-list';
 import TeamList from '../../components/shared/team-list/team-list';
 import FormationContentList from './formation-content-list/formation-content-list';
 import Title from '../../components/shared/title/title';
+import ProfessionalSlider from '../../components/professional-slider/professional-slider';
+import useProfessionals from '../../hooks/useProfessionals';
 
 const Training = () => {
     const { t } = useTranslation();
@@ -40,7 +42,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de interpretación de enlace se articula con los siguientes',
             cursosArticulados: [{name:'Consecutiva',key:2},
                                 {name:'Consecutiva formal',key:3},
@@ -62,7 +64,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de consecutivas se articula con los siguientes',
             cursosArticulados: [{name:'Enlace',key:1},
                                 {name:'Consecutiva formal',key:3},
@@ -85,7 +87,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de consecutivas se articula con los siguientes',
             cursosArticulados: [{name:'Enlace',key:1},
                                 {name:'Consecutiva',key:2},
@@ -109,7 +111,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de introducción a la simultánea se articula con los siguientes',
             cursosArticulados: [{name:'Enlace',key:1},
                                 {name:'Consecutiva',key:2},
@@ -132,7 +134,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de simultánea se articula con los siguientes',
             cursosArticulados: [{name:'Enlace',key:1},
                                 {name:'Consecutiva',key:2},
@@ -155,7 +157,7 @@ const Training = () => {
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
-            modalidad:'A distancia',
+            modalidad:'a distancia',
             resumen:'Este curso de simultánea se articula con los siguientes',
             cursosArticulados: [{name:'Enlace',key:1},
                                 {name:'Consecutiva',key:2},
@@ -168,7 +170,7 @@ const Training = () => {
             modulosTematicos:'Tecnología. Medicina. Economía y comercio',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
             clase:'clase remota. lunes de 18.00hs a 19.30hs.',
-            tutoria: ' a convenir',
+            tutoria: 'a convenir',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Simulacro de conferencia internacional',
             key:6
@@ -202,8 +204,6 @@ const Training = () => {
         {title:'Contactos e intercambios',description:'Se implementaron grupos de Whatsapp, para realizar los intercambios entre alumnos y docentes.',key:6},
         {title:'Distribución de material teórico y de ejercitación',description:'Se utiliza el correo electrónico personal.',key:7},
         {title:'E-Learning',description:'En la interpretación de conferencias : una experiencia argentina. - En: Congreso Latinoamericano de Traducción e Interpretación, 2016',key:8},
-
-
     ]
 
     const trainingContent = {
@@ -217,6 +217,9 @@ const Training = () => {
         curso:{title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
     }
     
+    const {getAllProfessionals} =  useProfessionals()
+    const topic = 'Teacher'
+    const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
     return (
         <TrainingContainer>
@@ -230,7 +233,8 @@ const Training = () => {
                     <p>{trainingList[trainingOption].subTitle}</p>
                     <FormationContentList  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 
-            <TeamList teamTitle={'docentes'} teamList={teachers}/>
+            {/* <TeamList teamTitle={'docentes'} teamList={teachers}/> */}
+            <ProfessionalSlider professionals={professionals}/>
         </TrainingContainer>
     )
 }

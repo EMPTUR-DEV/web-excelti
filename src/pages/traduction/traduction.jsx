@@ -4,23 +4,19 @@ import Info from '../../components/shared/info/info';
 import useTraductions from '../../hooks/useTraductions';
 import { useTranslation } from "react-i18next";
 import Books from './../../components/books/books';
-import TeamList from '../../components/shared/team-list/team-list';
+/* import TeamList from '../../components/shared/team-list/team-list'; */
 import Title from '../../components/shared/title/title';
+import useProfessionals from '../../hooks/useProfessionals';
+import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 
 const Traduction = () => {
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
 
-    const professionals = [
-        'Cynthia Abad Quintaié',
-        'Olga Álvarez',
-        'Cristina Cucchi',
-        'Pamela Fioravanti',
-        'Nancy Lynch',
-        'Laura Tavolai',
-        'Melisa Tello' ,
-        'Gabriela Yañez']
-
+    
+    const {getAllProfessionals} =  useProfessionals()
+    const topic = 'Interpreter'
+    const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
     const paragraph =()=>{
         return(
@@ -73,7 +69,8 @@ const Traduction = () => {
                     )
                 }
             </div>
-            <TeamList teamTitle={'traductores'} teamList={professionals}/>
+            {/* <TeamList teamTitle={'traductores'} teamList={professionals}/> */}
+            <ProfessionalSlider professionals={professionals}/>
         </div>
     )
 }
