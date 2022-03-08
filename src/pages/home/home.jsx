@@ -9,6 +9,7 @@ import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
 import Title from '../../components/shared/title/title';
 import './home.scss'
+import { interpretationBannerContent } from '../../components/shared/content';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -37,6 +38,12 @@ const Home = () => {
             
             <TraductionSlider time={10} color={'blue'} wide={160}>
                 <Slideshow time={10} items={traductions()} wide={160}/>
+            </TraductionSlider>
+            <TraductionSlider time={10} color={'green'} wide={160}>
+                <Slideshow time={10} items={interpretationBannerContent} wide={190}/>
+            </TraductionSlider>
+            <TraductionSlider time={10} color={'cyan'} wide={160}>
+                <Slideshow time={10} items={interpretationBannerContent} wide={190}/>
             </TraductionSlider>
             
             </div>

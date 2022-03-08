@@ -7,10 +7,15 @@
 }
 
 .slider-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 2% 8% 2%;
+    padding: 0 20px 8% 20px;
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .title {

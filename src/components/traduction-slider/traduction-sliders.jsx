@@ -17,31 +17,45 @@ export default TraductionSlider;
 
 const theme = {
   blue: "linear-gradient(to bottom right,#0b6d9e,rgb(18,134,193));",
+  green: "linear-gradient(to bottom right,var(--greenLeaf),var(--greenLeaf));",
+  cyan: "linear-gradient(to bottom right,var(--green),var(--green));",
     ocean:"linear-gradient(to bottom right,#5b7fff, #33ccfc);",
     sunset:"linear-gradient(to bottom right,#ff9e68, #ff68de);"
 };
-const shadow = {
-    blue: "rgba(18,134,193,.8)",
+const shadow = {    
+    /* blue: "rgba(18,134,193,.8)",
+    green: "rgba(18,134,193,.8)",
+    cyan: "rgba(18,134,193,.8)", */
       ocean:"rgb(91, 127, 255, .8)",
       sunset:"rgb(255, 104, 222, .8)"
   };
 
 const PrincipalContainer = styled.div`
+
+    --width-slider: 500px;
     position: relative;
     color:var(--white);
     display:flex;
     justify-content:center;
-    margin:20px;
     flex-wrap:wrap;
-    min-width:1000px;
     height:${props => `${props.width*2.8}px`};
-    flex-grow:1;
-    flex-shrink:1;
-    flex-basis:1;
-    min-width: 325px;
+    
+    
     border-radius: 20px;
     background:${props => theme[props.color]};
     box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
+    
+    margin:10px auto;
+    width: var(--width-slider) ;
+    @media screen and (max-width: 1500px){
+        --width-slider:380px;
+    }
+    @media screen and (max-width: 992px){
+        --width-slider:250px;
+    }
+    @media screen and (max-width: 700px){
+        --width-slider:350px;
+    }
 `;
     
 const Books = styled.div`

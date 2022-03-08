@@ -9,7 +9,7 @@ const InfoFooter2 = () => {
 
     return (
         <div className={`${styles.container}`}>
-            <h3 >Secciones</h3>
+            <h3 >SECCIONES</h3>
             <nav>
                 <ul>
                     <li>{t("traduction")}</li>

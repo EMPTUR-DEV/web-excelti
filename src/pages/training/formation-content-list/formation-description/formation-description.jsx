@@ -112,7 +112,7 @@ const FormationDescription = ({handleItemClick,formationItem}) => {
                   </ExtraInfoTitle>
 
                   <TeachersListCourse itemActive = {itemsActiveTeachers}>
-                    {formationItem.profesores.map((profesor,i)=> <li key={i}>{profesor}</li>) } 
+                    {formationItem.profesores.map((profesor,i)=> <li key={i }>{profesor}</li>) } 
                   </TeachersListCourse>
 
                 </SpanExtraInfo>

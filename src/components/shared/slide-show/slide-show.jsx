@@ -45,6 +45,7 @@ border-radius:10px;
     img{
         vertical-align: top;
         object-fit:cover;
+        object-position: center ;
         width: 100%;
         height:100%;
     }
@@ -54,11 +55,11 @@ const TextSlide = styled.div`
     background:rgba(0,0,0,.5);
     color:#fff;
     width: 100%;
-    padding: 10px 60pxl
+    padding: 10px 60px;
     text-align:center;
     position:absolute;
     bottom:0;
-    overflow:auto;
+    
     font-size:80%;
 `;
 
