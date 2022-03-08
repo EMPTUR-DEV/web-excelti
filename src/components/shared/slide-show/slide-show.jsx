@@ -24,8 +24,9 @@ const Slideshow = ({ items,wide }) => {
 }
 
 const PrincipalContainer = styled.div`
-    max-width: ${(props) => `${props.wide}px` || "150px"};
+    max-width: ${(props) => `${props.wide}px` || "230px"};
     overflow:hidden;
+    border-radius:10px ;
 `;
 
 const SlideshowContainer = styled.div`
@@ -55,7 +56,7 @@ const TextSlide = styled.div`
     background:rgba(0,0,0,.5);
     color:#fff;
     width: 100%;
-    padding: 10px 60px;
+    padding: 10px 10px;
     text-align:center;
     position:absolute;
     bottom:0;
