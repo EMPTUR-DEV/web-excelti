@@ -32,7 +32,7 @@ const shadow = {
 
 const PrincipalContainer = styled.div`
 
-    --width-slider: 500px;
+    --width-slider: 300px;
     position: relative;
     color:var(--white);
     display:flex;
@@ -45,13 +45,14 @@ const PrincipalContainer = styled.div`
     background:${props => theme[props.color]};
     box-shadow:0px 0px 20px 0 ${props => shadow[props.color]};
     
-    margin:10px auto;
+    margin:10px 5px;
     width: var(--width-slider) ;
-    @media screen and (max-width: 1500px){
+    @media screen and (min-width: 1200px){
         --width-slider:380px;
     }
     @media screen and (max-width: 992px){
         --width-slider:250px;
+        margin: 5px 1px;
     }
     @media screen and (max-width: 700px){
         --width-slider:350px;

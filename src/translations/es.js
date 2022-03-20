@@ -33,5 +33,5 @@ export const TRANSLATIONS_ES = {
     subVideo: " Subtitulado de videos:",
     subVideoParagraph: "TEXTO SUB AUDIO",
     asesoria: "Asesoramiento:",
-    asesoriaParagraph: "Asesoramiento para empresas, organizaciones, organizadores de conferencias, y otros clientes en materia de producción de textos a traducir y  otros servicios audiovisuales relacionados con la traducción.                                                         ."
+    asesoriaParagraph: "Empresas, organizaciones, organizadores de conferencias, y otros clientes en materia de producción de textos a traducir y  otros servicios audiovisuales relacionados con la traducción."
 };
