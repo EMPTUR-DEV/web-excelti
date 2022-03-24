@@ -1,40 +1,30 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import CardProfessional from '../../components/card-professional/card-professional'
-import './professionals.scss'
-import Banner from '../../components/header/banner/banner';
+import './professionals.scss';
+import useProfessionals from '../../hooks/useProfessionals';
 import { useTranslation } from "react-i18next";
 
 
-const professionalsData = [
-    {name:'Olga Alvarez',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''},
-    {name:'',profession:'', linkedInLink:'',pdfLink:''}
-]
-
 const Professionals = () => {
     const { t } = useTranslation();
+    const { getAllProfessionals } = useProfessionals();
+    const [ professionals,setProfessionals ] = useState(null);
+
+    useEffect(()=>{
+        setProfessionals(getAllProfessionals());
+    },[]);
 
     return (
         <div className='professionals-container'>
-            <Banner src={'header/home-banner.jpg'} title={t("ourProfessionals").toUpperCase()} />
             <h2>Profesionales</h2>
-
-            
             <div className='card-professionals-container'>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
-                <li><CardProfessional showContacBox={true}/></li>
+                { 
+                    professionals ?
+                        professionals.map(professional => (
+                            <li><CardProfessional professional = {professional} showContacBox={true}/></li>
+                    ))
+                    :<></>
+                }   
             </div>
         </div>
     )

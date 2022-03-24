@@ -74,16 +74,16 @@ export const ContactBox = styled.div`
 `
 export const ProfessionalSocialNetworksContainer = styled.div`
     width: 80%;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    align-self:center;
-    row-gap: 10px;
-    column-gap:10px;
+    display:flex;
+    align-self:flex-start;
+    justify-content:center;
     margin: 10px 10% 15px 10%;    
 `
 
 export const SocialIconContainer = styled.div`
     align-self:center;
+    display:block;
+    margin-right:10px;
     & > *{
         border-radius:100%;
         
@@ -95,7 +95,6 @@ export const SocialIconContainer = styled.div`
 `
 
 export const CvLink = styled.button`
-    
     font-weight: bold;
     background-color:var(--green);
     text-transform: uppercase;

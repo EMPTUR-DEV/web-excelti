@@ -3,7 +3,6 @@ import {CardProfessionalContainer,
         ProfessionalDataContainer,
         ProfessionalImage,
         NameTitle,
-        ProfessionTitle,
         ContactBox,
         ProfessionalSocialNetworksContainer,
         SocialIconContainer,
@@ -13,12 +12,15 @@ import {CardProfessionalContainer,
 import {SocialIcon} from 'react-social-icons'
 import ProfessionalDescription from './professional-description/professional-description'
 
-const CardProfessional = ({showContacBox,professions,name}) => {
+const CardProfessional = ({professional,showContacBox}) => {
+    const {name,profession:professions,name:key,image,contac} = professional;
+    const imgDefault = "https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg";
+    
     return (
-        <CardProfessionalContainer>
+        <CardProfessionalContainer key={key}>
             
             <ProfessionalImage>
-                    <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg" alt="" />
+                    <img src={image?image:imgDefault} alt="" />
                 </ProfessionalImage>
             
             <ProfessionalDataContainer>
@@ -31,13 +33,12 @@ const CardProfessional = ({showContacBox,professions,name}) => {
                 {
                     showContacBox?
                     <ContactBox>
-                        <span>Contacto</span>
                         <ProfessionalSocialNetworksContainer>
                             <SocialIconContainer>
-                                <SocialIcon  url="https://linkedin.com/" network='linkedin' fgColor="#fff"/>
+                            {contac.linkedin?<SocialIcon  url={encodeURI(contac.linkedin)} network='linkedin' fgColor="#fff"/>:<></>}
                             </SocialIconContainer>
                             <SocialIconContainer>
-                                <CvLink><span>CV</span></CvLink>
+                                {contac.cv?<a href={encodeURI(contac.cv)}><CvLink><span>CV</span></CvLink></a>:<></>}
                             </SocialIconContainer>
                         </ProfessionalSocialNetworksContainer>
                     </ContactBox>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import useSlideShow from '../../hooks/useSlideShow';
 import CardProfessional from '../card-professional/card-professional';
 
-const   ProfessionalSlider =({professionals})=>{
+const ProfessionalSlider =({professionals})=>{
     const { next } = useSlideShow(3.5);
     const handleLink = (linked) => {
         if(linked) window.location.replace(linked);
@@ -16,7 +16,7 @@ const   ProfessionalSlider =({professionals})=>{
                 { 
                 professionals ?
                     professionals.map(professional => (
-                        <CardProfessional   name={professional.name} professions={professional.profession}  key={professional.name}/>
+                        <CardProfessional professional={professional} />
                         ))
                         :<></>
                     }  

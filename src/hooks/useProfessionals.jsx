@@ -10,22 +10,24 @@ const useProfessionals = () => {
         return  [
             {
                 name:'Olga Alvarez',
+                image:'professionals/olga.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/olga-alvarez-barr-4067635b/',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-olga-alvarez.html'
                 },
                 profession:[
+                    professions[4],
                     professions[1],
                     professions[2],
-                    professions[3],
-                    professions[4]
+                    professions[3]
                 ]
             },
             {
                 name: 'Cynthia Abad Quintaié',
+                image:'professionals/cintia.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/cynthia-abad-quintai%C3%A9-424ab787/',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-cynthia-abad.html'
                 },
                 profession:[
                     professions[1],
@@ -34,6 +36,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Cristina Cucchi',
+                image:'',
                 contac:{
                     linkedin:'',
                     cv:'http://www.excelti.com.ar/cv-cristina-cucchi.html'
@@ -46,9 +49,10 @@ const useProfessionals = () => {
             },
             {
                 name: 'Pamela Fioravanti',
+                image:'',
                 contac:{
                     linkedin:'',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-pamela-fioravanti.html'
                 },
                 profession:[
                     professions[1],
@@ -56,9 +60,10 @@ const useProfessionals = () => {
             },
             {
                 name: 'Nancy Lynch',
+                image:'',
                 contac:{
                     linkedin:'',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-nancy-lynch.html'
                 },
                 profession:[
                     professions[1],
@@ -66,9 +71,10 @@ const useProfessionals = () => {
             },
             {
                 name: 'Laura Tavolai',
+                image:'',
                 contac:{
                     linkedin:'',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-laura-tavolai.html'
                 },
                 profession:[
                     professions[1],
@@ -77,6 +83,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Melisa Tello',
+                image:'professionals/melisa.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/melisa-tello-2400a821b/',
                     cv:''
@@ -89,9 +96,10 @@ const useProfessionals = () => {
             
             {
                 name: 'Gabriela Yañez',
+                image:'professionals/gabriela.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/gabriela-y%C3%A1%C3%B1ez-7447b62b/',
-                    cv:''
+                    cv:'http://www.excelti.com.ar/cv-gabriela-yanez.html'
                 },
                 profession:[
                     professions[1],
@@ -102,6 +110,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Mariana Spitalnik',
+                image:'professionals/mariana.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/mariana-spitalnik-9338a512/',
                     cv:''
@@ -113,8 +122,9 @@ const useProfessionals = () => {
             },
             {
                 name: 'Violeta Harfuch',
+                image:'professionals/violeta.jpg',
                 contac:{
-                    linkedin:'',
+                    linkedin:'https://www.linkedin.com/in/violeta-harfuch-54430745/',
                     cv:''
                 },
                 profession:[
@@ -123,6 +133,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Isolda Rodríguez Villegas',
+                image:'',
                 contac:{
                     linkedin:'',
                     cv:''
@@ -133,6 +144,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Vivien Perez Moran',
+                image:'',
                 contac:{
                     linkedin:'',
                     cv:''
@@ -144,8 +156,9 @@ const useProfessionals = () => {
             },
             {
                 name: 'Elisa Bianchi',
+                image:'professionals/elisa.jpg',
                 contac:{
-                    linkedin:'',
+                    linkedin:'https://www.linkedin.com/in/elisa-bianchi-b4b3536/',
                     cv:''
                 },
                 profession:[
