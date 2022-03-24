@@ -47,17 +47,12 @@ const PrincipalContainer = styled.div`
     @media screen and (min-width: 1200px){
         width: ${({wide})=>`${wide*4}px` || "1200px"};
     }
-    @media screen and (min-width: 1500px){
-        width: ${({wide})=>`${wide*5}px` || "1500px"};
-    }
-    @media screen and (min-width: 1800px){
-        width: ${({wide})=>`${wide*6}px` || "1500px"};
-    }
+    
     
 `;
 
 const SlideshowContainer = styled.div`
-    width: ${(props) => `${3000}px` || '800px' };
+    width: 3000px;
     height:100% ;
     display: flex;
     flex-wrap:nowrap;

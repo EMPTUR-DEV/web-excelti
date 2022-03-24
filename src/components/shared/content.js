@@ -62,56 +62,137 @@ export const trainingImages = {
             'name': '',
             'content': '',
             'url': '/capacitacion/curso/2018 prueba.jpg',
-            'alt': 'prueba'
+            'alt': 'Curso-1'
         },
         {
             'key': 'Curso-2',
             'name': '',
             'content': '',
-            'url': '/capacitacion/curso/box2.jpg',
-            'alt': 'box'
+            'url': '/capacitacion/curso/2018 desde la cabina.jpg',
+            'alt': 'Curso-2'
         },
         {
             'key': 'Curso-3',
             'name': '',
             'content': '',
-            'url': '/capacitacion/curso/conf.jpg',
-            'alt': 'conf'
+            'url': '/capacitacion/curso/ESCRITORIO.jpg',
+            'alt': 'Curso-3'
         },
         {
             'key': 'Curso-4',
             'name': '',
             'content': '',
-            'url': '/capacitacion/curso/2018 desde la cabina.jpg',
-            'alt': 'cabina'
+            'url': '/capacitacion/curso/2018 control en la cabina.jpg',
+            'alt': 'Curso-4'
         },
         {
             'key': 'Curso-5',
             'name': '',
             'content': '',
-            'url': '/capacitacion/curso/ESCRITORIO.jpg',
-            'alt': 'escritorio'
-        },
-        {
-            'key': 'Curso-6',
-            'name': '',
-            'content': '',
-            'url': '/capacitacion/curso/foto 8 20190211_084506.jpg',
-            'alt': 'mesa'
-        },
-        {
-            'key': 'Curso-7',
-            'name': '',
-            'content': '',
-            'url': '/capacitacion/curso/grupal1.jpg',
-            'alt': 'grupal'
-        },
-        {
-            'key': 'Curso-8',
-            'name': '',
-            'content': '',
-            'url': '/capacitacion/curso/grupal2.jpg',
-            'alt': 'grupal2'
+            'url': '/capacitacion/curso/2018 Violeta dando instrucciones.jpg',
+            'alt': 'Curso-5'
         }
+
+    ],
+    'coaching': [{
+            'key': 'coaching-1',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/AIIC 2019 liliana vista amplia del colegio.jpg',
+            'alt': 'coaching 1'
+        },
+        {
+            'key': 'coaching-2',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/auris.jpg',
+            'alt': 'coaching 2'
+        },
+        {
+            'key': 'coaching-4',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/salon.jpg',
+            'alt': 'coaching 3'
+        },
+        {
+            'key': 'coaching-5',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/foto 8 20190211_084506.jpg',
+            'alt': 'coaching-5'
+        },
+        {
+            'key': 'coaching-7',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/grupal1.jpg',
+            'alt': 'coaching-7'
+        },
+        {
+            'key': 'coaching-8',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/grupal2.jpg',
+            'alt': 'coaching'
+        },
+        {
+            'key': 'coaching-9',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/box2.jpg',
+            'alt': 'coaching-9'
+        },
+        {
+            'key': 'coaching-10',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/conf.jpg',
+            'alt': 'coaching-10'
+        },
+        {
+            'key': 'coaching-11',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/coaching/foto 6 20190211_093759.jpg',
+            'alt': 'coaching-11'
+        },
+
+    ],
+    'modalidad': [{
+            'key': 'modalidad-1',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/modalidad/Devolución de simultánea_2019.jpg',
+            'alt': 'modalidad-1'
+        },
+        {
+            'key': 'modalidad-2',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/modalidad/Evaluación de simultánea remota con público.jpg',
+            'alt': 'modalidad-2'
+        },
+        {
+            'key': 'modalidad-3',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/modalidad/Evaluación de simultánea remota-Cabina virtual.jpg',
+            'alt': 'modalidad-3'
+        },
+        {
+            'key': 'modalidad-4',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/modalidad/HIBRIDOS.jpg',
+            'alt': 'modalidad-4'
+        },
+        {
+            'key': 'modalidad-5',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/modalidad/Práctica de consecutiva y simultánea_2019.jpg',
+            'alt': 'modalidad-5'
+        },
     ]
 }
