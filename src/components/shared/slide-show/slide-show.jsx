@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useSlideShow from '../../../hooks/useSlideShow';
 
-const Slideshow = ({ items,wide, linked }) => {
+const Slideshow = ({ items,wide, linked ='#' , hasTextSlide=true}) => {
     const { next } = useSlideShow(2.5);
     const handleLink = (linked) => {
         console.log(linked)
@@ -18,7 +18,7 @@ const Slideshow = ({ items,wide, linked }) => {
                         (
                         <Slide key={item.key}>
                             <img  onClick={()=>handleLink(linked)} src={item.url} />
-                            <TextSlide>{item.name}</TextSlide>
+                            {hasTextSlide ? <TextSlide>{item.name}</TextSlide>: ''}
                         </Slide>
                         )
                     )

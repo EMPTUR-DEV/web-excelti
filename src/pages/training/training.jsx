@@ -10,6 +10,8 @@ import Title from '../../components/shared/title/title';
 import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 import useProfessionals from '../../hooks/useProfessionals';
 
+import Slideshow from '../../components/shared/slide-show/slide-show';
+
 const Training = () => {
     const { t } = useTranslation();
 
@@ -231,6 +233,9 @@ const Training = () => {
                 
                     <h2>{trainingList[trainingOption].title}</h2>
                     <p>{trainingList[trainingOption].subTitle}</p>
+
+                    {/* <Slideshow items={}/> */}
+
                     <FormationContentList  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 
             {/* <TeamList teamTitle={'docentes'} teamList={teachers}/> */}

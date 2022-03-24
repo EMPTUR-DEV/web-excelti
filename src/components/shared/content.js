@@ -55,3 +55,63 @@ export const interpretationBannerContent = [{
         'alt': 'peritos'
     }
 ]
+
+export const trainingImages = {
+    'curso': [{
+            'key': 'Curso-1',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/2018 prueba.jpg',
+            'alt': 'prueba'
+        },
+        {
+            'key': 'Curso-2',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/box2.jpg',
+            'alt': 'box'
+        },
+        {
+            'key': 'Curso-3',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/conf.jpg',
+            'alt': 'conf'
+        },
+        {
+            'key': 'Curso-4',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/2018 desde la cabina.jpg',
+            'alt': 'cabina'
+        },
+        {
+            'key': 'Curso-5',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/ESCRITORIO.jpg',
+            'alt': 'escritorio'
+        },
+        {
+            'key': 'Curso-6',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/foto 8 20190211_084506.jpg',
+            'alt': 'mesa'
+        },
+        {
+            'key': 'Curso-7',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/grupal1.jpg',
+            'alt': 'grupal'
+        },
+        {
+            'key': 'Curso-8',
+            'name': '',
+            'content': '',
+            'url': '/capacitacion/curso/grupal2.jpg',
+            'alt': 'grupal2'
+        }
+    ]
+}
