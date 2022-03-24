@@ -6,6 +6,11 @@ export const TrainingContainer = styled.div `
     margin-top: 80px;
     padding: 30px 10px;
 
+    &.subtitle{
+        display: flex ;
+        margin: auto ;
+    }
+    
     & p{
         font-size:14px; 
         overflow-wrap: break-word; 

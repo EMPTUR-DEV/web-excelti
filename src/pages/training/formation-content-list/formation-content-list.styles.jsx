@@ -62,8 +62,8 @@ export const FormationList = styled.ul `
             height: 0px;
             color: white;
 
-            border-bottom: 50px solid white;
-            border-top: 50px solid white;
+            border-bottom: calc(var(--li-height) / 2) solid white;
+            border-top: calc(var(--li-height) / 2) solid white;
             top:0px;
             filter: drop-shadow(0 0 5px #444);
         }

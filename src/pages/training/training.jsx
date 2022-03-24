@@ -9,8 +9,9 @@ import FormationContentList from './formation-content-list/formation-content-lis
 import Title from '../../components/shared/title/title';
 import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 import useProfessionals from '../../hooks/useProfessionals';
+import { trainingImages } from '../../components/shared/content';
 
-import Slideshow from '../../components/shared/slide-show/slide-show';
+import SlideshowTraining from '../../components/shared/slide-show/slide-show-training';
 
 const Training = () => {
     const { t } = useTranslation();
@@ -232,9 +233,9 @@ const Training = () => {
             </TrainingList>
                 
                     <h2>{trainingList[trainingOption].title}</h2>
-                    <p>{trainingList[trainingOption].subTitle}</p>
+                    <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
 
-                    {/* <Slideshow items={}/> */}
+                    <SlideshowTraining items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/> 
 
                     <FormationContentList  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 
