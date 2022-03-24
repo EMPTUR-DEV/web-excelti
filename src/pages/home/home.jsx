@@ -9,7 +9,7 @@ import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
 import Title from '../../components/shared/title/title';
 import './home.scss'
-import { interpretationBannerContent } from '../../components/shared/content';
+import { interpretationBannerContent, trainingImages } from '../../components/shared/content';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -29,6 +29,7 @@ const Home = () => {
 
     useEffect(()=>{
         setProfessionals(getAllProfessionals());
+
     },[]);
 
     return (
@@ -39,13 +40,16 @@ const Home = () => {
             <div className='slider-container'>
             
             <TraductionSlider  time={10} color={'blue'} wide={160}>
-                <Slideshow linked ={'/traduction'}  time={10} items={traductions()} wide={180}/>
+                <Slideshow linked ={'/traduction'}  time={10}
+                            items={traductions()} wide={230} height={200} />
             </TraductionSlider>
             <TraductionSlider  time={10} color={'green'} wide={160}>
-                <Slideshow linked ={'/interpretation'}  time={10} items={interpretationBannerContent} wide={220}/>
+                <Slideshow linked ={'/interpretation'}  time={10}
+                 items={interpretationBannerContent} wide={230}  height={200}/>
             </TraductionSlider>
             <TraductionSlider time={10} color={'cyan'} wide={160}>
-                <Slideshow linked ={'/training'}  time={10} items={interpretationBannerContent} wide={220}/>
+                <Slideshow linked ={'/training'}  time={10} items={trainingImages['curso'].concat(trainingImages['coaching'].concat(trainingImages['modalidad']))}
+                             wide={230}  height={200}/>
             </TraductionSlider>
             
             </div>

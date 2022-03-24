@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useSlideShow from '../../../hooks/useSlideShow';
 
-const Slideshow = ({ items,wide, linked ='#' , hasTextSlide=true}) => {
+const Slideshow = ({ items,wide,height, linked ='#' , hasTextSlide=true}) => {
     const { next } = useSlideShow(2.5);
     const handleLink = (linked) => {
         console.log(linked)
@@ -11,12 +11,12 @@ const Slideshow = ({ items,wide, linked ='#' , hasTextSlide=true}) => {
         };
       }
     return (
-        <PrincipalContainer wide={wide}>
+        <PrincipalContainer wide={wide} height={height}>
             <SlideshowContainer ref={next()}>
                 {
                     items.map(item=>
                         (
-                        <Slide key={item.key}>
+                        <Slide height={height} key={item.key}>
                             <img  onClick={()=>handleLink(linked)} src={item.url} />
                             {hasTextSlide ? <TextSlide>{item.name}</TextSlide>: ''}
                         </Slide>
@@ -30,12 +30,14 @@ const Slideshow = ({ items,wide, linked ='#' , hasTextSlide=true}) => {
 
 const PrincipalContainer = styled.div`
     max-width: ${(props) => `${props.wide}px` || "230px"};
+    height: ${({height}) => height? height : '300px'};
     overflow:hidden;
     border-radius:10px ;
     cursor:pointer ;
 `;
 
 const SlideshowContainer = styled.div`
+height: ${({height}) => height? height : '300px'};
 border-radius:10px;
     display: flex;
     flex-wrap:nowrap;

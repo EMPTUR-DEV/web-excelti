@@ -59,35 +59,35 @@ export const interpretationBannerContent = [{
 export const trainingImages = {
     'curso': [{
             'key': 'Curso-1',
-            'name': '',
+            'name': 'Curso de interpretación',
             'content': '',
             'url': '/capacitacion/curso/2018 prueba.jpg',
             'alt': 'Curso-1'
         },
         {
             'key': 'Curso-2',
-            'name': '',
+            'name': 'Curso de interpretación',
             'content': '',
             'url': '/capacitacion/curso/2018 desde la cabina.jpg',
             'alt': 'Curso-2'
         },
         {
             'key': 'Curso-3',
-            'name': '',
+            'name': 'Curso de interpretación',
             'content': '',
             'url': '/capacitacion/curso/ESCRITORIO.jpg',
             'alt': 'Curso-3'
         },
         {
             'key': 'Curso-4',
-            'name': '',
+            'name': 'Curso de interpretación',
             'content': '',
             'url': '/capacitacion/curso/2018 control en la cabina.jpg',
             'alt': 'Curso-4'
         },
         {
             'key': 'Curso-5',
-            'name': '',
+            'name': 'Curso de interpretación',
             'content': '',
             'url': '/capacitacion/curso/2018 Violeta dando instrucciones.jpg',
             'alt': 'Curso-5'
@@ -96,63 +96,63 @@ export const trainingImages = {
     ],
     'coaching': [{
             'key': 'coaching-1',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/AIIC 2019 liliana vista amplia del colegio.jpg',
             'alt': 'coaching 1'
         },
         {
             'key': 'coaching-2',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/auris.jpg',
             'alt': 'coaching 2'
         },
         {
             'key': 'coaching-4',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/salon.jpg',
             'alt': 'coaching 3'
         },
         {
             'key': 'coaching-5',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/foto 8 20190211_084506.jpg',
             'alt': 'coaching-5'
         },
         {
             'key': 'coaching-7',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/grupal1.jpg',
             'alt': 'coaching-7'
         },
         {
             'key': 'coaching-8',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/grupal2.jpg',
             'alt': 'coaching'
         },
         {
             'key': 'coaching-9',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/box2.jpg',
             'alt': 'coaching-9'
         },
         {
             'key': 'coaching-10',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/conf.jpg',
             'alt': 'coaching-10'
         },
         {
             'key': 'coaching-11',
-            'name': '',
+            'name': 'Coaching',
             'content': '',
             'url': '/capacitacion/coaching/foto 6 20190211_093759.jpg',
             'alt': 'coaching-11'
@@ -161,35 +161,35 @@ export const trainingImages = {
     ],
     'modalidad': [{
             'key': 'modalidad-1',
-            'name': '',
+            'name': 'Modalidades',
             'content': '',
             'url': '/capacitacion/modalidad/Devolución de simultánea_2019.jpg',
             'alt': 'modalidad-1'
         },
         {
             'key': 'modalidad-2',
-            'name': '',
+            'name': 'Modalidades',
             'content': '',
             'url': '/capacitacion/modalidad/Evaluación de simultánea remota con público.jpg',
             'alt': 'modalidad-2'
         },
         {
             'key': 'modalidad-3',
-            'name': '',
+            'name': 'Modalidades',
             'content': '',
             'url': '/capacitacion/modalidad/Evaluación de simultánea remota-Cabina virtual.jpg',
             'alt': 'modalidad-3'
         },
         {
             'key': 'modalidad-4',
-            'name': '',
+            'name': 'Modalidades',
             'content': '',
             'url': '/capacitacion/modalidad/HIBRIDOS.jpg',
             'alt': 'modalidad-4'
         },
         {
             'key': 'modalidad-5',
-            'name': '',
+            'name': 'Modalidades',
             'content': '',
             'url': '/capacitacion/modalidad/Práctica de consecutiva y simultánea_2019.jpg',
             'alt': 'modalidad-5'
