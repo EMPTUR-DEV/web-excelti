@@ -9,65 +9,11 @@ import {IoIosPeople} from 'react-icons/io'
 import {GraphicContainer,Double,Single, CenterCircleContainer,Full} from './infograph.styles'
 import Square from './square-infograph/square-infograph'
 import useOnScreen from '../../../hooks/intersectionObserver';
-
+import { large_square_size,short_square_size,exceltiColors,backgroundImages,exceltiColorsAlpha,dots,box_shadows } from '../../shared/content'
 
 const InfoGraph = ({items}) => {
   
-  const large_square_size = '100%';
-  const short_square_size = '100%';
 
-  const backgroundImages = ['home/traduction-background.jpg',
-                            'home/learning-background.jpg',
-                            'home/learning-background.jpg',
-                            'home/servicios-audiovisuales-background.jpg',
-                            'home/professional-background.jpg',
-                            'home/professional-background.jpg'
-                          ]
-  
-  const exceltiColors = [ 'rgb(6,107,153)',
-                          'rgb(18,134,193)',
-                          'rgb(0,152,219)',
-                          'rgb(21,178,185)',
-                          'rgb(9,174,140)',
-                          'rgb(36,181,122)',
-                          'rgb(68,169,37)',
-                          'rgb(52,150,91)',
-                        ]  
-    const exceltiColorsAlpha = [ {'initial':'rgba(6,107,153,0.5)',
-                                  'mid':'rgba(6,107,153,0)'},
-                                  {'initial':'rgba(18,134,193,0.5)',
-                                'mid':'rgba(18,134,193,0)'},
-                                  {'initial':'rgba(0,152,219,0.5)',
-                                'mid':'rgba(0,152,219,0)'},
-                                  {'initial':'rgba(21,178,185,0.5)',
-                                'mid':'rgba(21,178,185,0)'},
-                                  {'initial':'rgba(9,174,140,0.5)',
-                                'mid':'rgba(9,174,140,0)'},
-                                {'initial ':'rgba(36,181,122,0.5)',
-                                'mid':'rgba(36,181,122,0)'},
-                                {'initial':'rgba(68,169,37,0.5)',
-                                'mid':'rgba(68,169,37,0)'},
-                                {'initial':'rgba(52,150,91,0.5)',
-                                'mid':'rgba(52,150,91,0)'}
-                      ]  
-  
-
-  const dots = [
-    "top:0px;left: 0px" ,
-    'top:0px;left: 0px',
-    "top:0px;left: 0px" ,
-    'top:0px;left: 0px',
-    "top:0px;left: 0px" ,
-    'top:0px;left: 0px',
-    ]
-  const box_shadows = [
-    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),220px 150px 0 6px var(--background)",
-    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),230px 150px 0 6px var(--background)",
-    "0px -20px 0 6px var(--background),0px 180px 0 4px var(--background),230px 160px 0 6px var(--background)",
-    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),200px 150px 0 6px var(--background)",
-    "0px -10px 0 6px var(--background),-20px 180px 0 4px var(--background),250px 150px 0 6px var(--background)",
-    "0px 30px 0 6px var(--background),-20px 130px 0 4px var(--background),250px 150px 0 6px var(--background)"
-  ]
 
   const [showInfo,setShowInfo] = useState(false)
   const [infoToShow,setInfoToShow] = useState('')

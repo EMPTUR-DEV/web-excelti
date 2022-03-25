@@ -12,6 +12,7 @@ import useProfessionals from '../../hooks/useProfessionals';
 import { trainingImages } from '../../components/shared/content';
 
 import SlideshowTraining from '../../components/shared/slide-show/slide-show-training';
+import TrainingListInfograph from './training-list-2/training-list-2';
 
 const Training = () => {
     const { t } = useTranslation();
@@ -215,9 +216,9 @@ const Training = () => {
         curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
-        modalidad:{title: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.'} ,
-        coaching:{title: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA '} ,
-        curso:{title: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
+        modalidad:{name: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.'} ,
+        coaching:{name: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA '} ,
+        curso:{name: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
     }
     
     const {getAllProfessionals} =  useProfessionals()
@@ -229,10 +230,10 @@ const Training = () => {
             <Title title={t("training")} color={'green'} />
 
             <Info className='info' paragraph={paragraph()}/>
-            <TrainingList  handleOption ={handleOption} trainingDic={trainingList}>
-            </TrainingList>
+            <TrainingListInfograph  handleOption ={handleOption} trainingDic={trainingList}>
+            </TrainingListInfograph>
                 
-                    <h2>{trainingList[trainingOption].title}</h2>
+                    <h2>{trainingList[trainingOption].name}</h2>
                     <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
 
                     <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/> 

@@ -4,7 +4,7 @@ import {CircleContainer} from './square-infograph.styles'
 
 
 const Square = ({size,box_shadows,item,background,children,
-                pulseColor,backgroundImage,type_square}) => {
+                pulseColor,backgroundImage,type_square,hasFuncitionLink=false,functionLink=undefined, arg}) => {
 
     const [itemActive, setItemActive] = useState(false);
     const pulse = useRef(null);
@@ -39,7 +39,10 @@ const Square = ({size,box_shadows,item,background,children,
                             onMouseEnter={()=>setItemActive(!itemActive)}
                             type_square = {type_square}
                             onClick = {()=>{    
-                                    window.location.replace(item.link)
+                                    hasFuncitionLink ? 
+                                        functionLink(arg)
+                                    :
+                                        window.location.replace(item.link)
                                     /* setInfoItem(item.name)
                                     setEnterButtonColor(background)  */
                                 }

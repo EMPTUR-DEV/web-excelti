@@ -196,3 +196,94 @@ export const trainingImages = {
         },
     ]
 }
+
+export const large_square_size = '100%';
+export const short_square_size = '100%';
+
+export const backgroundImages = ['home/traduction-background.jpg',
+    'home/learning-background.jpg',
+    'home/learning-background.jpg',
+    'home/servicios-audiovisuales-background.jpg',
+    'home/professional-background.jpg',
+    'home/professional-background.jpg'
+]
+
+export const exceltiColors = ['rgb(6,107,153)',
+    'rgb(18,134,193)',
+    'rgb(0,152,219)',
+    'rgb(21,178,185)',
+    'rgb(9,174,140)',
+    'rgb(36,181,122)',
+    'rgb(68,169,37)',
+    'rgb(52,150,91)',
+]
+export const exceltiColors2 = [
+    'rgb(18,134,193)',
+    'rgb(68,169,37)',
+    'rgb(21,178,185)'
+]
+export const exceltiColorsAlpha2 = [{
+        'initial': 'rgba(18,134,193,0.5)',
+        'mid': 'rgba(18,134,193,0)'
+    },
+    {
+        'initial': 'rgba(68,169,37,0.5)',
+        'mid': 'rgba(68,169,37,0)'
+    },
+    {
+        'initial': 'rgba(21,178,185,0.5)',
+        'mid': 'rgba(21,178,185,0)'
+    }
+]
+
+export const exceltiColorsAlpha = [{
+        'initial': 'rgba(6,107,153,0.5)',
+        'mid': 'rgba(6,107,153,0)'
+    },
+    {
+        'initial': 'rgba(18,134,193,0.5)',
+        'mid': 'rgba(18,134,193,0)'
+    },
+    {
+        'initial': 'rgba(0,152,219,0.5)',
+        'mid': 'rgba(0,152,219,0)'
+    },
+    {
+        'initial': 'rgba(21,178,185,0.5)',
+        'mid': 'rgba(21,178,185,0)'
+    },
+    {
+        'initial': 'rgba(9,174,140,0.5)',
+        'mid': 'rgba(9,174,140,0)'
+    },
+    {
+        'initial ': 'rgba(36,181,122,0.5)',
+        'mid': 'rgba(36,181,122,0)'
+    },
+    {
+        'initial': 'rgba(68,169,37,0.5)',
+        'mid': 'rgba(68,169,37,0)'
+    },
+    {
+        'initial': 'rgba(52,150,91,0.5)',
+        'mid': 'rgba(52,150,91,0)'
+    }
+]
+
+
+export const dots = [
+    "top:0px;left: 0px",
+    'top:0px;left: 0px',
+    "top:0px;left: 0px",
+    'top:0px;left: 0px',
+    "top:0px;left: 0px",
+    'top:0px;left: 0px',
+]
+export const box_shadows = [
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),220px 150px 0 6px var(--background)",
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),230px 150px 0 6px var(--background)",
+    "0px -20px 0 6px var(--background),0px 180px 0 4px var(--background),230px 160px 0 6px var(--background)",
+    "0px -30px 0 6px var(--background),-20px 180px 0 4px var(--background),200px 150px 0 6px var(--background)",
+    "0px -10px 0 6px var(--background),-20px 180px 0 4px var(--background),250px 150px 0 6px var(--background)",
+    "0px 30px 0 6px var(--background),-20px 130px 0 4px var(--background),250px 150px 0 6px var(--background)"
+]
