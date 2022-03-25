@@ -10,12 +10,13 @@ const SlideshowTraining = ({ items,wide,height, linked ='#' , hasTextSlide=true}
             window.location.replace(linked)
         };
       }
-      console.log(items.length)
+
+      console.log(items)
     return (
         <PrincipalContainer wide={wide} height={height} >
             <SlideshowContainer wide={wide * items.length} ref={next()}>
                 {
-                    items.map(item=>
+                    items.map((item)=>
                         (
                         <Slide wide={wide}  key={item.key}>
                             <img   src={item.url} />

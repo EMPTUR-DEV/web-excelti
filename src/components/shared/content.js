@@ -51,7 +51,7 @@ export const interpretationBannerContent = [{
         'key': 7,
         'name': 'Actuación pericial',
         'content': 'Servicios de traductores públicos con peritos intérpretes.',
-        'url': '/interpretation/interpretacionremota21.png',
+        'url': '/interpretation/business_improv_2009_4.jpg',
         'alt': 'peritos'
     }
 ]

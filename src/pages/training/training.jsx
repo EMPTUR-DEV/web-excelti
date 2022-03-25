@@ -184,8 +184,8 @@ const Training = () => {
     const coaching = [
         
         {title: 'Traductores', 
-         topics: [{topicTitle: 'Traductores', description: 'Descripcion 1'}], 
-         key:1 } ,
+        topics: [{topicTitle: 'Traductores', description: 'Descripcion 1'}], 
+        key:1 } ,
         {title:'Intérpretes',
         topics: [{topicTitle:'Intérpretes', description: 'Descripcion 2'}],
         key:2 },
@@ -235,7 +235,7 @@ const Training = () => {
                     <h2>{trainingList[trainingOption].title}</h2>
                     <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
 
-                    <SlideshowTraining items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/> 
+                    <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/> 
 
                     <FormationContentList  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 

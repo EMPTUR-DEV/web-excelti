@@ -3,7 +3,7 @@ const useProfessionals = () => {
         1:'Traductor',
         2:'Interpreter',
         3:'Teacher',
-        4:'Lead'
+        4:'Leader'
     }
     
     const getAllProfessionals = () => {

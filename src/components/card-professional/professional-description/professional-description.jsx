@@ -5,7 +5,7 @@ const ProfessionalDescription = ({professions}) =>{
         Traductor:'var(--blue)',
         Interpreter:'var(--parrotGreen)',
         Teacher: 'var(--green)',
-        Lead: '#959500',
+        Leader: '#959500',
     }
       
 
