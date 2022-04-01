@@ -4,7 +4,7 @@ import {CircleContainer} from './square-infograph.styles'
 
 
 const Square = ({size,box_shadows,item,background,children,
-                pulseColor,backgroundImage,type_square,hasFuncitionLink=false,functionLink=undefined, arg}) => {
+                pulseColor,backgroundImage,type_square,hasFunctionLink=false,functionLink=undefined, arg, fontH3 }) => {
 
     const [itemActive, setItemActive] = useState(false);
     const pulse = useRef(null);
@@ -27,6 +27,7 @@ const Square = ({size,box_shadows,item,background,children,
         animation();
     },[itemActive]);
     
+    console.log(hasFunctionLink)
     
     return (
         
@@ -38,8 +39,9 @@ const Square = ({size,box_shadows,item,background,children,
                             onMouseLeave={()=>setItemActive(!itemActive)} 
                             onMouseEnter={()=>setItemActive(!itemActive)}
                             type_square = {type_square}
+                            fontH3 = {fontH3}
                             onClick = {()=>{    
-                                    hasFuncitionLink ? 
+                                    hasFunctionLink ? 
                                         functionLink(arg)
                                     :
                                         window.location.replace(item.link)

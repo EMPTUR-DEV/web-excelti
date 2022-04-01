@@ -2,7 +2,7 @@ import React,{useState, useRef} from 'react'
 
 import { useTranslation } from "react-i18next";
 import Info from '../../components/shared/info/info';
-import {CoachingList, CoachingItem, TrainingContainer} from './training.styles'
+import {CoachingList, CoachingItem, TrainingContainer,TrainingSliderContainer} from './training.styles'
 import TrainingList from './training-list/training-list';
 import TeamList from '../../components/shared/team-list/team-list';
 import FormationContentList from './formation-content-list/formation-content-list';
@@ -10,9 +10,10 @@ import Title from '../../components/shared/title/title';
 import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 import useProfessionals from '../../hooks/useProfessionals';
 import { trainingImages } from '../../components/shared/content';
-
+import TraductionSlider from '../../components/traduction-slider/traduction-sliders';
 import SlideshowTraining from '../../components/shared/slide-show/slide-show-training';
 import TrainingListInfograph from './training-list-2/training-list-2';
+import Slideshow from '../../components/shared/slide-show/slide-show';
 
 const Training = () => {
     const { t } = useTranslation();
@@ -26,18 +27,12 @@ const Training = () => {
         </div>)
     };
     
+    const scrollToRef = () =>  refScroll.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const refScroll = useRef();
+
     const handleOption = (option) =>{
         setTrainingOption(option)
-        
     }
-
-    const teachers = [
-        'Olga Álvarez – Coordinadora de EXCELTI',
-        'Elisa Bianchi',
-        'Violeta Harfuch',
-        'Gabriela Yáñez'
-    ]
-
     
     
     const cursos = [
@@ -228,17 +223,35 @@ const Training = () => {
     return (
         <TrainingContainer>
             <Title title={t("training")} color={'green'} />
-
             <Info className='info' paragraph={paragraph()}/>
             <TrainingListInfograph  handleOption ={handleOption} trainingDic={trainingList}>
             </TrainingListInfograph>
+            
+            <TrainingSliderContainer>
+            
+                <TraductionSlider  time={10} color={'blue'} wide={160}>
+                    <Slideshow linked ={'/traduction'}  time={10}
+                                items={trainingImages['modalidad']} wide={230} height={200} />
+                </TraductionSlider>
+                <TraductionSlider  time={10} color={'green'} wide={160}>
+                    <Slideshow linked ={'/interpretation'}  time={10}
+                    items={trainingImages['coaching']} wide={230}  height={200}/>
+                </TraductionSlider>
+                <TraductionSlider time={10} color={'cyan'} wide={160}>
+                    <Slideshow linked ={'/training'}  time={10} items={trainingImages['curso']}
+                                wide={230}  height={200}/>
+                </TraductionSlider>
+                
+            </TrainingSliderContainer>
+
+       
                 
                     <h2>{trainingList[trainingOption].name}</h2>
                     <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
 
-                    <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/> 
+                    {/* <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/>  */}
 
-                    <FormationContentList  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
+                    <FormationContentList ref={refScroll}  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 
             {/* <TeamList teamTitle={'docentes'} teamList={teachers}/> */}
             <ProfessionalSlider professionals={professionals}/>

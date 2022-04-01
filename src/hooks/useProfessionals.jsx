@@ -44,7 +44,7 @@ const useProfessionals = () => {
                 profession:[
                     professions[1],
                     professions[2],
-                    professions[3],
+                    
                 ]
             },
             {
@@ -90,7 +90,7 @@ const useProfessionals = () => {
                 },
                 profession:[
                     professions[1],
-                    professions[2],
+                    
                 ]
             },
             
@@ -117,7 +117,7 @@ const useProfessionals = () => {
                 },
                 profession:[
                     professions[1],
-                    professions[3],
+                    
                 ]
             },
             {
@@ -151,7 +151,7 @@ const useProfessionals = () => {
                 },
                 profession:[
                     professions[2],
-                    professions[3],
+                    
                 ]
             },
             {
@@ -162,7 +162,7 @@ const useProfessionals = () => {
                     cv:''
                 },
                 profession:[
-                    professions[2],
+                    
                     professions[3],
                 ]
             }

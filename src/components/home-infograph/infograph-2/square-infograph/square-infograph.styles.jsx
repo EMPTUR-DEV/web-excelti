@@ -81,7 +81,7 @@ export const CircleContainer = styled.div`
             position: absolute;
             width:100%;
             height:100%;            
-            z-index: 200;
+            z-index: 40;
 
             @media (min-width: 1200px) {
                 --width-overlap:380px;
@@ -160,7 +160,7 @@ export const CircleContainer = styled.div`
                 text-align:center;
                 overflow-wrap: break-word;
                 color: black;//var(--background);
-                font-size: 2rem;
+                font-size: ${({fontH3})=> fontH3 ? fontH3 : '2rem'};
                 ${({item_active})=>
                     item_active? 'opacity: 100%; display:flex;color: var(--background);' : 
                     'opacity: ;display:flex;'

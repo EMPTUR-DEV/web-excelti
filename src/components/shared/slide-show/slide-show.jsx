@@ -44,7 +44,7 @@ border-radius:10px;
 `;
 
 const Slide = styled.div`
-border-radius:10px;
+    border-radius:10px 10px 0 0px;
     min-width:100%;
     overflow:hidden;
     transition: .3 ease all;

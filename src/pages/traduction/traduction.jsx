@@ -15,7 +15,7 @@ const Traduction = () => {
 
     
     const {getAllProfessionals} =  useProfessionals()
-    const topic = 'Interpreter'
+    const topic = 'Traductor'
     const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
     const paragraph =()=>{

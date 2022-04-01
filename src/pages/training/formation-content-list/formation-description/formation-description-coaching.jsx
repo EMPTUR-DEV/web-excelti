@@ -2,8 +2,8 @@ import React from 'react'
 import {    FormationDescriptionContainer, 
             HeadTitleCourse, 
             ContentInformationContainer,
-            SpanInfoCourse,
             IconInfoCourseContainer} from './formation-description.styles'
+import  {SpanInfoCourse} from './formation-description-coaching.styles'
 import {BsCardChecklist} from 'react-icons/bs'
 
 const iconSize = '75px';

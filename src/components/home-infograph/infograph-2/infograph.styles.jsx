@@ -12,6 +12,8 @@ export const GraphicContainer = styled.div`
     padding: 0 0px;
     margin:auto;
     margin-top: 10px;    
+
+    z-index:0 ;
 `
 
 export const CenterCircleContainer =styled.div`

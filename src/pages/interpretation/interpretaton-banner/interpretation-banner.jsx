@@ -57,19 +57,22 @@ const InterpretationBannerContainer = styled.div`
     width: 100%;
     padding: 1% 5%  5% 5%;
     opacity:0;
+    
     img{
         margin-top: 5px;
         max-width:100%;
         margin-bottom:5px;
+        
         @media (min-width: 1100px) {
-            max-width:  500px;
+            width:  500px;
             max-height: 500px;
             justify-self: center;
             // grid-area: 
             grid-column: ${props => props.orientation == 'right' && '2' || '1'};
             grid-row:1/3; 
-            object-fit: cover;
+            
         }
+        object-fit: cover;
     }
     h2{
         text-decoration: ${props => props.underline == 1 && `underline var(--parrotGreen)`};

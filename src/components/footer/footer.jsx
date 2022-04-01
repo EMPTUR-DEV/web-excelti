@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             
             <div className= {styles.footer}>
-               <span> Copyright  <a href="https://www.tempweb.com.ar">© TempWeb </a>
+               <span> Copyright  <a href="mailto:tempweb.arg@gmail.com">© TempWeb </a>
                {`${currentYear}`}
                </span>
             </div>

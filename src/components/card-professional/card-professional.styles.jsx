@@ -15,6 +15,7 @@ export const CardProfessionalContainer =  styled.div`
     width: var(--general-width);
     margin-top:80px;
     margin-bottom:40px;
+    min-height: 350px ;
     
 `
 
@@ -38,6 +39,7 @@ export const ProfessionalImage = styled.div`
     /* left: calc(var(--general-width)/2 - var(--width)/2);
     top:calc(-1*var(--width)/2); */
     margin:auto;
+    margin-top: 20px;
     
     &:after{
         content:'';

@@ -10,34 +10,32 @@ import useOnScreen from '../../../hooks/intersectionObserver';
 const TrainingListInfograph = ({ handleOption, trainingDic }) => {
 
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "-1000px");
+  const onScreen = useOnScreen(ref, "-600px");
   const [infoState,setInfoState] = useState (false)
 
   useEffect(()=>{
     onScreen ? setInfoState(true) : setInfoState(false);
-
   }, [onScreen]);
 
-  console.log(trainingDic)
+  const fontH3 = '1.5rem'
 
   return <GraphicContainer ref={ref}>
 
           <CenterCircleContainer infoState={infoState} >
-
             {
               Object.keys(trainingDic).map((key,i)=>
               <Single>
-              <Square background={exceltiColors2[i]} size={large_square_size}
+              <Square  background={exceltiColors2[i]} size={large_square_size}
                 pulseColor={exceltiColorsAlpha2[i]}
                 item={trainingDic[key]}
                 type_square={'single'}
+                fontH3={fontH3}
                 backgroundImage={''}
-
                 hasFunctionLink ={true}
                 functionLink = {handleOption}
-                arg = {'modalidad'}
-
-                box_shadows={box_shadows[i]} 
+                arg = {key}
+                box_shadows={box_shadows[i]
+              } 
               >
                 <RiTranslate />
               </Square>

@@ -33,7 +33,6 @@ const FormationContentList = ({ formationItems}) => {
             setItemActive('')
         }else{
             setItemActive(key)
-            console.log(itemActive)
             scrollToRef()
         }
     }

@@ -40,6 +40,8 @@ const PrincipalContainer = styled.div`
     flex-basis:1;
     width: 325px;
     overflow:hidden;
+    margin: 20px auto ;
+    
     @media screen and  (min-width: 700px) {
         width: 670px;
         margin: 20px auto ;
@@ -63,13 +65,14 @@ const CardsContainer = styled.div`
     display: flex;
     flex-wrap:nowrap;
     max-width:100%;
+    
     cursor:pointer;
     & > *{
         min-width:100%;
         transition: .3 ease all;
         z-index:10;
         box-shadow:none;
-
+        
         @media screen and  (min-width: 800px) {
         min-width: 290px;
         
