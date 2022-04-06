@@ -9,7 +9,7 @@ import FormationContentList from './formation-content-list/formation-content-lis
 import Title from '../../components/shared/title/title';
 import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 import useProfessionals from '../../hooks/useProfessionals';
-import { trainingImages } from '../../components/shared/content';
+import useContent from '../../components/shared/useContent';
 import TraductionSlider from '../../components/traduction-slider/traduction-sliders';
 import SlideshowTraining from '../../components/shared/slide-show/slide-show-training';
 import TrainingListInfograph from './training-list-2/training-list-2';
@@ -17,7 +17,7 @@ import Slideshow from '../../components/shared/slide-show/slide-show';
 
 const Training = () => {
     const { t } = useTranslation();
-
+    const { trainingImages } = useContent();
     const [trainingOption, setTrainingOption] = useState('curso');
     const [coachingOption, setCoachingOption] = useState('')
 

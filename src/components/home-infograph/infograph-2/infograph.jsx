@@ -9,11 +9,10 @@ import {IoIosPeople} from 'react-icons/io'
 import {GraphicContainer,Double,Single, CenterCircleContainer,Full} from './infograph.styles'
 import Square from './square-infograph/square-infograph'
 import useOnScreen from '../../../hooks/intersectionObserver';
-import { large_square_size,short_square_size,exceltiColors,backgroundImages,exceltiColorsAlpha,dots,box_shadows } from '../../shared/content'
+import useContent from '../../shared/useContent';
 
 const InfoGraph = ({items}) => {
-  
-
+  const { large_square_size,short_square_size,exceltiColors,backgroundImages,exceltiColorsAlpha,dots,box_shadows }  = useContent();
 
   const [showInfo,setShowInfo] = useState(false)
   const [infoToShow,setInfoToShow] = useState('')

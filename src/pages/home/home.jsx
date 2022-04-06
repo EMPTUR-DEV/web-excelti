@@ -9,9 +9,10 @@ import Slideshow from '../../components/shared/slide-show/slide-show';
 import { useTranslation } from "react-i18next";
 import Title from '../../components/shared/title/title';
 import './home.scss'
-import { interpretationBannerContent, trainingImages } from '../../components/shared/content';
+import useContent from '../../components/shared/useContent';
 
 const Home = () => {
+    const { interpretationBannerContent, trainingImages } = useContent();
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
     const { getAllProfessionals } = useProfessionals();

@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import InterpretationBanner from './interpretaton-banner/interpretation-banner'
 import TeamList from '../../components/shared/team-list/team-list';
 import Title from '../../components/shared/title/title';
-import { interpretationBannerContent } from '../../components/shared/content';
+import useContent from '../../components/shared/useContent';
 import useProfessionals from '../../hooks/useProfessionals';
 import ProfessionalSlider from '../../components/professional-slider/professional-slider';
 import { useTranslation } from 'react-i18next';
 
 const InterpretationPage = () => {
 
-
+const { interpretationBannerContent } = useContent();
 
 const {getAllProfessionals} =  useProfessionals()
 const topic = 'Interpreter'
