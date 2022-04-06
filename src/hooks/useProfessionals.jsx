@@ -129,6 +129,7 @@ const useProfessionals = () => {
                 },
                 profession:[
                     professions[2],
+                    professions[3],
                 ]
             },
             {

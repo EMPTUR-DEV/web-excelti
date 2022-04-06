@@ -211,15 +211,17 @@ const Training = () => {
         curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
-        modalidad:{name: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.'} ,
-        coaching:{name: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA '} ,
-        curso:{name: 'Curso de interpretación (Inglés - Español)', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:'},   
+        modalidad:{name: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.',secondTitle:''} ,
+        coaching:{name: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA ',secondTitle:'(Español-Inglés-Portugués)'},
+        curso:{name: 'Curso de interpretación', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:',secondTitle:'(Inglés - Español)'}  
     }
     
     const {getAllProfessionals} =  useProfessionals()
     const topic = 'Teacher'
     const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
+
+    
     return (
         <TrainingContainer>
             <Title title={t("training")} color={'green'} />
@@ -231,22 +233,24 @@ const Training = () => {
             
                 <TraductionSlider  time={10} color={'blue'} wide={160}>
                     <Slideshow linked ={'/traduction'}  time={10}
-                                items={trainingImages['modalidad']} wide={230} height={200} />
+                                items={trainingImages['modalidad']} wide={250} height={200} />
                 </TraductionSlider>
                 <TraductionSlider  time={10} color={'green'} wide={160}>
                     <Slideshow linked ={'/interpretation'}  time={10}
-                    items={trainingImages['coaching']} wide={230}  height={200}/>
+                    items={trainingImages['coaching']} wide={250}  height={200}/>
                 </TraductionSlider>
                 <TraductionSlider time={10} color={'cyan'} wide={160}>
                     <Slideshow linked ={'/training'}  time={10} items={trainingImages['curso']}
-                                wide={230}  height={200}/>
+                                wide={250}  height={200}/>
                 </TraductionSlider>
                 
             </TrainingSliderContainer>
 
        
                 
-                    <h2>{trainingList[trainingOption].name}</h2>
+                    <h2>{trainingList[trainingOption].name} </h2>
+                    <h3>{trainingList[trainingOption].secondTitle}</h3>
+
                     <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
 
                     {/* <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/>  */}
