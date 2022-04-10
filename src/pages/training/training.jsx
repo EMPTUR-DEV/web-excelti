@@ -217,7 +217,7 @@ const Training = () => {
     }
     
     const {getAllProfessionals} =  useProfessionals()
-    const topic = 'Teacher'
+    const topic = t("teacher")
     const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
 

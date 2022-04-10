@@ -11,12 +11,12 @@ import { useTranslation } from 'react-i18next';
 const InterpretationPage = () => {
 
 const { interpretationBannerContent } = useContent();
-
+const { t } = useTranslation();
 const {getAllProfessionals} =  useProfessionals()
-const topic = 'Interpreter'
+const topic = t("interpreter")
 const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
 
-const { t } = useTranslation();
+
 
 
   return <InterpretationPageContainer>
