@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 const useProfessionals = () => {
+    const { t } = useTranslation();
+
     const professions ={
-        1:'Traductor',
-        2:'Interpreter',
-        3:'Teacher',
-        4:'Leader'
+        1:t("traductora"),
+        2:t("interpreter"),
+        3:t("teacher"),
+        4:t("leader")
     }
     
     const getAllProfessionals = () => {

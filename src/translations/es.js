@@ -48,4 +48,8 @@ export const TRANSLATIONS_ES = {
     interpretacionRemotaContent: "Los participantes de la reunión se encuentran en diferentes sedes y se comunican a través de medios de telecomunicación, plataformas de videoconferencias o de interpretación.",
     eventosHibridosContent: "Modalidad en la que se combina la interpretación presencial con la virtual. ",
     actuacionPericialContent: "Servicios de traductores públicos con peritos intérpretes.",
+    traductora: "Traductora",
+    interpreter: "Intérprete",
+    teacher: "Docente",
+    leader: "Líder",
 };

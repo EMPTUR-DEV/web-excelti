@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { useTranslation } from "react-i18next";
 
 const ProfessionalDescription = ({professions}) =>{
+    const { t } = useTranslation();
+
     const colors ={
-        Traductor:'var(--blue)',
-        Interpreter:'var(--parrotGreen)',
-        Teacher: 'var(--green)',
-        Leader: '#959500',
+        [t("traductora")]:'var(--blue)',
+        [t("interpreter")]:'var(--parrotGreen)',
+        [t("teacher")]: 'var(--green)',
+        [t("leader")]: '#959500',
     }
       
 
