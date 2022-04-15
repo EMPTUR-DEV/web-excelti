@@ -1,4 +1,5 @@
 import React, {useState,useEffect,useRef} from 'react'
+import { useHistory } from "react-router-dom";
 
 import {RiTranslate} from 'react-icons/ri'
 import {RiArticleLine}  from 'react-icons/ri'
@@ -19,6 +20,7 @@ const InfoGraph = ({items}) => {
   const [enterButtonColor,setEnterButtonColor] = useState('#338')
   const [infoState,setInfoState] = useState(false)
 
+  const history = useHistory()
   const ref = useRef();
   const onScreen = useOnScreen(ref, "-1000px");
 
@@ -49,8 +51,8 @@ const InfoGraph = ({items}) => {
                     type_square = {'single'}
                     backgroundImage = {backgroundImages[0]}
                     setInfoItem= {setInfoItem}
-                    
                     box_shadows={box_shadows[0]} position_stats={dots[0]}
+                    history={history}
                     >
                   <RiTranslate />
             </Square>
@@ -65,6 +67,7 @@ const InfoGraph = ({items}) => {
                     type_square = {'single'}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
+                    history={history}
                     >
                     <BsHeadset/>
             </Square>
@@ -78,6 +81,7 @@ const InfoGraph = ({items}) => {
                     type_square = {'single'}
                     setEnterButtonColor = {setEnterButtonColor}
                     setInfoItem= {setInfoItem}
+                    history={history}
                     >
                     <FiEdit3/>
             </Square>

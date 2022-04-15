@@ -1,4 +1,5 @@
 import React,{ useState,useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import {GraphicContainer,Single, CenterCircleContainer} from '../../../components/home-infograph/infograph-2/infograph.styles'
 import useContent from '../../../components/shared/useContent'
 import Square from '../../../components/home-infograph/infograph-2/square-infograph/square-infograph'
@@ -12,6 +13,8 @@ const TrainingListInfograph = ({ handleOption, trainingDic }) => {
   const ref = useRef();
   const onScreen = useOnScreen(ref, "-600px");
   const [infoState,setInfoState] = useState (false)
+
+  const history = useHistory()
 
   useEffect(()=>{
     onScreen ? setInfoState(true) : setInfoState(false);
@@ -34,8 +37,9 @@ const TrainingListInfograph = ({ handleOption, trainingDic }) => {
                 hasFunctionLink ={true}
                 functionLink = {handleOption}
                 arg = {key}
-                box_shadows={box_shadows[i]
-              } 
+                box_shadows={box_shadows[i]}
+                history={history}
+              
               >
                 <RiTranslate />
               </Square>
@@ -43,39 +47,6 @@ const TrainingListInfograph = ({ handleOption, trainingDic }) => {
             </Single>
               )
             }
-            {/*             <Single>
-              <Square background={exceltiColors[6]} size={short_square_size}
-                item={items[3]} box_shadows={box_shadows[3]}
-                pulseColor={exceltiColorsAlpha[6]}
-                backgroundImage={backgroundImages[3]}
-                position_stats={dots[3]}
-                type_square={'single'}
-                hasFunctionLink ={true}
-                functionLink = {handleOption}
-                arg = {'coaching'}
-                setEnterButtonColor={setEnterButtonColor}
-                setInfoItem={setInfoItem}
-              >
-                <BsHeadset />
-              </Square>
-            </Single>
-            <Single>
-              <Square background={exceltiColors[3]} size={large_square_size}
-                item={items[1]} box_shadows={box_shadows[1]}
-                pulseColor={exceltiColorsAlpha[3]}
-                backgroundImage={backgroundImages[1]}
-                position_stats={dots[1]}
-                type_square={'single'}
-                hasFunctionLink ={true}
-                functionLink = {handleOption}
-                arg = {'curso'}
-                setEnterButtonColor={setEnterButtonColor}
-                setInfoItem={setInfoItem}
-              >
-                <FiEdit3 />
-              </Square>
-
-            </Single> */}
     </CenterCircleContainer>
   </GraphicContainer>
 };

@@ -4,7 +4,7 @@ import {CircleContainer} from './square-infograph.styles'
 
 
 const Square = ({size,box_shadows,item,background,children,
-                pulseColor,backgroundImage,type_square,hasFunctionLink=false,functionLink=undefined, arg, fontH3 }) => {
+                pulseColor,backgroundImage,type_square,hasFunctionLink=false,functionLink=undefined, arg, fontH3,history }) => {
 
     const [itemActive, setItemActive] = useState(false);
     const pulse = useRef(null);
@@ -29,6 +29,13 @@ const Square = ({size,box_shadows,item,background,children,
     
     console.log(hasFunctionLink)
     
+    const changeWindow =(link) =>{
+        if (hasFunctionLink)  functionLink(arg);
+        if (link[0] != "#")
+            history.push(link); 
+        window.location.replace(link);
+    }
+
     return (
         
             <CircleContainer background={background} size={size} 
@@ -40,15 +47,7 @@ const Square = ({size,box_shadows,item,background,children,
                             onMouseEnter={()=>setItemActive(!itemActive)}
                             type_square = {type_square}
                             fontH3 = {fontH3}
-                            onClick = {()=>{    
-                                    hasFunctionLink ? 
-                                        functionLink(arg)
-                                    :
-                                        window.location.replace(item.link)
-                                    /* setInfoItem(item.name)
-                                    setEnterButtonColor(background)  */
-                                }
-                             }
+                            onClick = {()=>changeWindow(item.link)}
                             >
                 <img src= {backgroundImage} alt="" />
                 <div className='dot'  />

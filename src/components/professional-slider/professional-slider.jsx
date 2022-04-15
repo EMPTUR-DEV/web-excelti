@@ -3,10 +3,13 @@ import styled from 'styled-components';
 import useSlideShow from '../../hooks/useSlideShow';
 import CardProfessional from '../card-professional/card-professional';
 
-const ProfessionalSlider =({professionals})=>{
+const ProfessionalSlider =({professionals,history})=>{
     const { next } = useSlideShow(3.5);
     const handleLink = (linked) => {
-        if(linked) window.location.replace(linked);
+        if(linked) {
+            history.push(linked)
+            window.location.replace(linked);
+        }
       }
     
     return (

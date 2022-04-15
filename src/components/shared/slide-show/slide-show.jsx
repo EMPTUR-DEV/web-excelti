@@ -2,13 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import useSlideShow from '../../../hooks/useSlideShow';
 
-const Slideshow = ({ items,wide,height, linked ='#' , hasTextSlide=true}) => {
+const Slideshow = ({ items,wide,height, linked ='#' , hasTextSlide=true,
+                        handleOption,option,history}) => {
     const { next } = useSlideShow(2.5);
     const handleLink = (linked) => {
         console.log(linked)
+        if (linked[0] != '#')
+            history.push(linked)
         if(linked) {
+            
             window.location.replace(linked)
         };
+        handleOption(option)
       }
     return (
         <PrincipalContainer wide={wide} height={height}>

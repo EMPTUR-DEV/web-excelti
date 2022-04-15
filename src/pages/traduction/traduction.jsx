@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import styles from './traduction.module.scss';
 import Info from '../../components/shared/info/info';
 import useTraductions from '../../hooks/useTraductions';
@@ -13,6 +14,7 @@ const Traduction = () => {
     const { t } = useTranslation();
     const GetTraductions = useTraductions();
 
+    const history = useHistory()
     
     const {getAllProfessionals} =  useProfessionals()
     const topic = t("traductora")
@@ -70,7 +72,7 @@ const Traduction = () => {
                 }
             </div>
             {/* <TeamList teamTitle={'traductores'} teamList={professionals}/> */}
-            <ProfessionalSlider professionals={professionals}/>
+            <ProfessionalSlider history={history} professionals={professionals}/>
         </div>
     )
 }

@@ -1,7 +1,15 @@
 import styles from './nav-header.module.scss';
+import { useHistory } from 'react-router-dom';
 const NavHeader = ({items})=>{
+
+  const history = useHistory()
+  
   const handleLink = (linked) => {
-    if(linked) window.location.replace(linked);
+    
+    if(linked){
+      history.push(linked)
+      window.location.replace(linked);
+    }
   }
 
   return (<div className={styles.container}>

@@ -1,5 +1,5 @@
 import React,{useState, useRef} from 'react'
-
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useTranslation } from "react-i18next";
 import Info from '../../components/shared/info/info';
 import {CoachingList, CoachingItem, TrainingContainer,TrainingSliderContainer} from './training.styles'
@@ -15,12 +15,14 @@ import SlideshowTraining from '../../components/shared/slide-show/slide-show-tra
 import TrainingListInfograph from './training-list-2/training-list-2';
 import Slideshow from '../../components/shared/slide-show/slide-show';
 
+
 const Training = () => {
     const { t } = useTranslation();
     const { trainingImages } = useContent();
     const [trainingOption, setTrainingOption] = useState('curso');
     const [coachingOption, setCoachingOption] = useState('')
 
+    const history = useHistory()
     const paragraph = () => {
         return(<div>
             {t('trainingParagraph')}
@@ -211,9 +213,9 @@ const Training = () => {
         curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
-        modalidad:{name: 'Modalidad', link:'/',key:'modalidad',subTitle:'Presencial y remota.',secondTitle:''} ,
-        coaching:{name: 'Coaching', link:'/',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA ',secondTitle:'(Español-Inglés-Portugués)'},
-        curso:{name: 'Curso de interpretación', link:'/',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:',secondTitle:'(Inglés - Español)'}  
+        modalidad:{name: 'Modalidad', link:'#training-option',key:'modalidad',subTitle:'Presencial y remota.',secondTitle:'',color:'blue'} ,
+        coaching:{name: 'Coaching', link:'#training-option',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA ',secondTitle:'(Español-Inglés-Portugués)',color:'green'},
+        curso:{name: 'Curso de interpretación', link:'#training-option',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:',secondTitle:'(Inglés - Español)',color:'cyan'}  
     }
     
     const {getAllProfessionals} =  useProfessionals()
@@ -230,25 +232,34 @@ const Training = () => {
             </TrainingListInfograph>
             
             <TrainingSliderContainer>
-            
-                <TraductionSlider  time={10} color={'blue'} wide={160}>
-                    <Slideshow linked ={'/traduction'}  time={10}
+
+                { Object.keys(trainingList).map((key,i)=>
+                    <TraductionSlider   time={10} color={trainingList[key].color} wide={160}>
+                        <Slideshow handleOption ={handleOption} option={key}  linked ={'#training-option'}  time={10}
+                                items={trainingImages[key]} wide={250} height={200} />
+                    </TraductionSlider>
+                )}
+                {/* <TraductionSlider   time={10} color={'blue'} wide={160}>
+                    <Slideshow handleOption ={handleOption} option='modalidad'  linked ={'#training-option'}  time={10}
                                 items={trainingImages['modalidad']} wide={250} height={200} />
                 </TraductionSlider>
-                <TraductionSlider  time={10} color={'green'} wide={160}>
-                    <Slideshow linked ={'/interpretation'}  time={10}
+                <TraductionSlider handleOption ={handleOption} option='coaching' time={10} 
+                        color={'green'} wide={160}>
+                    <Slideshow linked ={'#training-option'}  time={10}
                     items={trainingImages['coaching']} wide={250}  height={200}/>
                 </TraductionSlider>
                 <TraductionSlider time={10} color={'cyan'} wide={160}>
-                    <Slideshow linked ={'/training'}  time={10} items={trainingImages['curso']}
+                    <Slideshow handleOption ={handleOption} option='curso' 
+                                linked ={'#training-option'}  time={10} 
+                                items={trainingImages['curso']}
                                 wide={250}  height={200}/>
                 </TraductionSlider>
-                
+                 */}
             </TrainingSliderContainer>
 
        
                 
-                    <h2>{trainingList[trainingOption].name} </h2>
+                    <h2 id="training-option">{trainingList[trainingOption].name} </h2>
                     <h3>{trainingList[trainingOption].secondTitle}</h3>
 
                     <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
@@ -258,7 +269,7 @@ const Training = () => {
                     <FormationContentList ref={refScroll}  handleOption ={handleOption}  formationItems={trainingContent[trainingOption]}/>
                 
             {/* <TeamList teamTitle={'docentes'} teamList={teachers}/> */}
-            <ProfessionalSlider professionals={professionals}/>
+            <ProfessionalSlider history={history} professionals={professionals}/>
         </TrainingContainer>
     )
 }

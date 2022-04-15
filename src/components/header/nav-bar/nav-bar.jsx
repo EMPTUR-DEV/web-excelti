@@ -11,7 +11,7 @@ const NavBar = () => {
     const [ items,setItems ] = useState([]);
     useEffect(()=>{
         setItems([{name: t("traduction"), link:'/traduction',image:'header/traduction-page.jpg'},
-                {name:'Interpretación', link:'/interpretation',image:'header/traduction-page.jpg'}, 
+                {name:t("interpretation"), link:'/interpretation',image:'header/traduction-page.jpg'}, 
                 {name:t("training"), link:'/training',image:'header/traduction-page.jpg'},
                 {name:'Contacto', link:'#footer',image:'header/traduction-page.jpg'},
                 /* {name:t("ourProfessionals"), link:'/professionals',image:'header/traduction-page.jpg'},

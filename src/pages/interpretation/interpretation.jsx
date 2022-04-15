@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components'
 import InterpretationBanner from './interpretaton-banner/interpretation-banner'
 import TeamList from '../../components/shared/team-list/team-list';
@@ -15,7 +16,7 @@ const { t } = useTranslation();
 const {getAllProfessionals} =  useProfessionals()
 const topic = t("interpreter")
 const professionals = getAllProfessionals().filter((prof)=>prof.profession.includes(topic))
-
+const history = useHistory()
 
 
 
@@ -27,7 +28,7 @@ const professionals = getAllProfessionals().filter((prof)=>prof.profession.inclu
                                             <InterpretationBanner key={key} title={name} content = {content}
                                                                   image={url} alt={alt} order={key} />)}
             {/* <TeamList teamTitle='intérpretes' teamList={professionals}/> */}
-            <ProfessionalSlider professionals={professionals}/>
+            <ProfessionalSlider history={history} professionals={professionals}/>
             
         </InterpretationPageContainer>;
 };
