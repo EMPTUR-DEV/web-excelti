@@ -185,13 +185,13 @@ const UseContent = () => {
                 'url': '/capacitacion/modalidad/Evaluación de simultánea remota-Cabina virtual.jpg',
                 'alt': 'modalidad-3'
             },
-            {
+            /* {
                 'key': 'modalidad-4',
                 'name': 'Modalidades',
                 'content': '',
                 'url': '/capacitacion/modalidad/HIBRIDOS.jpg',
                 'alt': 'modalidad-4'
-            },
+            }, */
             {
                 'key': 'modalidad-5',
                 'name': 'Modalidades',

@@ -43,7 +43,10 @@ const FormationContentBox = ({item}) => {
             </IconInfoCourseContainer>
             <h4>{item.title}:</h4>
         </strong>
-        <p> {item.description} </p> 
+        <p> {item.description} 
+        {item.key == 8 ? <a href=' http://biblio.traductores.org.ar/documentos/07428.pdf'>Ver más...</a>: ''}
+        </p> 
+        
         {item.description.length>100 ? 
             itemsViewMore?
             <BsArrowBarUp  style={{'cursor':'pointer'}} onClick={handleClickViewMore} size={'30px'}/>

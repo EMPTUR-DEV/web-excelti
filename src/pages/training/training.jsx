@@ -58,7 +58,7 @@ const Training = () => {
             clase:' Miércoles de 18.00 a 19.30 horas Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
             tutoria: 'Día y horario a convenir Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
-            evaluacion: 'Interpretación de enlace y primera vista',
+            evaluacion: 'Interpreatación simultánea remota',
             key:1},
                 
         {   title: 'Consecutiva', 
@@ -80,7 +80,7 @@ const Training = () => {
             clase:'Miércoles de 18.00 a 19.30 horas. Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
             tutoria: 'Día y horario a convenir, actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
-            evaluacion: 'Interpretación de enlace y primera vista',
+            evaluacion: 'Interpreatación simultánea remota',
             key:2
             }, 
 
@@ -101,7 +101,7 @@ const Training = () => {
             modulosTematicos:'Política. Diplomacia. Banquetes. Unidades culturales argentinas',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
             clase:'Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir',
-            tutoria: 'dia y horario a convenir. Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente',
+            tutoria: 'Día y horario a convenir. Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación simultánea remota',
             key:3
@@ -125,7 +125,7 @@ const Training = () => {
             modulosTematicos:'Medio ambiente. Educación. Empleo. Temas de actualidad',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
             clase:'Lunes de 18.00 a 19.30 horas, actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir',
-            tutoria: 'dia y horario a convenir. Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente',
+            tutoria: 'Día y horario a convenir. Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación simultánea remota',
             key:4
@@ -148,7 +148,7 @@ const Training = () => {
             modulosTematicos:'Organizaciones internacionales. Política internacional',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
             clase:'Clase remota: lunes de 18.00 a 19.30 horas',
-            tutoria: ' a convenir',
+            tutoria: 'A convenir',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Interpretación simultánea remota',
             key:5
@@ -170,8 +170,8 @@ const Training = () => {
             objetivos:'a) adquirir las habilidades necesarias para actuar como intérprete simultáneo (inglés-español y viceversa); b) familiarizarse con el mercado argentino y regional de trabajo de la interpretación; y c) práctica de relay',
             modulosTematicos:'Tecnología. Medicina. Economía y comercio',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:'clase remota. lunes de 18.00hs a 19.30hs.',
-            tutoria: 'a convenir',
+            clase:'Clase remota. lunes de 18.00hs a 19.30hs.',
+            tutoria: 'A convenir',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
             evaluacion: 'Simulacro de conferencia internacional',
             key:6
@@ -213,8 +213,8 @@ const Training = () => {
         curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
-        modalidad:{name: 'Modalidad', link:'#training-option',key:'modalidad',subTitle:'Presencial y remota.',secondTitle:'',color:'blue'} ,
-        coaching:{name: 'Coaching', link:'#training-option',key:'coaching',subTitle:'Inglés-español. Consecutiva y simultánea. Duración: 2 años - Coordinadora: Olga Álvarez-Barr - Intérprete consultora. CTPCBA, AIIC, ADICA ',secondTitle:'(Español-Inglés-Portugués)',color:'green'},
+        modalidad:{name: 'Modalidad', link:'#training-option',key:'modalidad',subTitle:'Presencial y remota',secondTitle:'',color:'blue'} ,
+        coaching:{name: 'Coaching', link:'#training-option',key:'coaching',subTitle:'',secondTitle:'(Español-Inglés-Portugués)',color:'green'},
         curso:{name: 'Curso de interpretación', link:'#training-option',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:',secondTitle:'(Inglés - Español)',color:'cyan'}  
     }
     
@@ -262,7 +262,7 @@ const Training = () => {
                     <h2 id="training-option">{trainingList[trainingOption].name} </h2>
                     <h3>{trainingList[trainingOption].secondTitle}</h3>
 
-                    <p className='subtitle'>{trainingList[trainingOption].subTitle}</p>
+                    <p className='subtitle'>{trainingList[trainingOption].subTitle}</p> 
 
                     {/* <SlideshowTraining key={trainingOption} items={trainingImages[trainingOption]}  time={10} wide={300} height={300} hasTextSlide={false}/>  */}
 

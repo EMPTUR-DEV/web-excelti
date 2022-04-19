@@ -191,6 +191,11 @@ export const SpanInfoModalidad = styled.div`
         overflow-y:hidden;
         transition: all 0.4s ease-out;
         box-shadow:${({itemVisible, isItemLarge}) => itemVisible ? 'none' : isItemLarge? 'inset 0px -15px 15px -20px rgba(0,0,0,0.75) ':'none'}; 
+
+        & a{
+            margin-left: 10px ;
+            text-decoration:none ;
+        }
         @media screen and (max-width: 400px){
             width: 330px;
         }

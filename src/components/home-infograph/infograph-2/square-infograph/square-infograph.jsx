@@ -55,6 +55,7 @@ const Square = ({size,box_shadows,item,background,children,
                 <div className='icon' >
                 <i className="far fa-building">{children}</i>
                 <h3>{item.name}</h3>
+                <span>{item.secondTitle}</span>
                 </div>
                 <div className="image-overlap"/>
 

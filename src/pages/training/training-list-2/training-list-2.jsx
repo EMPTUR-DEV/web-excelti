@@ -4,7 +4,9 @@ import {GraphicContainer,Single, CenterCircleContainer} from '../../../component
 import useContent from '../../../components/shared/useContent'
 import Square from '../../../components/home-infograph/infograph-2/square-infograph/square-infograph'
 import {RiTranslate} from 'react-icons/ri'
-
+import {SiGoogleclassroom} from 'react-icons/si'
+import {BsHeadset} from 'react-icons/bs'
+import {MdClass} from 'react-icons/md'
 import useOnScreen from '../../../hooks/intersectionObserver';
 
 
@@ -13,7 +15,7 @@ const TrainingListInfograph = ({ handleOption, trainingDic }) => {
   const ref = useRef();
   const onScreen = useOnScreen(ref, "-600px");
   const [infoState,setInfoState] = useState (false)
-
+  const iconos = [<SiGoogleclassroom />,<BsHeadset/>,<MdClass/>]
   const history = useHistory()
 
   useEffect(()=>{
@@ -41,7 +43,7 @@ const TrainingListInfograph = ({ handleOption, trainingDic }) => {
                 history={history}
               
               >
-                <RiTranslate />
+                {iconos[i]}
               </Square>
 
             </Single>

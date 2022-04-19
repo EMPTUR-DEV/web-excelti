@@ -22,5 +22,9 @@ export const TRANSLATIONS_EN = {
     translatedBooks: "Transalated Books",
     otherPublishedTranslates: "Other Published Translates",
     teamTranslates: 'Gestión de proyectos de traducción en equipo',
-    trainingParagraph: "Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su profile personal"
+    trainingParagraph: "Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su profile personal",
+    traductora: "Tanslator",
+    interpreter: "Interpreter",
+    teacher: "Teacher",
+    leader: "Leader",
 };
