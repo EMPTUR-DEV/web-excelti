@@ -40,7 +40,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Cristina Cucchi',
-                image:'',
+                image:'professionals/cristina.jpg',
                 contac:{
                     linkedin:'',
                     cv:'http://www.excelti.com.ar/cv-cristina-cucchi.html'
@@ -52,19 +52,8 @@ const useProfessionals = () => {
                 ]
             },
             {
-                name: 'Pamela Fioravanti',
-                image:'',
-                contac:{
-                    linkedin:'',
-                    cv:'http://www.excelti.com.ar/cv-pamela-fioravanti.html'
-                },
-                profession:[
-                    professions[1],
-                ]
-            },
-            {
                 name: 'Nancy Lynch',
-                image:'',
+                image:'professionals/nancy.jpg',
                 contac:{
                     linkedin:'',
                     cv:'http://www.excelti.com.ar/cv-nancy-lynch.html'
@@ -75,7 +64,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Laura Tavolai',
-                image:'',
+                image:'professionals/laura.jpg',
                 contac:{
                     linkedin:'',
                     cv:'http://www.excelti.com.ar/cv-laura-tavolai.html'
@@ -138,7 +127,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Isolda Rodríguez Villegas',
-                image:'',
+                image:'professionals/isolda.jpg',
                 contac:{
                     linkedin:'',
                     cv:''
@@ -149,7 +138,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Vivien Perez Moran',
-                image:'',
+                image:'professionals/viviana.jpg',
                 contac:{
                     linkedin:'',
                     cv:''
@@ -170,7 +159,18 @@ const useProfessionals = () => {
                     
                     professions[3],
                 ]
-            }
+            },
+            {
+                name: 'Pamela Fioravanti',
+                image:'',
+                contac:{
+                    linkedin:'',
+                    cv:'http://www.excelti.com.ar/cv-pamela-fioravanti.html'
+                },
+                profession:[
+                    professions[1],
+                ]
+            },
         ];
     };
 
