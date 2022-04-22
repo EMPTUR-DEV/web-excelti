@@ -38,7 +38,7 @@ const CardProfessional = ({professional,showContacBox}) => {
                             {contac.linkedin?<SocialIcon  url={encodeURI(contac.linkedin)} network='linkedin' fgColor="#fff"/>:<></>}
                             </SocialIconContainer>
                             <SocialIconContainer>
-                                {contac.cv?<a href={encodeURI(contac.cv)}><CvLink><span>CV</span></CvLink></a>:<></>}
+                                {contac.cv?<a href={encodeURI(contac.cv)} download><CvLink><span>CV</span></CvLink></a>:<></>}
                             </SocialIconContainer>
                         </ProfessionalSocialNetworksContainer>
                     </ContactBox>
