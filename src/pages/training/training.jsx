@@ -228,7 +228,7 @@ const Training = () => {
         <TrainingContainer>
             <Title title={t("training")} color={'green'} />
             <Info className='info' paragraph={paragraph()}/>
-            <TrainingListInfograph  handleOption ={handleOption} trainingDic={trainingList}>
+            <TrainingListInfograph id='ingographTraining'  handleOption ={handleOption} trainingDic={trainingList}>
             </TrainingListInfograph>
             
             <TrainingSliderContainer>

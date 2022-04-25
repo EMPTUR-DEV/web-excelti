@@ -40,6 +40,12 @@
             position: relative;
             border-bottom: darkslateblue 1px solid;
             font-weight: normal;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+                color: var(--parrotGreen);
+                font-weight: bold;
+            }
         }
     }
 }

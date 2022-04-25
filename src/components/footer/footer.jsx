@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 /* import ContactForm from '../contact-form/contact-form' */
 import styles from './footer.module.scss'
 import InfoFooter from './info-footer/info-footer'
@@ -9,7 +10,8 @@ import InfoFooter2 from './info-footer/info-footer-2'
 const Footer = () => {
     
     const currentYear  = new Date().getFullYear()
-    
+   
+
     return (
         <div id='footer' className= {styles.container}>
             
