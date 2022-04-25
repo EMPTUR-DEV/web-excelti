@@ -79,21 +79,28 @@ export const ProfessionalSocialNetworksContainer = styled.div`
     display:flex;
     align-self:flex-start;
     justify-content:center;
-    margin: 10px 10% 15px 10%;    
+    margin: 10px 10% 15px 10%;  
+    
+    & > *{
+        &:hover{
+            box-shadow: 0 0 1px 5px #aac;
+        }
+    transition: ease-in 0.2s box-shadow;
+    }
 `
 
 export const SocialIconContainer = styled.div`
     align-self:center;
     display:block;
     margin-right:10px;
+    border-radius: 50%;
+
     & > *{
-        border-radius:100%;
-        
-        &:hover{
-            box-shadow: 0 0 1px 5px #aac;
-        }
-        transition: ease-in 0.2s box-shadow;
+        border-radius:50%;
     }
+
+    
+
 `
 
 export const CvLink = styled.button`
@@ -107,6 +114,8 @@ export const CvLink = styled.button`
     font-size:23px;
     border-radius: 100%;
     cursor: pointer;
+    
+    
     &:active{
         background-color: var(--blue);
         color:white;

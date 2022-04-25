@@ -16,6 +16,7 @@ const CardProfessional = ({professional,showContacBox}) => {
     const {name,profession:professions,name:key,image,contac} = professional;
     const imgDefault = "https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg";
     
+    console.log(contac)
     return (
         <CardProfessionalContainer key={key}>
             
