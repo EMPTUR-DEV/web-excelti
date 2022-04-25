@@ -17,7 +17,7 @@ const useProfessionals = () => {
                 image:'professionals/olga.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/olga-alvarez-barr-4067635b/',
-                    cv:'http://www.excelti.com.ar/cv-olga-alvarez.html'
+                    cv:'cvs/Olga_Alvarez_ESP.pdf'
                 },
                 profession:[
                     professions[4],
@@ -31,7 +31,7 @@ const useProfessionals = () => {
                 image:'professionals/cintia.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/cynthia-abad-quintai%C3%A9-424ab787/',
-                    cv:'http://www.excelti.com.ar/cv-cynthia-abad.html'
+                    cv:'cvs/Cynthia_Abad_Quintale_ESP.pdf'
                 },
                 profession:[
                     professions[1],
@@ -43,7 +43,7 @@ const useProfessionals = () => {
                 image:'professionals/cristina.jpg',
                 contac:{
                     linkedin:'',
-                    cv:'http://www.excelti.com.ar/cv-cristina-cucchi.html'
+                    cv:'cvs/Cristina_Cucchi_ESP.pdf'
                 },
                 profession:[
                     professions[1],
@@ -67,7 +67,7 @@ const useProfessionals = () => {
                 image:'professionals/laura.jpg',
                 contac:{
                     linkedin:'',
-                    cv:'http://www.excelti.com.ar/cv-laura-tavolai.html'
+                    cv:'cvs/Laura_Tavolai_ESP.pdf'
                 },
                 profession:[
                     professions[1],
@@ -92,7 +92,7 @@ const useProfessionals = () => {
                 image:'professionals/gabriela.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/gabriela-y%C3%A1%C3%B1ez-7447b62b/',
-                    cv:'http://www.excelti.com.ar/cv-gabriela-yanez.html'
+                    cv:'cvs/Gabriela_Luisa_Yañez_ESP.pdf'
                 },
                 profession:[
                     professions[1],
@@ -118,7 +118,7 @@ const useProfessionals = () => {
                 image:'professionals/violeta.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/violeta-harfuch-54430745/',
-                    cv:''
+                    cv:'cvs/Violeta_Harfuch.pdf'
                 },
                 profession:[
                     professions[2],
@@ -153,7 +153,7 @@ const useProfessionals = () => {
                 image:'professionals/elisa.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/elisa-bianchi-b4b3536/',
-                    cv:''
+                    cv:'cvs/Elisa_Bianchi.pdf'
                 },
                 profession:[
                     
@@ -165,7 +165,7 @@ const useProfessionals = () => {
                 image:'',
                 contac:{
                     linkedin:'',
-                    cv:'http://www.excelti.com.ar/cv-pamela-fioravanti.html'
+                    cv:'cvs/Pamela_Fioravanti_ESP.pdf'
                 },
                 profession:[
                     professions[1],
