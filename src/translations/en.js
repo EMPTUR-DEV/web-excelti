@@ -7,7 +7,7 @@ export const TRANSLATIONS_EN = {
     ourProfessionals: "Our Professionals",
     publications: "Publications",
     module: "Module {{count}}",
-    contact: "Contact",
+    contacto: "Contact",
 
     homeTitle: "EXCELTI",
     homeSubtitle: "Team of translators and interpreters who deliver solutions to the highest quality standards.", //Olga
