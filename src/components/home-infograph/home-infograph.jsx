@@ -27,7 +27,7 @@ const HomeInfograph = (props) => {
         ]);
 
     useEffect(()=>{
-        setItems([{name: t("traduction"), link:'/traduction',key:0},
+        setItems([{name: t("traduction"), link:'/translation',key:0},
                 {name:t("training"), link:'/training', key:1},
                 {name:'E-learning', link:'/elearning', key:2},
                 {name:t("interpretation"), link:'/interpretation', key:3},

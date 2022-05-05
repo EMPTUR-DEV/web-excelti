@@ -181,30 +181,30 @@ const Training = () => {
 
     const coaching = [
         
-        {title: 'Traductores', 
+        {title: t('traductores'), 
         topics: [{topicTitle: 'Traductores', description: 'Descripcion 1'}], 
         key:1 } ,
-        {title:'Intérpretes',
+        {title: t('interpretes'),
         topics: [{topicTitle:'Intérpretes', description: 'Descripcion 2'}],
         key:2 },
-        {title: 'Estudiantes',
+        {title: t('estudiantes'),
         topics: [{topicTitle:'Estudiantes', description: 'Descripcion 3'}], 
         key:3  },
-        {title: 'Instituciones internacionales',
+        {title: t('institucionesInternacionales'),
         topics: [{topicTitle:'Ingresantes en instituciones internacionales', description: 'Descripcion 4'}], 
         key:4 },
     ]
 
     const modalidad = [
-        {title:'Virtual (2020-Actualidad)',description:"A distancia", key:0},
-        {title:'Moodle',description:"Moodle es un paquete de software para la creación de cursos en línea y sitios Web basados en Internet.  Se distribuye gratuitamente como Software libre. Fue creado por Martin Dougiamas, un administrador de WebCT en Curtin University, Australia, graduado en Ciencias de la Computación y Educación. La filosofía planteada por Moodle está basada en el constructivismo social de la educación, enfatizando que los estudiantes (y no sólo los profesores) pueden contribuir a la experiencia educativa en muchas formas. Moodle es lo suficientemente flexible para permitir una amplia gama de modos de enseñanza. Puede ser utilizado para generar contenido de manera básica o avanzada (por ejemplo, páginas web) o evaluaciones de diversos tipos.",key:1},
-        {title:'Plataformas de E-Learning',description:"Las plataformas son conjuntos de servicios de software que permiten configurar un entorno virtual de aprendizaje, al proveer herramientas que facilitan la interacción entre el profesor y el alumno, y la publicación y distribución de contenidos. En ellas el estudiante y el docente se pueden comunicar de manera asincrónica (en tiempo y espacio distintos), por ejemplo, blogs, wikis, e mail y de manera sincrónica (diferentes espacios pero mismo tiempo), por ejemplo, chat, webcam, videoconferencia.", key:2},
-        {title:'B-learning',description:"La metodología de Formación Combinada o Formación Mixta se denomina Blended Learning, y consiste en la modalidad semipresencial de estudios. Se aprovechan las ventajas de la digitalización de los contenidos y de la comunicación vía Internet, con la supervisión presencial del docente.", key:3},
-        {title:'Clases',description:'Actividad sincrónica y grupal.  Se utiliza Zoom, para las clases y tutorías, al que los alumnos y docentes se conectan con dos dispositivos. Las clases se graban y la grabación está disponible para los alumnos, en un directorio de acceso controlado.  Los alumnos también pueden grabar sus propias participaciones de ejercitación en sus equipos personales.',key:4},
-        {title:'Tutorias',description:'Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente. Plataformas disponibles: Zoom, Skype, Webex y Meet.',key:5},
-        {title:'Contactos e intercambios',description:'Se implementaron grupos de Whatsapp, para realizar los intercambios entre alumnos y docentes.',key:6},
-        {title:'Distribución de material teórico y de ejercitación',description:'Se utiliza el correo electrónico personal.',key:7},
-        {title:'E-Learning',description:'En la interpretación de conferencias : una experiencia argentina. - En: Congreso Latinoamericano de Traducción e Interpretación, 2016',key:8},
+        {title:t('modalidadVirtual'),description:"A distancia", key:0},
+        {title:t('modalidadMoodle'),description:"Moodle es un paquete de software para la creación de cursos en línea y sitios Web basados en Internet.  Se distribuye gratuitamente como Software libre. Fue creado por Martin Dougiamas, un administrador de WebCT en Curtin University, Australia, graduado en Ciencias de la Computación y Educación. La filosofía planteada por Moodle está basada en el constructivismo social de la educación, enfatizando que los estudiantes (y no sólo los profesores) pueden contribuir a la experiencia educativa en muchas formas. Moodle es lo suficientemente flexible para permitir una amplia gama de modos de enseñanza. Puede ser utilizado para generar contenido de manera básica o avanzada (por ejemplo, páginas web) o evaluaciones de diversos tipos.",key:1},
+        {title:t('modalidadElearningPlataforma'),description:"Las plataformas son conjuntos de servicios de software que permiten configurar un entorno virtual de aprendizaje, al proveer herramientas que facilitan la interacción entre el profesor y el alumno, y la publicación y distribución de contenidos. En ellas el estudiante y el docente se pueden comunicar de manera asincrónica (en tiempo y espacio distintos), por ejemplo, blogs, wikis, e mail y de manera sincrónica (diferentes espacios pero mismo tiempo), por ejemplo, chat, webcam, videoconferencia.", key:2},
+        {title:t('modalidadBlended'),description:"La metodología de Formación Combinada o Formación Mixta se denomina Blended Learning, y consiste en la modalidad semipresencial de estudios. Se aprovechan las ventajas de la digitalización de los contenidos y de la comunicación vía Internet, con la supervisión presencial del docente.", key:3},
+        {title:t('modalidadGroup'),description:'Actividad sincrónica y grupal.  Se utiliza Zoom, para las clases y tutorías, al que los alumnos y docentes se conectan con dos dispositivos. Las clases se graban y la grabación está disponible para los alumnos, en un directorio de acceso controlado.  Los alumnos también pueden grabar sus propias participaciones de ejercitación en sus equipos personales.',key:4},
+        {title:t('modalidadIndividual'),description:'Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente. Plataformas disponibles: Zoom, Skype, Webex y Meet.',key:5},
+        {title:t('modalidadComunicacion'),description:'Se implementaron grupos de Whatsapp, para realizar los intercambios entre alumnos y docentes.',key:6},
+        {title:t('modalidadTeorica'),description:'Se utiliza el correo electrónico personal.',key:7},
+        {title:t('modalidadElearning'),description:'En la interpretación de conferencias : una experiencia argentina. - En: Congreso Latinoamericano de Traducción e Interpretación, 2016',key:8},
     ]
 
     const trainingContent = {
@@ -213,9 +213,9 @@ const Training = () => {
         curso:{content:cursos, key:'curso'}
     }
     const trainingList = {
-        modalidad:{name: 'Modalidad', link:'#training-option',key:'modalidad',subTitle:'Presencial y remota',secondTitle:'',color:'blue'} ,
-        coaching:{name: 'Coaching', link:'#training-option',key:'coaching',subTitle:'',secondTitle:'(Español-Inglés-Portugués)',color:'green'},
-        curso:{name: 'Curso de interpretación', link:'#training-option',key:'curso',subTitle:'Metodología de aprendizaje personalizada y con fines específicos para:',secondTitle:'(Inglés - Español)',color:'cyan'}  
+        modalidad:{name: t('modalidad'), link:'#training-option',key:'modalidad',subTitle:t('modalidadSubTitle'),secondTitle:'',color:'blue'} ,
+        coaching:{name: t('coaching'), link:'#training-option',key:'coaching',subTitle:'',secondTitle:t('coachingSecondTitle'),color:'green'},
+        curso:{name: t('cursoInterpretacion'), link:'#training-option',key:'curso',subTitle:t('cursoSubTitle'),secondTitle:t('cursoSecondTitle'),color:'cyan'}  
     }
     
     const {getAllProfessionals} =  useProfessionals()

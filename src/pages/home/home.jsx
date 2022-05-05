@@ -28,7 +28,7 @@ const Home = () => {
     }
 
     const sectionList = [
-        {items:traductions(),link:'/traduction',color:'blue'},
+        {items:traductions(),link:'/translation',color:'blue'},
         {items:interpretationBannerContent,link:'/interpretation',color:'green'},
         {items:trainingImages['curso'].concat(trainingImages['coaching'].concat(trainingImages['modalidad'])),link:'/training',color:'cyan'},
 
@@ -67,7 +67,7 @@ const Home = () => {
             </div>
             <ProfessionalSlider history ={history} professionals={professionals}/>
             <Info
-            subtitle={'Los invitamos a contactarse con nosotros. Será un gusto poder escucharlos y orientarlos en función de sus necesidades.'} 
+            subtitle={t("homeInfoFooterText")} 
             paragraph={' '}
             />
         </div>

@@ -24,7 +24,7 @@ const Router = () => {
                 {/* <ContactButton/> */}
                     <Switch>  
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/traduction' component={Traduction} />
+                        <Route exact path='/translation' component={Traduction} />
                         <Route exact path='/professionals' component={Professionals} />
                         <Route exact path='/training' component={Training} />
                         <Route exact path='/interpretation' component={InterpretationPage} />

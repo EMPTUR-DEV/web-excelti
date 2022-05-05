@@ -9,7 +9,7 @@ const NavBarMobile = () => {
     const isDesktop = useMediaQuery('(min-width: 1024px)');
     const { t, i18n } = useTranslation();
     const { showMobileMenu,changeShowMobile } = useContext(BooksContext);
-    const [ items,setItems ] = useState([{name: t("traduction"), link:'/traduction',image:'header/traduction-page.jpg'},
+    const [ items,setItems ] = useState([{name: t("traduction"), link:'/translation',image:'header/traduction-page.jpg'},
     {name:'Interpretación', link:'/interpretation',image:'header/traduction-page.jpg'}, 
     {name:t("training"), link:'/training',image:'header/traduction-page.jpg'},
     {name:'Contacto', link:'#footer',image:'header/traduction-page.jpg'}

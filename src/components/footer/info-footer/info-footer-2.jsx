@@ -21,10 +21,10 @@ const InfoFooter2 = () => {
 
     return (
         <div className={`${styles.container}`}>
-            <h3 >SECCIONES</h3>
+            <h3 >{t('secciones').toUpperCase()}</h3>
             <nav>
                 <ul>
-                    <li onClick={()=>handleLink('/traduction')}>{t("traduction")}</li>
+                    <li onClick={()=>handleLink('/translation')}>{t("traduction")}</li>
                     <li onClick={()=>handleLink('/interpretation')}>{t("interpretation")}</li>
                     <li onClick={()=>handleLink('/training')}>{t("training")}</li>
                     <li onClick={()=>handleLink('/professionals')}>{t("ourProfessionals")}</li>
