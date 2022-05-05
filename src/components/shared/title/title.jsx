@@ -12,7 +12,7 @@ export default Title;
 const Container = styled.h2`
    color:${props => `var(--${props.color})`};
    @media (max-width: 800px) {
-       font-size: 1em;
+       font-size: 1.2em;
        padding: 1%;
    }
 `
