@@ -13,7 +13,7 @@ const useProfessionals = () => {
     const getAllProfessionals = () => {
         return  [
             {
-                name:'Olga Alvarez',
+                name:'Olga Álvarez',
                 image:'professionals/olga.jpg',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/olga-alvarez-barr-4067635b/',
@@ -137,7 +137,7 @@ const useProfessionals = () => {
                 ]
             },
             {
-                name: 'Vivien Perez Moran',
+                name: 'Vivien Pérez Moran',
                 image:'professionals/viviana.jpg',
                 contac:{
                     linkedin:'',
@@ -162,7 +162,7 @@ const useProfessionals = () => {
             },
             {
                 name: 'Pamela Fioravanti',
-                image:'',
+                image:'professionals/pamela-fioravanti.png',
                 contac:{
                     linkedin:'',
                     cv:'cvs/Pamela_Fioravanti_ESP.pdf'

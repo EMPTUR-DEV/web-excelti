@@ -52,13 +52,13 @@ const Training = () => {
                                 {name:'Simultánea - Mercados especializados',key:6} ],
             infoPedagogica: 'El curso de interpretación de enlace tiene una duración de 2 meses, según el siguiente detalle',
             duracion: '2 meses (abril y mayo)',
-            objetivos:' Interpretación de enlace. Presencialidad vs Virtualidad. Técnicas de desverbalización. Técnicas de expresión oral. Traducción a primera vista. Introducción a las técnicas de interpretación consecutiva sin notas. Primeros pasos para la interpretación simultánea. Nuevos medios técnicos para la interpretación.',
+            objetivos:' Interpretación de enlace. Presencialidad vs. virtualidad. Técnicas de desverbalización. Técnicas de expresión oral. Traducción a primera vista. Introducción a las técnicas de interpretación consecutiva sin notas. Primeros pasos para la interpretación simultánea. Nuevos medios técnicos para la interpretación.',
             modulosTematicos:'Gestión empresarial. Negociaciones. Temas de actualidad.',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
-            clase:' Miércoles de 18.00 a 19.30 horas Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
-            tutoria: 'Día y horario a convenir Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
+            clase:' Miércoles de 18.00 a 19.30 horas. Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
+            tutoria: 'Día y horario a convenir. Actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
-            evaluacion: 'Interpreatación simultánea remota',
+            evaluacion: 'Interpretación simultánea remota',
             key:1},
                 
         {   title: 'Consecutiva', 
@@ -78,13 +78,13 @@ const Training = () => {
             modulosTematicos:'Medio ambiente. Salud pública. Temas de actualidad.',
             periodicidadSemanal:'1 clase a distancia de 90 minutos + 1 tutoría a distancia',
             clase:'Miércoles de 18.00 a 19.30 horas. Actividad sincrónica y grupal. Se utiliza la plataforma ZOOM, licenciada. La clase se estructura sobre una planificación previamente distribuida. La grabación de la clase se hace accesible a los alumnos que no puedan asistir.',
-            tutoria: 'Día y horario a convenir, actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en funcion del perfil de cada asistente.',
+            tutoria: 'Día y horario a convenir, actividad sincrónica individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente.',
             profesores:['Olga Álvarez','Violeta Harfuch','Gabriela Yáñez'],
-            evaluacion: 'Interpreatación simultánea remota',
+            evaluacion: 'Interpretación simultánea remota',
             key:2
             }, 
 
-        {   title:'Consecutiva Formal',
+        {   title:'Consecutiva formal',
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
@@ -131,7 +131,7 @@ const Training = () => {
             key:4
         }, 
         
-        {   title:'Simultánea - Organísmos internacionales', 
+        {   title:'Simultánea - Organismos internacionales', 
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
@@ -154,7 +154,7 @@ const Training = () => {
             key:5
             },  
         
-        {   title:'Simultánea remóta - Mercados especializados',  
+        {   title:'Simultánea remota - Mercados especializados',  
             requirements:'Título universitario o terciario en cualquier disciplina. Nivel de lengua extranjera equivalente a la de un traductor o profesor de inglés. Nivel de lengua española equivalente a la de un hispanoparlante culto.',
             admision: 'En función de una entrevista personal a distancia, cuyo fin es orientar a los interesados, evaluar su perfil y anticipar qué áreas deben desarrollar durante su formación.',
             entrevistas:'Se organiza en función del CV resumido del interesado, en el que consten sus datos personales, su formación (año y lugar de graduación y promedio general), antecedentes laborales. - Días y horario: a combinar. La entrevista tiene una duración aproximada de 1 hora. ',
@@ -198,7 +198,7 @@ const Training = () => {
     const modalidad = [
         {title:t('modalidadVirtual'),description:"A distancia", key:0},
         {title:t('modalidadMoodle'),description:"Moodle es un paquete de software para la creación de cursos en línea y sitios Web basados en Internet.  Se distribuye gratuitamente como Software libre. Fue creado por Martin Dougiamas, un administrador de WebCT en Curtin University, Australia, graduado en Ciencias de la Computación y Educación. La filosofía planteada por Moodle está basada en el constructivismo social de la educación, enfatizando que los estudiantes (y no sólo los profesores) pueden contribuir a la experiencia educativa en muchas formas. Moodle es lo suficientemente flexible para permitir una amplia gama de modos de enseñanza. Puede ser utilizado para generar contenido de manera básica o avanzada (por ejemplo, páginas web) o evaluaciones de diversos tipos.",key:1},
-        {title:t('modalidadElearningPlataforma'),description:"Las plataformas son conjuntos de servicios de software que permiten configurar un entorno virtual de aprendizaje, al proveer herramientas que facilitan la interacción entre el profesor y el alumno, y la publicación y distribución de contenidos. En ellas el estudiante y el docente se pueden comunicar de manera asincrónica (en tiempo y espacio distintos), por ejemplo, blogs, wikis, e mail y de manera sincrónica (diferentes espacios pero mismo tiempo), por ejemplo, chat, webcam, videoconferencia.", key:2},
+        {title:t('modalidadElearningPlataforma'),description:"Las plataformas son conjuntos de servicios de software que permiten configurar un entorno virtual de aprendizaje, al proveer herramientas que facilitan la interacción entre el profesor y el alumno, y la publicación y distribución de contenidos. En ellas el estudiante y el docente se pueden comunicar de manera asincrónica (en tiempo y espacio distintos), por ejemplo, blogs, wikis, email y de manera sincrónica (diferentes espacios pero mismo tiempo), por ejemplo, chat, webcam, videoconferencia.", key:2},
         {title:t('modalidadBlended'),description:"La metodología de Formación Combinada o Formación Mixta se denomina Blended Learning, y consiste en la modalidad semipresencial de estudios. Se aprovechan las ventajas de la digitalización de los contenidos y de la comunicación vía Internet, con la supervisión presencial del docente.", key:3},
         {title:t('modalidadGroup'),description:'Actividad sincrónica y grupal.  Se utiliza Zoom, para las clases y tutorías, al que los alumnos y docentes se conectan con dos dispositivos. Las clases se graban y la grabación está disponible para los alumnos, en un directorio de acceso controlado.  Los alumnos también pueden grabar sus propias participaciones de ejercitación en sus equipos personales.',key:4},
         {title:t('modalidadIndividual'),description:'Actividad sincrónica e individual. Se trabaja intensamente para alcanzar los objetivos en función del perfil de cada asistente. Plataformas disponibles: Zoom, Skype, Webex y Meet.',key:5},

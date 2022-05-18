@@ -3,7 +3,7 @@ const useTrainingImages = () => {
     const getTrainingImages = (topic) => {
         return  [
             {
-                name:'Olga Alvarez',
+                name:'Olga Álvarez',
                 contac:{
                     linkedin:'https://www.linkedin.com/in/olga-alvarez-barr-4067635b/',
                     cv:''

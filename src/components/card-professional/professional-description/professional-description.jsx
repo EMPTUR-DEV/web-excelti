@@ -18,7 +18,7 @@ const ProfessionalDescription = ({professions}) =>{
                 professions.map((profession, i) =>(
                     (i + 1 == professions.length) ? <Color key={profession} 
                                                            type={colors[profession]}>
-                                                           {` ${profession}`}
+                                                           {` ${profession}.`}
                                                     </Color>
                                                     :<Color key={profession}
                                                             type={colors[profession]}>

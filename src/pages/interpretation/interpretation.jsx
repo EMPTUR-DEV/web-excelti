@@ -24,9 +24,9 @@ const history = useHistory()
             
             <Title title={t('interpretation')} color={'parrotGreen'}/>
 
-            {interpretationBannerContent.map(({name,content,url,alt,key}) => 
+            {interpretationBannerContent.map(({name,content,url,alt,key,extraContent}) => 
                                             <InterpretationBanner key={key} title={name} content = {content}
-                                                                  image={url} alt={alt} order={key} />)}
+                                                                  image={url} alt={alt} order={key} extraContent={extraContent} />)}
             {/* <TeamList teamTitle='intérpretes' teamList={professionals}/> */}
             <ProfessionalSlider history={history} professionals={professionals}/>
             

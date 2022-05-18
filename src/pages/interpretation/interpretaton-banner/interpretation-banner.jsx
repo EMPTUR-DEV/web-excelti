@@ -1,10 +1,11 @@
 import React,{useRef,useEffect,useState} from 'react';
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import useOnScreen from '../../../hooks/intersectionObserver';
 
-const InterpretationBanner = ({title,content,image,alt,order}) => {
+const InterpretationBanner = ({title,content,image,alt,order,key,extraContent}) => {
     const [ sign,setSign ] = useState((order % 2 === 1) ? {sign:'',orientation:'right'} : {sign:'-',orientation:'left'});
-
+    const { t } = useTranslation();
     const refContainer = useRef();
     const onScreen = useOnScreen(refContainer,'');
     useEffect(()=>{
@@ -46,7 +47,7 @@ const InterpretationBanner = ({title,content,image,alt,order}) => {
     return <InterpretationBannerContainer orientation={sign.orientation} underline={order} direction={sign.sign} ref={refContainer}>
             <h2>{title}</h2>
             <img src={image} alt={alt} />
-            <Info orientation={sign.orientation} underline={order} >{content}</Info>     
+            <Info orientation={sign.orientation} underline={order} >{content} <i>{extraContent}</i></Info>     
         </InterpretationBannerContainer>;
 };
 

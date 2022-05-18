@@ -34,12 +34,13 @@ const UseContent = () => {
                 'key': 4,
                 'name': t('susurrada'),
                 'content': t("susurradaContent"),
+                'extraContent':t('susurradaContentI'),
                 'url': '/interpretation/susurrada21.png',
                 'alt': 'susurrada'
             },
             {
                 'key': 5,
-                'name': t("Interpretación remota"),
+                'name': t("InterpretacionRemota"),
                 'content': t("interpretacionRemotaContent"),
                 'url': '/interpretation/interpretacionremota21.png',
                 'alt': 'susurrada'
