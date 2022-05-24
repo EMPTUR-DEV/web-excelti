@@ -40,7 +40,7 @@ const UseContent = () => {
             },
             {
                 'key': 5,
-                'name': t("InterpretacionRemota"),
+                'name': t("interpretacionRemota"),
                 'content': t("interpretacionRemotaContent"),
                 'url': '/interpretation/interpretacionremota21.png',
                 'alt': 'susurrada'

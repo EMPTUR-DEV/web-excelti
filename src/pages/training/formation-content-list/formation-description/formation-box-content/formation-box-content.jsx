@@ -41,7 +41,7 @@ const FormationContentBox = ({item}) => {
             <IconInfoCourseContainer>
                 {Icons[item.key]}
             </IconInfoCourseContainer>
-            <h4>{item.title}:</h4>
+            <h4>{item.title}</h4>
         </strong>
         <p> {item.description} 
         {item.key == 8 ? <a href=' http://biblio.traductores.org.ar/documentos/07428.pdf'>Ver más...</a>: ''}

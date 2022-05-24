@@ -59,7 +59,7 @@ export const TRANSLATIONS_ES = {
     //Página capacitación
     modalidad: 'Modalidades',
     coaching: 'Coaching',
-    cursoInterpretacion: 'Curso de interpretacion',
+    cursoInterpretacion: 'Curso de interpretación',
     coachingSecondTitle: '(Español-Inglés-Portugués)',
     cursoSecondTitle: '(Inglés - Español)',
     trainingParagraph: " Todos los integrantes de Excelti estamos comprometidos con nuestra propia capacitación y con la de nuestros colegas, a los que orientamos en función de su perfil personal",
