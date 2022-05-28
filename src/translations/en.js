@@ -84,7 +84,7 @@ export const TRANSLATIONS_EN = {
     modalidadElearning: 'E-learning',
 
 
-    traductora: "Tanslator",
+    traductora: "Translator",
     interpreter: "Interpreter",
     teacher: "Teacher",
     leader: "Leader",
