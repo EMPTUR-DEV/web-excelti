@@ -85,7 +85,6 @@ export const TRANSLATIONS_PT = {
     modalidadTeorica: 'Theoretical Material and Exercises',
     modalidadElearning: 'E-learning',
 
-
     traductora: "Tradutora",
     interpreter: "Intérprete",
     teacher: "Professora",
