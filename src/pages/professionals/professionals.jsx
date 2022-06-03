@@ -16,7 +16,7 @@ const Professionals = () => {
 
     return (
         <div className='professionals-container'>
-            <h2>Profesionales</h2>
+            <h2>{t("profesionales")}</h2>
             <div className='card-professionals-container'>
                 { 
                     professionals ?

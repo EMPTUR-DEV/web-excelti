@@ -69,6 +69,7 @@ export const TRANSLATIONS_EN = {
     traductores: 'Translators',
     interpretes: 'Interpreters',
     estudiantes: 'Students',
+    profesionales: "Professionals",
     institucionesInternacionales: 'International Organizations',
 
     //Modalidades

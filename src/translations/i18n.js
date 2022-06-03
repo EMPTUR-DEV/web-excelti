@@ -4,12 +4,16 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import { TRANSLATIONS_ES } from "./es";
 import { TRANSLATIONS_EN } from "./en";
+import { TRANSLATIONS_PT } from "./pt";
 
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
         resources: {
+            pt: {
+                translation: TRANSLATIONS_PT
+            },
             en: {
                 translation: TRANSLATIONS_EN
             },
