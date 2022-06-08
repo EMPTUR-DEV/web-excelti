@@ -54,7 +54,7 @@ export const TRANSLATIONS_ES = {
     eventosHibridos: "Eventos híbridos",
     eventosHibridosContent: "Modalidad en la que se combina la interpretación presencial con la virtual. ",
     actuacionPericial: "Actuación pericial",
-    actuacionPericialContent: "Servicios de traductores públicos con peritos intérpretes.",
+    actuacionPericialContent: "Servicios de traductores públicos como peritos intérpretes.",
 
     //Página capacitación
     modalidad: 'Modalidades',
@@ -75,10 +75,10 @@ export const TRANSLATIONS_ES = {
     modalidadSubTitle: 'Presencial y remota',
     modalidadVirtual: 'Virtual (2020-Actualidad)',
     modalidadMoodle: 'Moodle',
-    modalidadElearningPlataforma: 'Plataformas de E-Learnings',
+    modalidadElearningPlataforma: 'Plataforma de E-Learnings',
     modalidadBlended: 'B-learning',
     modalidadGroup: 'Clases',
-    modalidadIndividual: 'Tutorias',
+    modalidadIndividual: 'Tutorías',
     modalidadComunicacion: 'Contactos e intercambios',
     modalidadTeorica: 'Distribución de material teórico y de ejercitación',
     modalidadElearning: 'E-learning',
