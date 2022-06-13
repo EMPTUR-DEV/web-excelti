@@ -13,7 +13,7 @@ export const TRANSLATIONS_PT = {
     homeTitle: "EXCELTI",
     homeSubtitle: "Equipe de tradutores e intérpretes comprometidos com a profissão.", //Olga
     homeParagraph: "Dirigido por Olga Álvarez-Barr", //Olga
-    homeInfoFooterText: "Entre em contato conosco. Será um prazer poder escutá-lo e orientá-loem função de suas necessidades.", //Olga
+    homeInfoFooterText: "Entre em contato conosco. Será um prazer poder escutá-lo e orientá-lo em função de suas necessidades.", //Olga
 
 
     //Lista página traducción
@@ -75,13 +75,13 @@ export const TRANSLATIONS_PT = {
 
     //Modalidades
     modalidadSubTitle: 'Presencial e à distância',
-    modalidadVirtual: 'Virtual (2020-Actualidade)',
+    modalidadVirtual: 'Virtual (2020-Atualidade)',
     modalidadMoodle: 'Moodle',
-    modalidadElearningPlataforma: 'Plataformas de E-learning',
+    modalidadElearningPlataforma: 'Plataforma de E-learning',
     modalidadBlended: 'B-Learning',
     modalidadGroup: 'Aulas',
     modalidadIndividual: 'Tutorias',
-    modalidadComunicacion: 'Teacher-Student Communication',
+    modalidadComunicacion: 'Contatos e intercâmbios',
     modalidadTeorica: 'Distribuição de material teórico e exercícios práticos',
     modalidadElearning: 'E-learning',
 
