@@ -16,7 +16,7 @@ export const TRANSLATIONS_ES = {
 
     //Página traducción
     asesoria: "Asesoramiento:",
-    asesoriaParagraph: "Empresas, organizaciones, organizadores de conferencias, y otros clientes en materia de producción de textos a traducir y  otros servicios audiovisuales relacionados con la traducción.",
+    asesoriaParagraph: "Empresas, organizaciones, organizadores de conferencias, otros clientes en materia de producción de textos a traducir y  otros servicios audiovisuales relacionados con la traducción.",
     tecnic: "Técnica:",
     tecnicParagraph: " Manuales, especificaciones, patentes, folletos, gacetillas, catálogos.",
     cientific: "Científica:",
@@ -75,7 +75,7 @@ export const TRANSLATIONS_ES = {
     modalidadSubTitle: 'Presencial y remota',
     modalidadVirtual: 'Virtual (2020-Actualidad)',
     modalidadMoodle: 'Moodle',
-    modalidadElearningPlataforma: 'Plataforma de E-Learnings',
+    modalidadElearningPlataforma: 'Plataforma de E-Learning',
     modalidadBlended: 'B-learning',
     modalidadGroup: 'Clases',
     modalidadIndividual: 'Tutorías',

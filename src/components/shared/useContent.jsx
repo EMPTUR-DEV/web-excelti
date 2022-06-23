@@ -35,7 +35,7 @@ const UseContent = () => {
                 'name': t('susurrada'),
                 'content': t("susurradaContent"),
                 'extraContent':t('susurradaContentI'),
-                'url': '/interpretation/susurrada21.png',
+                'url': '/interpretation/maradona2.jpeg',
                 'alt': 'susurrada'
             },
             {
